@@ -1,6 +1,10 @@
 OpenEstate-IO 1.5
 =================
 
+[![CI](https://github.com/gkrost/OpenEstate-IO/actions/workflows/ci.yml/badge.svg)](https://github.com/gkrost/OpenEstate-IO/actions/workflows/ci.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/org.openestate.io/OpenEstate-IO-Core.svg)](https://search.maven.org/artifact/org.openestate.io/OpenEstate-IO-Core)
+[![License](https://img.shields.io/github/license/gkrost/OpenEstate-IO.svg)](https://github.com/gkrost/OpenEstate-IO/blob/main/LICENSE.txt)
+
 *OpenEstate-IO* provides a set of Java libraries to read and write real estate data in common formats. These libraries are used within [*OpenEstate-ImmoTool*](https://openestate.org/) and in some of our clients projects in order to process real estate data.
 
 
