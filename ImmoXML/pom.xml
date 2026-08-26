@@ -133,12 +133,9 @@
             </plugin>
 
             <!--
-            JAXB codegen is intentionally NOT run for this module: the ImmoXML schema is
-            proprietary (see src/main/schema/README.txt) and is never present in this checkout,
-            so XJC has nothing valid to compile against. The build relies entirely on the
-            pre-generated sources already committed under src/main/jaxb (added as a source root
-            below via build-helper). Regenerate manually with mvn-jaxb-xjc.sh once you have a
-            licensed copy of the schema in place.
+            XJC is not invoked; the proprietary schema (src/main/schema/README.txt) is not in the
+            tree. Committed src/main/jaxb is the source root (see build-helper above). Regenerate
+            with mvn-jaxb-xjc.sh once a licensed copy of the schema is in place.
             -->
 
         </plugins>
