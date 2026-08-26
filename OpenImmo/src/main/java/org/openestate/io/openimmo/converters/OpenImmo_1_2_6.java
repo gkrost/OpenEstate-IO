@@ -282,29 +282,20 @@ public class OpenImmo_1_2_6 extends AbstractConverter {
      * @throws XPathExpressionException if xpath evaluation failed
      */
     protected void removePreiseChildElements(Document doc) throws XPathExpressionException {
-        final String xpath = "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:kaufpreisnetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:kaufpreisbrutto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:hauptmietzinsnetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:pauschalmiete | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:betriebskostennetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:evbnetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:gesamtmietenetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:gesamtmietebrutto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:gesamtbelastungnetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:gesamtbelastungbrutto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:gesamtkostenprom2von | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:heizkostennetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:monatlichekostennetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:monatlichekostenbrutto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:nebenkostenprom2von | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:ruecklagenetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:sonstigekostennetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:sonstigemietenetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:summemietenetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:nettomieteprom2von | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:provisionnetto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:provisionbrutto | " +
-                "/io:openimmo/io:anbieter/io:immobilie/io:preise/io:richtpreisprom2";
+        // a single union of 23 full paths compiles to 101 XPath operators, one over the JDK's
+        // built-in JAXP hardening default (jdk.xml.xpathExprOpLimit, defaults to 100); a wildcard
+        // step with a self:: predicate stays well under that ceiling (breaks at 48 self:: terms)
+        // and has headroom for further elements without reopening this issue
+        final String xpath = "/io:openimmo/io:anbieter/io:immobilie/io:preise/*[" +
+                "self::io:kaufpreisnetto or self::io:kaufpreisbrutto or self::io:hauptmietzinsnetto or " +
+                "self::io:pauschalmiete or self::io:betriebskostennetto or self::io:evbnetto or " +
+                "self::io:gesamtmietenetto or self::io:gesamtmietebrutto or self::io:gesamtbelastungnetto or " +
+                "self::io:gesamtbelastungbrutto or self::io:gesamtkostenprom2von or self::io:heizkostennetto or " +
+                "self::io:monatlichekostennetto or self::io:monatlichekostenbrutto or self::io:nebenkostenprom2von or " +
+                "self::io:ruecklagenetto or self::io:sonstigekostennetto or self::io:sonstigemietenetto or " +
+                "self::io:summemietenetto or self::io:nettomieteprom2von or self::io:provisionnetto or " +
+                "self::io:provisionbrutto or self::io:richtpreisprom2" +
+                "]";
 
         XmlUtils.xPathElementsProcess(XmlUtils.xPath(xpath, doc, "io"), doc,
                 (element) -> element.getParentNode().removeChild(element));
