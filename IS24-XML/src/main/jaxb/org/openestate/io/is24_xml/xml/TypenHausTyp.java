@@ -1,59 +1,58 @@
-
 package org.openestate.io.is24_xml.xml;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for TypenHausTyp complex type.
+ * <p>Java class for TypenHausTyp complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="TypenHausTyp"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}VirtuelleImmobilieBaseTyp"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Baureihe" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/&gt;
- *         &lt;element name="Haustypinfo" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/&gt;
- *         &lt;element name="Dachform" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/&gt;
- *         &lt;element name="WohnFlProGeschoss" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/&gt;
- *         &lt;element name="PreisProBauleistung" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Objektkategorie2" type="{http://www.immobilienscout24.de/immobilientransfer}TypenHausKategorienTyp" default="keineAngabe" /&gt;
- *       &lt;attribute name="Wohnflaeche" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" /&gt;
- *       &lt;attribute name="Grundflaeche" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" /&gt;
- *       &lt;attribute name="Gesamtflaeche" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" /&gt;
- *       &lt;attribute name="Zimmeranzahl" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}ZimmeranzahlTyp" /&gt;
- *       &lt;attribute name="PreisAb" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
- *       &lt;attribute name="Bauweise" type="{http://www.immobilienscout24.de/immobilientransfer}BauweiseTyp" /&gt;
- *       &lt;attribute name="KWert" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl32Typ" /&gt;
- *       &lt;attribute name="Ausbaustufe" type="{http://www.immobilienscout24.de/immobilientransfer}AusbaustufeTyp" /&gt;
- *       &lt;attribute name="Energiestandard" type="{http://www.immobilienscout24.de/immobilientransfer}EnergiestandardTyp" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="TypenHausTyp">
+ *   <complexContent>
+ *     <extension base="{http://www.immobilienscout24.de/immobilientransfer}VirtuelleImmobilieBaseTyp">
+ *       <sequence>
+ *         <element name="Baureihe" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/>
+ *         <element name="Haustypinfo" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/>
+ *         <element name="Dachform" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/>
+ *         <element name="WohnFlProGeschoss" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/>
+ *         <element name="PreisProBauleistung" type="{http://www.immobilienscout24.de/immobilientransfer}Freitext2000Typ" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="Objektkategorie2" type="{http://www.immobilienscout24.de/immobilientransfer}TypenHausKategorienTyp" default="keineAngabe" />
+ *       <attribute name="Wohnflaeche" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" />
+ *       <attribute name="Grundflaeche" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" />
+ *       <attribute name="Gesamtflaeche" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" />
+ *       <attribute name="Zimmeranzahl" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}ZimmeranzahlTyp" />
+ *       <attribute name="PreisAb" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+ *       <attribute name="Bauweise" type="{http://www.immobilienscout24.de/immobilientransfer}BauweiseTyp" />
+ *       <attribute name="KWert" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl32Typ" />
+ *       <attribute name="Ausbaustufe" type="{http://www.immobilienscout24.de/immobilientransfer}AusbaustufeTyp" />
+ *       <attribute name="Energiestandard" type="{http://www.immobilienscout24.de/immobilientransfer}EnergiestandardTyp" />
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -68,67 +67,71 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlSeeAlso({
     TypenHaus.class
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public class TypenHausTyp
     extends VirtuelleImmobilieBaseTyp
-    implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(name = "Baureihe")
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String baureihe;
     @XmlElement(name = "Haustypinfo")
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String haustypinfo;
     @XmlElement(name = "Dachform")
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String dachform;
     @XmlElement(name = "WohnFlProGeschoss")
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String wohnFlProGeschoss;
     @XmlElement(name = "PreisProBauleistung")
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String preisProBauleistung;
     @XmlAttribute(name = "Objektkategorie2")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected TypenHausKategorienTyp objektkategorie2;
     @XmlAttribute(name = "Wohnflaeche", required = true)
     @XmlJavaTypeAdapter(Adapter34 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal wohnflaeche;
     @XmlAttribute(name = "Grundflaeche")
     @XmlJavaTypeAdapter(Adapter34 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal grundflaeche;
     @XmlAttribute(name = "Gesamtflaeche")
     @XmlJavaTypeAdapter(Adapter34 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal gesamtflaeche;
     @XmlAttribute(name = "Zimmeranzahl", required = true)
     @XmlJavaTypeAdapter(Adapter32 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal zimmeranzahl;
     @XmlAttribute(name = "PreisAb", required = true)
     @XmlJavaTypeAdapter(Adapter35 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal preisAb;
     @XmlAttribute(name = "Bauweise")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BauweiseTyp bauweise;
+    /**
+     * Neuer Fachbegriff hierfuer: U-Wert
+     * 
+     */
     @XmlAttribute(name = "KWert")
     @XmlJavaTypeAdapter(Adapter28 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal kWert;
     @XmlAttribute(name = "Ausbaustufe")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected AusbaustufeTyp ausbaustufe;
     @XmlAttribute(name = "Energiestandard")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected EnergiestandardTyp energiestandard;
 
     /**
@@ -139,7 +142,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getBaureihe() {
         return baureihe;
     }
@@ -152,7 +155,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setBaureihe(String value) {
         this.baureihe = value;
     }
@@ -165,7 +168,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getHaustypinfo() {
         return haustypinfo;
     }
@@ -178,7 +181,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setHaustypinfo(String value) {
         this.haustypinfo = value;
     }
@@ -191,7 +194,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getDachform() {
         return dachform;
     }
@@ -204,7 +207,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setDachform(String value) {
         this.dachform = value;
     }
@@ -217,7 +220,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getWohnFlProGeschoss() {
         return wohnFlProGeschoss;
     }
@@ -230,7 +233,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setWohnFlProGeschoss(String value) {
         this.wohnFlProGeschoss = value;
     }
@@ -243,7 +246,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getPreisProBauleistung() {
         return preisProBauleistung;
     }
@@ -256,7 +259,7 @@ public class TypenHausTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setPreisProBauleistung(String value) {
         this.preisProBauleistung = value;
     }
@@ -269,7 +272,7 @@ public class TypenHausTyp
      *     {@link TypenHausKategorienTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public TypenHausKategorienTyp getObjektkategorie2() {
         if (objektkategorie2 == null) {
             return TypenHausKategorienTyp.KEINE_ANGABE;
@@ -286,7 +289,7 @@ public class TypenHausTyp
      *     {@link TypenHausKategorienTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setObjektkategorie2(TypenHausKategorienTyp value) {
         this.objektkategorie2 = value;
     }
@@ -296,10 +299,10 @@ public class TypenHausTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getWohnflaeche() {
         return wohnflaeche;
     }
@@ -309,10 +312,10 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setWohnflaeche(BigDecimal value) {
         this.wohnflaeche = value;
     }
@@ -322,10 +325,10 @@ public class TypenHausTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getGrundflaeche() {
         return grundflaeche;
     }
@@ -335,10 +338,10 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGrundflaeche(BigDecimal value) {
         this.grundflaeche = value;
     }
@@ -348,10 +351,10 @@ public class TypenHausTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getGesamtflaeche() {
         return gesamtflaeche;
     }
@@ -361,10 +364,10 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGesamtflaeche(BigDecimal value) {
         this.gesamtflaeche = value;
     }
@@ -374,10 +377,10 @@ public class TypenHausTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getZimmeranzahl() {
         return zimmeranzahl;
     }
@@ -387,10 +390,10 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setZimmeranzahl(BigDecimal value) {
         this.zimmeranzahl = value;
     }
@@ -400,10 +403,10 @@ public class TypenHausTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getPreisAb() {
         return preisAb;
     }
@@ -413,10 +416,10 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setPreisAb(BigDecimal value) {
         this.preisAb = value;
     }
@@ -429,7 +432,7 @@ public class TypenHausTyp
      *     {@link BauweiseTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BauweiseTyp getBauweise() {
         return bauweise;
     }
@@ -442,20 +445,20 @@ public class TypenHausTyp
      *     {@link BauweiseTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setBauweise(BauweiseTyp value) {
         this.bauweise = value;
     }
 
     /**
-     * Gets the value of the kWert property.
+     * Neuer Fachbegriff hierfuer: U-Wert
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getKWert() {
         return kWert;
     }
@@ -465,10 +468,11 @@ public class TypenHausTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
+     * @see #getKWert()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setKWert(BigDecimal value) {
         this.kWert = value;
     }
@@ -481,7 +485,7 @@ public class TypenHausTyp
      *     {@link AusbaustufeTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public AusbaustufeTyp getAusbaustufe() {
         return ausbaustufe;
     }
@@ -494,7 +498,7 @@ public class TypenHausTyp
      *     {@link AusbaustufeTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setAusbaustufe(AusbaustufeTyp value) {
         this.ausbaustufe = value;
     }
@@ -507,7 +511,7 @@ public class TypenHausTyp
      *     {@link EnergiestandardTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public EnergiestandardTyp getEnergiestandard() {
         return energiestandard;
     }
@@ -520,29 +524,32 @@ public class TypenHausTyp
      *     {@link EnergiestandardTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setEnergiestandard(EnergiestandardTyp value) {
         this.energiestandard = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         super.appendFields(locator, buffer, strategy);
         {
             String theBaureihe;
@@ -622,19 +629,22 @@ public class TypenHausTyp
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         super.copyTo(locator, draftCopy, strategy);
         if (draftCopy instanceof TypenHausTyp) {
@@ -838,13 +848,15 @@ public class TypenHausTyp
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object createNewInstance() {
         return new TypenHausTyp();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -993,9 +1005,10 @@ public class TypenHausTyp
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 

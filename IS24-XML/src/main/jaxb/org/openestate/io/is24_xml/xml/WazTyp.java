@@ -1,95 +1,94 @@
-
 package org.openestate.io.is24_xml.xml;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Calendar;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for WazTyp complex type.
+ * <p>Java class for WazTyp complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="WazTyp"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}ImmobilieBaseTyp"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Pauschalmiete"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp"&gt;
- *                 &lt;attribute name="MietePauschal" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
- *                 &lt;attribute name="MietePro" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazZeiteinheitenTyp" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Monatsmiete" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp"&gt;
- *                 &lt;attribute name="Kaltmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
- *                 &lt;attribute name="Nebenkosten" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="BefeuerungsArt" type="{http://www.immobilienscout24.de/immobilientransfer}BefeuerungsArtTyp" minOccurs="0"/&gt;
- *         &lt;element name="Energieausweis" type="{http://www.immobilienscout24.de/immobilientransfer}EnergieausweisTyp" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="WazKategorie" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazKategorienTyp" /&gt;
- *       &lt;attribute name="Wohnflaeche" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" /&gt;
- *       &lt;attribute name="Zimmer" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}ZimmeranzahlTyp" /&gt;
- *       &lt;attribute name="FreiBis" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
- *       &lt;attribute name="Midestmietdauer" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl52Typ" /&gt;
- *       &lt;attribute name="Maximalmietdauer" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl52Typ" /&gt;
- *       &lt;attribute name="Etage" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl3i0Typ" /&gt;
- *       &lt;attribute name="Etagenzahl" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl3Typ" /&gt;
- *       &lt;attribute name="Objektzustand" type="{http://www.immobilienscout24.de/immobilientransfer}WazObjektZustandTyp" /&gt;
- *       &lt;attribute name="Heizungsart" type="{http://www.immobilienscout24.de/immobilientransfer}HeizungsartTyp" /&gt;
- *       &lt;attribute name="Aufzug" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Haustiere" type="{http://www.immobilienscout24.de/immobilientransfer}GenehmigungTyp" /&gt;
- *       &lt;attribute name="BalkonTerrasse" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="GartenBenutzung" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Mobilar" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="RaucherOk" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Geschlecht" type="{http://www.immobilienscout24.de/immobilientransfer}GeschlechtTyp" /&gt;
- *       &lt;attribute name="AnzahlPersonen" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl2Typ" /&gt;
- *       &lt;attribute name="FreiAb" use="required" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
- *       &lt;attribute name="Parkplatz" type="{http://www.immobilienscout24.de/immobilientransfer}StellplatzKategorieTyp" default="keineAngabe" /&gt;
- *       &lt;attribute name="AnzahlGaragenStellplaetze" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl2Typ" /&gt;
- *       &lt;attribute name="Keller" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="GaesteWC" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Rollstuhlgerecht" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Barrierefrei" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Parkplatzmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
- *       &lt;attribute name="Kaution" type="{http://www.immobilienscout24.de/immobilientransfer}Text50Typ" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="WazTyp">
+ *   <complexContent>
+ *     <extension base="{http://www.immobilienscout24.de/immobilientransfer}ImmobilieBaseTyp">
+ *       <sequence>
+ *         <element name="Pauschalmiete">
+ *           <complexType>
+ *             <complexContent>
+ *               <extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp">
+ *                 <attribute name="MietePauschal" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+ *                 <attribute name="MietePro" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazZeiteinheitenTyp" />
+ *               </extension>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="Monatsmiete" minOccurs="0">
+ *           <complexType>
+ *             <complexContent>
+ *               <extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp">
+ *                 <attribute name="Kaltmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+ *                 <attribute name="Nebenkosten" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+ *               </extension>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="BefeuerungsArt" type="{http://www.immobilienscout24.de/immobilientransfer}BefeuerungsArtTyp" minOccurs="0"/>
+ *         <element name="Energieausweis" type="{http://www.immobilienscout24.de/immobilientransfer}EnergieausweisTyp" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="WazKategorie" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazKategorienTyp" />
+ *       <attribute name="Wohnflaeche" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl102Typ" />
+ *       <attribute name="Zimmer" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}ZimmeranzahlTyp" />
+ *       <attribute name="FreiBis" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       <attribute name="Midestmietdauer" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl52Typ" />
+ *       <attribute name="Maximalmietdauer" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl52Typ" />
+ *       <attribute name="Etage" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl3i0Typ" />
+ *       <attribute name="Etagenzahl" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl3Typ" />
+ *       <attribute name="Objektzustand" type="{http://www.immobilienscout24.de/immobilientransfer}WazObjektZustandTyp" />
+ *       <attribute name="Heizungsart" type="{http://www.immobilienscout24.de/immobilientransfer}HeizungsartTyp" />
+ *       <attribute name="Aufzug" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Haustiere" type="{http://www.immobilienscout24.de/immobilientransfer}GenehmigungTyp" />
+ *       <attribute name="BalkonTerrasse" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="GartenBenutzung" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Mobilar" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="RaucherOk" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Geschlecht" type="{http://www.immobilienscout24.de/immobilientransfer}GeschlechtTyp" />
+ *       <attribute name="AnzahlPersonen" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl2Typ" />
+ *       <attribute name="FreiAb" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       <attribute name="Parkplatz" type="{http://www.immobilienscout24.de/immobilientransfer}StellplatzKategorieTyp" default="keineAngabe" />
+ *       <attribute name="AnzahlGaragenStellplaetze" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl2Typ" />
+ *       <attribute name="Keller" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="GaesteWC" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Rollstuhlgerecht" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Barrierefrei" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       <attribute name="Parkplatzmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+ *       <attribute name="Kaution" type="{http://www.immobilienscout24.de/immobilientransfer}Text50Typ" />
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -103,118 +102,122 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlSeeAlso({
     org.openestate.io.is24_xml.xml.WAZ.Type.class
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public class WazTyp
     extends ImmobilieBaseTyp
-    implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(name = "Pauschalmiete", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected WazTyp.Pauschalmiete pauschalmiete;
     @XmlElement(name = "Monatsmiete")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected WazTyp.Monatsmiete monatsmiete;
     @XmlElement(name = "BefeuerungsArt")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BefeuerungsArtTyp befeuerungsArt;
     @XmlElement(name = "Energieausweis")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected EnergieausweisTyp energieausweis;
     @XmlAttribute(name = "WazKategorie", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected WazKategorienTyp wazKategorie;
     @XmlAttribute(name = "Wohnflaeche", required = true)
     @XmlJavaTypeAdapter(Adapter34 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal wohnflaeche;
     @XmlAttribute(name = "Zimmer", required = true)
     @XmlJavaTypeAdapter(Adapter32 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal zimmer;
     @XmlAttribute(name = "FreiBis")
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "date")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Calendar freiBis;
     @XmlAttribute(name = "Midestmietdauer")
     @XmlJavaTypeAdapter(Adapter30 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal midestmietdauer;
     @XmlAttribute(name = "Maximalmietdauer")
     @XmlJavaTypeAdapter(Adapter30 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal maximalmietdauer;
     @XmlAttribute(name = "Etage")
     @XmlJavaTypeAdapter(Adapter20 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Long etage;
     @XmlAttribute(name = "Etagenzahl")
     @XmlJavaTypeAdapter(Adapter21 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Long etagenzahl;
     @XmlAttribute(name = "Objektzustand")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected WazObjektZustandTyp objektzustand;
     @XmlAttribute(name = "Heizungsart")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected HeizungsartTyp heizungsart;
     @XmlAttribute(name = "Aufzug")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean aufzug;
     @XmlAttribute(name = "Haustiere")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected GenehmigungTyp haustiere;
     @XmlAttribute(name = "BalkonTerrasse")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean balkonTerrasse;
     @XmlAttribute(name = "GartenBenutzung")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean gartenBenutzung;
     @XmlAttribute(name = "Mobilar")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean mobilar;
     @XmlAttribute(name = "RaucherOk")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean raucherOk;
     @XmlAttribute(name = "Geschlecht")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected GeschlechtTyp geschlecht;
     @XmlAttribute(name = "AnzahlPersonen")
     @XmlJavaTypeAdapter(Adapter19 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Long anzahlPersonen;
     @XmlAttribute(name = "FreiAb", required = true)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "date")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Calendar freiAb;
     @XmlAttribute(name = "Parkplatz")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected StellplatzKategorieTyp parkplatz;
     @XmlAttribute(name = "AnzahlGaragenStellplaetze")
     @XmlJavaTypeAdapter(Adapter19 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Long anzahlGaragenStellplaetze;
     @XmlAttribute(name = "Keller")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean keller;
     @XmlAttribute(name = "GaesteWC")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean gaesteWC;
+    /**
+     * Nicht mehr unterstuetzt: siehe stattdessen 'Barrierefrei'
+     * 
+     */
     @XmlAttribute(name = "Rollstuhlgerecht")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean rollstuhlgerecht;
     @XmlAttribute(name = "Barrierefrei")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected Boolean barrierefrei;
     @XmlAttribute(name = "Parkplatzmiete")
     @XmlJavaTypeAdapter(Adapter35 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected BigDecimal parkplatzmiete;
     @XmlAttribute(name = "Kaution")
     @XmlJavaTypeAdapter(Adapter7 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected String kaution;
 
     /**
@@ -225,7 +228,7 @@ public class WazTyp
      *     {@link WazTyp.Pauschalmiete }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public WazTyp.Pauschalmiete getPauschalmiete() {
         return pauschalmiete;
     }
@@ -238,7 +241,7 @@ public class WazTyp
      *     {@link WazTyp.Pauschalmiete }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setPauschalmiete(WazTyp.Pauschalmiete value) {
         this.pauschalmiete = value;
     }
@@ -251,7 +254,7 @@ public class WazTyp
      *     {@link WazTyp.Monatsmiete }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public WazTyp.Monatsmiete getMonatsmiete() {
         return monatsmiete;
     }
@@ -264,7 +267,7 @@ public class WazTyp
      *     {@link WazTyp.Monatsmiete }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setMonatsmiete(WazTyp.Monatsmiete value) {
         this.monatsmiete = value;
     }
@@ -277,7 +280,7 @@ public class WazTyp
      *     {@link BefeuerungsArtTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BefeuerungsArtTyp getBefeuerungsArt() {
         return befeuerungsArt;
     }
@@ -290,7 +293,7 @@ public class WazTyp
      *     {@link BefeuerungsArtTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setBefeuerungsArt(BefeuerungsArtTyp value) {
         this.befeuerungsArt = value;
     }
@@ -303,7 +306,7 @@ public class WazTyp
      *     {@link EnergieausweisTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public EnergieausweisTyp getEnergieausweis() {
         return energieausweis;
     }
@@ -316,7 +319,7 @@ public class WazTyp
      *     {@link EnergieausweisTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setEnergieausweis(EnergieausweisTyp value) {
         this.energieausweis = value;
     }
@@ -329,7 +332,7 @@ public class WazTyp
      *     {@link WazKategorienTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public WazKategorienTyp getWazKategorie() {
         return wazKategorie;
     }
@@ -342,7 +345,7 @@ public class WazTyp
      *     {@link WazKategorienTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setWazKategorie(WazKategorienTyp value) {
         this.wazKategorie = value;
     }
@@ -352,10 +355,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getWohnflaeche() {
         return wohnflaeche;
     }
@@ -365,10 +368,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setWohnflaeche(BigDecimal value) {
         this.wohnflaeche = value;
     }
@@ -378,10 +381,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getZimmer() {
         return zimmer;
     }
@@ -391,10 +394,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setZimmer(BigDecimal value) {
         this.zimmer = value;
     }
@@ -404,10 +407,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Calendar getFreiBis() {
         return freiBis;
     }
@@ -417,10 +420,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setFreiBis(Calendar value) {
         this.freiBis = value;
     }
@@ -430,10 +433,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getMidestmietdauer() {
         return midestmietdauer;
     }
@@ -443,10 +446,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setMidestmietdauer(BigDecimal value) {
         this.midestmietdauer = value;
     }
@@ -456,10 +459,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getMaximalmietdauer() {
         return maximalmietdauer;
     }
@@ -469,10 +472,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setMaximalmietdauer(BigDecimal value) {
         this.maximalmietdauer = value;
     }
@@ -482,10 +485,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Long getEtage() {
         return etage;
     }
@@ -495,10 +498,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setEtage(Long value) {
         this.etage = value;
     }
@@ -508,10 +511,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Long getEtagenzahl() {
         return etagenzahl;
     }
@@ -521,10 +524,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setEtagenzahl(Long value) {
         this.etagenzahl = value;
     }
@@ -537,7 +540,7 @@ public class WazTyp
      *     {@link WazObjektZustandTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public WazObjektZustandTyp getObjektzustand() {
         return objektzustand;
     }
@@ -550,7 +553,7 @@ public class WazTyp
      *     {@link WazObjektZustandTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setObjektzustand(WazObjektZustandTyp value) {
         this.objektzustand = value;
     }
@@ -563,7 +566,7 @@ public class WazTyp
      *     {@link HeizungsartTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public HeizungsartTyp getHeizungsart() {
         return heizungsart;
     }
@@ -576,7 +579,7 @@ public class WazTyp
      *     {@link HeizungsartTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setHeizungsart(HeizungsartTyp value) {
         this.heizungsart = value;
     }
@@ -589,7 +592,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getAufzug() {
         return aufzug;
     }
@@ -602,7 +605,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setAufzug(Boolean value) {
         this.aufzug = value;
     }
@@ -615,7 +618,7 @@ public class WazTyp
      *     {@link GenehmigungTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public GenehmigungTyp getHaustiere() {
         return haustiere;
     }
@@ -628,7 +631,7 @@ public class WazTyp
      *     {@link GenehmigungTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setHaustiere(GenehmigungTyp value) {
         this.haustiere = value;
     }
@@ -641,7 +644,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getBalkonTerrasse() {
         return balkonTerrasse;
     }
@@ -654,7 +657,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setBalkonTerrasse(Boolean value) {
         this.balkonTerrasse = value;
     }
@@ -667,7 +670,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getGartenBenutzung() {
         return gartenBenutzung;
     }
@@ -680,7 +683,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGartenBenutzung(Boolean value) {
         this.gartenBenutzung = value;
     }
@@ -693,7 +696,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getMobilar() {
         return mobilar;
     }
@@ -706,7 +709,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setMobilar(Boolean value) {
         this.mobilar = value;
     }
@@ -719,7 +722,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getRaucherOk() {
         return raucherOk;
     }
@@ -732,7 +735,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setRaucherOk(Boolean value) {
         this.raucherOk = value;
     }
@@ -745,7 +748,7 @@ public class WazTyp
      *     {@link GeschlechtTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public GeschlechtTyp getGeschlecht() {
         return geschlecht;
     }
@@ -758,7 +761,7 @@ public class WazTyp
      *     {@link GeschlechtTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGeschlecht(GeschlechtTyp value) {
         this.geschlecht = value;
     }
@@ -768,10 +771,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Long getAnzahlPersonen() {
         return anzahlPersonen;
     }
@@ -781,10 +784,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setAnzahlPersonen(Long value) {
         this.anzahlPersonen = value;
     }
@@ -794,10 +797,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Calendar getFreiAb() {
         return freiAb;
     }
@@ -807,10 +810,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setFreiAb(Calendar value) {
         this.freiAb = value;
     }
@@ -823,7 +826,7 @@ public class WazTyp
      *     {@link StellplatzKategorieTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public StellplatzKategorieTyp getParkplatz() {
         if (parkplatz == null) {
             return StellplatzKategorieTyp.KEINE_ANGABE;
@@ -840,7 +843,7 @@ public class WazTyp
      *     {@link StellplatzKategorieTyp }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setParkplatz(StellplatzKategorieTyp value) {
         this.parkplatz = value;
     }
@@ -850,10 +853,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Long getAnzahlGaragenStellplaetze() {
         return anzahlGaragenStellplaetze;
     }
@@ -863,10 +866,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setAnzahlGaragenStellplaetze(Long value) {
         this.anzahlGaragenStellplaetze = value;
     }
@@ -879,7 +882,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getKeller() {
         return keller;
     }
@@ -892,7 +895,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setKeller(Boolean value) {
         this.keller = value;
     }
@@ -905,7 +908,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getGaesteWC() {
         return gaesteWC;
     }
@@ -918,20 +921,20 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGaesteWC(Boolean value) {
         this.gaesteWC = value;
     }
 
     /**
-     * Gets the value of the rollstuhlgerecht property.
+     * Nicht mehr unterstuetzt: siehe stattdessen 'Barrierefrei'
      * 
      * @return
      *     possible object is
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getRollstuhlgerecht() {
         return rollstuhlgerecht;
     }
@@ -943,8 +946,9 @@ public class WazTyp
      *     allowed object is
      *     {@link Boolean }
      *     
+     * @see #getRollstuhlgerecht()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setRollstuhlgerecht(Boolean value) {
         this.rollstuhlgerecht = value;
     }
@@ -957,7 +961,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Boolean getBarrierefrei() {
         return barrierefrei;
     }
@@ -970,7 +974,7 @@ public class WazTyp
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setBarrierefrei(Boolean value) {
         this.barrierefrei = value;
     }
@@ -980,10 +984,10 @@ public class WazTyp
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public BigDecimal getParkplatzmiete() {
         return parkplatzmiete;
     }
@@ -993,10 +997,10 @@ public class WazTyp
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setParkplatzmiete(BigDecimal value) {
         this.parkplatzmiete = value;
     }
@@ -1009,7 +1013,7 @@ public class WazTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String getKaution() {
         return kaution;
     }
@@ -1022,29 +1026,32 @@ public class WazTyp
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setKaution(String value) {
         this.kaution = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         super.appendFields(locator, buffer, strategy);
         {
             WazTyp.Pauschalmiete thePauschalmiete;
@@ -1204,19 +1211,22 @@ public class WazTyp
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         super.copyTo(locator, draftCopy, strategy);
         if (draftCopy instanceof WazTyp) {
@@ -1628,13 +1638,15 @@ public class WazTyp
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object createNewInstance() {
         return new WazTyp();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -1927,46 +1939,47 @@ public class WazTyp
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp"&gt;
-     *       &lt;attribute name="Kaltmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
-     *       &lt;attribute name="Nebenkosten" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp">
+     *       <attribute name="Kaltmiete" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+     *       <attribute name="Nebenkosten" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+     *     </extension>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public static class Monatsmiete
         extends WazMieteBaseTyp
-        implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+        implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlAttribute(name = "Kaltmiete")
         @XmlJavaTypeAdapter(Adapter35 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         protected BigDecimal kaltmiete;
         @XmlAttribute(name = "Nebenkosten")
         @XmlJavaTypeAdapter(Adapter35 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         protected BigDecimal nebenkosten;
 
         /**
@@ -1974,10 +1987,10 @@ public class WazTyp
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public BigDecimal getKaltmiete() {
             return kaltmiete;
         }
@@ -1987,10 +2000,10 @@ public class WazTyp
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public void setKaltmiete(BigDecimal value) {
             this.kaltmiete = value;
         }
@@ -2000,10 +2013,10 @@ public class WazTyp
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public BigDecimal getNebenkosten() {
             return nebenkosten;
         }
@@ -2013,32 +2026,35 @@ public class WazTyp
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public void setNebenkosten(BigDecimal value) {
             this.nebenkosten = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             super.appendFields(locator, buffer, strategy);
             {
                 BigDecimal theKaltmiete;
@@ -2053,19 +2069,22 @@ public class WazTyp
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             super.copyTo(locator, draftCopy, strategy);
             if (draftCopy instanceof WazTyp.Monatsmiete) {
@@ -2100,13 +2119,15 @@ public class WazTyp
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object createNewInstance() {
             return new WazTyp.Monatsmiete();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -2138,9 +2159,10 @@ public class WazTyp
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 
@@ -2148,37 +2170,37 @@ public class WazTyp
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp"&gt;
-     *       &lt;attribute name="MietePauschal" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" /&gt;
-     *       &lt;attribute name="MietePro" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazZeiteinheitenTyp" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <extension base="{http://www.immobilienscout24.de/immobilientransfer}WazMieteBaseTyp">
+     *       <attribute name="MietePauschal" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}Zahl152Typ" />
+     *       <attribute name="MietePro" use="required" type="{http://www.immobilienscout24.de/immobilientransfer}WazZeiteinheitenTyp" />
+     *     </extension>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public static class Pauschalmiete
         extends WazMieteBaseTyp
-        implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+        implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlAttribute(name = "MietePauschal", required = true)
         @XmlJavaTypeAdapter(Adapter35 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         protected BigDecimal mietePauschal;
         @XmlAttribute(name = "MietePro", required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         protected WazZeiteinheitenTyp mietePro;
 
         /**
@@ -2186,10 +2208,10 @@ public class WazTyp
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public BigDecimal getMietePauschal() {
             return mietePauschal;
         }
@@ -2199,10 +2221,10 @@ public class WazTyp
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public void setMietePauschal(BigDecimal value) {
             this.mietePauschal = value;
         }
@@ -2215,7 +2237,7 @@ public class WazTyp
          *     {@link WazZeiteinheitenTyp }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public WazZeiteinheitenTyp getMietePro() {
             return mietePro;
         }
@@ -2228,29 +2250,32 @@ public class WazTyp
          *     {@link WazZeiteinheitenTyp }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public void setMietePro(WazZeiteinheitenTyp value) {
             this.mietePro = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             super.appendFields(locator, buffer, strategy);
             {
                 BigDecimal theMietePauschal;
@@ -2265,19 +2290,22 @@ public class WazTyp
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             super.copyTo(locator, draftCopy, strategy);
             if (draftCopy instanceof WazTyp.Pauschalmiete) {
@@ -2312,13 +2340,15 @@ public class WazTyp
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public Object createNewInstance() {
             return new WazTyp.Pauschalmiete();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -2350,9 +2380,10 @@ public class WazTyp
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 

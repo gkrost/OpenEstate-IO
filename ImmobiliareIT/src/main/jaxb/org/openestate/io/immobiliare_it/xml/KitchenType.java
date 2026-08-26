@@ -1,33 +1,31 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for kitchen.
+ * <p>Java class for kitchen</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="kitchen"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Abitabile"/&gt;
- *     &lt;enumeration value="Semi abitabile"/&gt;
- *     &lt;enumeration value="Cucinotto"/&gt;
- *     &lt;enumeration value="Angolo Cottura"/&gt;
- *     &lt;enumeration value="A vista"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="kitchen">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Abitabile"/>
+ *     <enumeration value="Semi abitabile"/>
+ *     <enumeration value="Cucinotto"/>
+ *     <enumeration value="Angolo Cottura"/>
+ *     <enumeration value="A vista"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "kitchen")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public enum KitchenType {
 
     @XmlEnumValue("Abitabile")
@@ -46,10 +44,26 @@ public enum KitchenType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static KitchenType fromValue(String v) {
         for (KitchenType c: KitchenType.values()) {
             if (c.value.equals(v)) {

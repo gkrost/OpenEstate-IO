@@ -1,14 +1,14 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the org.openestate.io.immobiliare_it.xml package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public class ObjectFactory {
 
 
@@ -32,6 +33,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Document }
      * 
+     * @return
+     *     the new instance of {@link Document }
      */
     public Document createDocument() {
         return new Document();
@@ -40,6 +43,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionActorType }
      * 
+     * @return
+     *     the new instance of {@link AuctionActorType }
      */
     public AuctionActorType createAuctionActorType() {
         return new AuctionActorType();
@@ -48,6 +53,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Auction }
      * 
+     * @return
+     *     the new instance of {@link Auction }
      */
     public Auction createAuction() {
         return new Auction();
@@ -56,6 +63,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Video }
      * 
+     * @return
+     *     the new instance of {@link Video }
      */
     public Video createVideo() {
         return new Video();
@@ -64,6 +73,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AirConditioning }
      * 
+     * @return
+     *     the new instance of {@link AirConditioning }
      */
     public AirConditioning createAirConditioning() {
         return new AirConditioning();
@@ -72,6 +83,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Heating }
      * 
+     * @return
+     *     the new instance of {@link Heating }
      */
     public Heating createHeating() {
         return new Heating();
@@ -80,6 +93,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Registry }
      * 
+     * @return
+     *     the new instance of {@link Registry }
      */
     public Registry createRegistry() {
         return new Registry();
@@ -88,6 +103,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassEnergy }
      * 
+     * @return
+     *     the new instance of {@link ClassEnergy }
      */
     public ClassEnergy createClassEnergy() {
         return new ClassEnergy();
@@ -96,6 +113,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassEnergy.EnergySeason }
      * 
+     * @return
+     *     the new instance of {@link ClassEnergy.EnergySeason }
      */
     public ClassEnergy.EnergySeason createClassEnergyEnergySeason() {
         return new ClassEnergy.EnergySeason();
@@ -104,6 +123,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ClassEnergy.EnergyPerformance }
      * 
+     * @return
+     *     the new instance of {@link ClassEnergy.EnergyPerformance }
      */
     public ClassEnergy.EnergyPerformance createClassEnergyEnergyPerformance() {
         return new ClassEnergy.EnergyPerformance();
@@ -112,6 +133,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BoxProject }
      * 
+     * @return
+     *     the new instance of {@link BoxProject }
      */
     public BoxProject createBoxProject() {
         return new BoxProject();
@@ -120,6 +143,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FloorProject }
      * 
+     * @return
+     *     the new instance of {@link FloorProject }
      */
     public FloorProject createFloorProject() {
         return new FloorProject();
@@ -128,6 +153,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link org.openestate.io.immobiliare_it.xml.Floor }
      * 
+     * @return
+     *     the new instance of {@link org.openestate.io.immobiliare_it.xml.Floor }
      */
     public org.openestate.io.immobiliare_it.xml.Floor createFloor() {
         return new org.openestate.io.immobiliare_it.xml.Floor();
@@ -136,6 +163,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Box }
      * 
+     * @return
+     *     the new instance of {@link Box }
      */
     public Box createBox() {
         return new Box();
@@ -144,6 +173,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BusinessElement }
      * 
+     * @return
+     *     the new instance of {@link BusinessElement }
      */
     public BusinessElement createBusinessElement() {
         return new BusinessElement();
@@ -152,6 +183,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures }
      */
     public AuctionFeatures createAuctionFeatures() {
         return new AuctionFeatures();
@@ -160,6 +193,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.Court }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.Court }
      */
     public AuctionFeatures.Court createAuctionFeaturesCourt() {
         return new AuctionFeatures.Court();
@@ -168,6 +203,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Extended }
      * 
+     * @return
+     *     the new instance of {@link Extended }
      */
     public Extended createExtended() {
         return new Extended();
@@ -176,6 +213,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure }
      */
     public LocationStructure createLocationStructure() {
         return new LocationStructure();
@@ -184,6 +223,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure.Locality }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure.Locality }
      */
     public LocationStructure.Locality createLocationStructureLocality() {
         return new LocationStructure.Locality();
@@ -192,6 +233,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure.Locality.Neighbourhood }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure.Locality.Neighbourhood }
      */
     public LocationStructure.Locality.Neighbourhood createLocationStructureLocalityNeighbourhood() {
         return new LocationStructure.Locality.Neighbourhood();
@@ -200,6 +243,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SalesOffice }
      * 
+     * @return
+     *     the new instance of {@link SalesOffice }
      */
     public SalesOffice createSalesOffice() {
         return new SalesOffice();
@@ -208,6 +253,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Sizes }
      * 
+     * @return
+     *     the new instance of {@link Sizes }
      */
     public Sizes createSizes() {
         return new Sizes();
@@ -216,6 +263,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Sizes.Size }
      * 
+     * @return
+     *     the new instance of {@link Sizes.Size }
      */
     public Sizes.Size createSizesSize() {
         return new Sizes.Size();
@@ -224,6 +273,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtraFeatures }
      * 
+     * @return
+     *     the new instance of {@link ExtraFeatures }
      */
     public ExtraFeatures createExtraFeatures() {
         return new ExtraFeatures();
@@ -232,6 +283,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtraFeatures.Flatmate }
      * 
+     * @return
+     *     the new instance of {@link ExtraFeatures.Flatmate }
      */
     public ExtraFeatures.Flatmate createExtraFeaturesFlatmate() {
         return new ExtraFeatures.Flatmate();
@@ -240,6 +293,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Lots }
      * 
+     * @return
+     *     the new instance of {@link Lots }
      */
     public Lots createLots() {
         return new Lots();
@@ -248,6 +303,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Metadata }
      * 
+     * @return
+     *     the new instance of {@link Metadata }
      */
     public Metadata createMetadata() {
         return new Metadata();
@@ -256,6 +313,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Feed }
      * 
+     * @return
+     *     the new instance of {@link Feed }
      */
     public Feed createFeed() {
         return new Feed();
@@ -264,6 +323,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Projects }
      * 
+     * @return
+     *     the new instance of {@link Projects }
      */
     public Projects createProjects() {
         return new Projects();
@@ -272,6 +333,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Properties }
      * 
+     * @return
+     *     the new instance of {@link Properties }
      */
     public Properties createProperties() {
         return new Properties();
@@ -280,6 +343,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Project }
      * 
+     * @return
+     *     the new instance of {@link Project }
      */
     public Project createProject() {
         return new Project();
@@ -288,6 +353,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Agent }
      * 
+     * @return
+     *     the new instance of {@link Agent }
      */
     public Agent createAgent() {
         return new Agent();
@@ -296,6 +363,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Pictures }
      * 
+     * @return
+     *     the new instance of {@link Pictures }
      */
     public Pictures createPictures() {
         return new Pictures();
@@ -304,6 +373,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Videos }
      * 
+     * @return
+     *     the new instance of {@link Videos }
      */
     public Videos createVideos() {
         return new Videos();
@@ -312,6 +383,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FeaturesProject }
      * 
+     * @return
+     *     the new instance of {@link FeaturesProject }
      */
     public FeaturesProject createFeaturesProject() {
         return new FeaturesProject();
@@ -320,6 +393,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Property }
      * 
+     * @return
+     *     the new instance of {@link Property }
      */
     public Property createProperty() {
         return new Property();
@@ -328,6 +403,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Transactions }
      * 
+     * @return
+     *     the new instance of {@link Transactions }
      */
     public Transactions createTransactions() {
         return new Transactions();
@@ -336,6 +413,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Building }
      * 
+     * @return
+     *     the new instance of {@link Building }
      */
     public Building createBuilding() {
         return new Building();
@@ -344,6 +423,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FeaturesProperty }
      * 
+     * @return
+     *     the new instance of {@link FeaturesProperty }
      */
     public FeaturesProperty createFeaturesProperty() {
         return new FeaturesProperty();
@@ -352,6 +433,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Documents }
      * 
+     * @return
+     *     the new instance of {@link Documents }
      */
     public Documents createDocuments() {
         return new Documents();
@@ -360,6 +443,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Blueprints }
      * 
+     * @return
+     *     the new instance of {@link Blueprints }
      */
     public Blueprints createBlueprints() {
         return new Blueprints();
@@ -368,6 +453,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Publisher }
      * 
+     * @return
+     *     the new instance of {@link Publisher }
      */
     public Publisher createPublisher() {
         return new Publisher();
@@ -376,6 +463,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Transaction }
      * 
+     * @return
+     *     the new instance of {@link Transaction }
      */
     public Transaction createTransaction() {
         return new Transaction();
@@ -384,6 +473,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Terrains }
      * 
+     * @return
+     *     the new instance of {@link Terrains }
      */
     public Terrains createTerrains() {
         return new Terrains();
@@ -392,6 +483,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BuildingMap }
      * 
+     * @return
+     *     the new instance of {@link BuildingMap }
      */
     public BuildingMap createBuildingMap() {
         return new BuildingMap();
@@ -400,6 +493,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BuildingMaps }
      * 
+     * @return
+     *     the new instance of {@link BuildingMaps }
      */
     public BuildingMaps createBuildingMaps() {
         return new BuildingMaps();
@@ -408,6 +503,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Proptype }
      * 
+     * @return
+     *     the new instance of {@link Proptype }
      */
     public Proptype createProptype() {
         return new Proptype();
@@ -416,6 +513,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TerrainElement }
      * 
+     * @return
+     *     the new instance of {@link TerrainElement }
      */
     public TerrainElement createTerrainElement() {
         return new TerrainElement();
@@ -424,6 +523,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SizeType }
      * 
+     * @return
+     *     the new instance of {@link SizeType }
      */
     public SizeType createSizeType() {
         return new SizeType();
@@ -432,6 +533,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LandSizeType }
      * 
+     * @return
+     *     the new instance of {@link LandSizeType }
      */
     public LandSizeType createLandSizeType() {
         return new LandSizeType();
@@ -440,6 +543,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link PriceType }
      * 
+     * @return
+     *     the new instance of {@link PriceType }
      */
     public PriceType createPriceType() {
         return new PriceType();
@@ -448,6 +553,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Langtxt }
      * 
+     * @return
+     *     the new instance of {@link Langtxt }
      */
     public Langtxt createLangtxt() {
         return new Langtxt();
@@ -456,6 +563,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DescriptionType }
      * 
+     * @return
+     *     the new instance of {@link DescriptionType }
      */
     public DescriptionType createDescriptionType() {
         return new DescriptionType();
@@ -464,6 +573,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RoomsType }
      * 
+     * @return
+     *     the new instance of {@link RoomsType }
      */
     public RoomsType createRoomsType() {
         return new RoomsType();
@@ -472,6 +583,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AdditionalCostsType }
      * 
+     * @return
+     *     the new instance of {@link AdditionalCostsType }
      */
     public AdditionalCostsType createAdditionalCostsType() {
         return new AdditionalCostsType();
@@ -480,6 +593,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Descriptions }
      * 
+     * @return
+     *     the new instance of {@link Descriptions }
      */
     public Descriptions createDescriptions() {
         return new Descriptions();
@@ -488,6 +603,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Contact }
      * 
+     * @return
+     *     the new instance of {@link Contact }
      */
     public Contact createContact() {
         return new Contact();
@@ -496,6 +613,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Ambience }
      * 
+     * @return
+     *     the new instance of {@link Ambience }
      */
     public Ambience createAmbience() {
         return new Ambience();
@@ -504,6 +623,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Actors }
      * 
+     * @return
+     *     the new instance of {@link Actors }
      */
     public Actors createActors() {
         return new Actors();
@@ -512,6 +633,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Picture }
      * 
+     * @return
+     *     the new instance of {@link Picture }
      */
     public Picture createPicture() {
         return new Picture();
@@ -520,6 +643,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Registry.Income }
      * 
+     * @return
+     *     the new instance of {@link Registry.Income }
      */
     public Registry.Income createRegistryIncome() {
         return new Registry.Income();
@@ -528,6 +653,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SalesOffice.City }
      * 
+     * @return
+     *     the new instance of {@link SalesOffice.City }
      */
     public SalesOffice.City createSalesOfficeCity() {
         return new SalesOffice.City();
@@ -536,6 +663,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SalesOffice.Locality }
      * 
+     * @return
+     *     the new instance of {@link SalesOffice.Locality }
      */
     public SalesOffice.Locality createSalesOfficeLocality() {
         return new SalesOffice.Locality();
@@ -544,6 +673,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Sizes.Size.Floor }
      * 
+     * @return
+     *     the new instance of {@link Sizes.Size.Floor }
      */
     public Sizes.Size.Floor createSizesSizeFloor() {
         return new Sizes.Size.Floor();
@@ -552,6 +683,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.Auctions }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.Auctions }
      */
     public AuctionFeatures.Auctions createAuctionFeaturesAuctions() {
         return new AuctionFeatures.Auctions();
@@ -560,6 +693,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.StartingPrice }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.StartingPrice }
      */
     public AuctionFeatures.StartingPrice createAuctionFeaturesStartingPrice() {
         return new AuctionFeatures.StartingPrice();
@@ -568,6 +703,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.MinimumBid }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.MinimumBid }
      */
     public AuctionFeatures.MinimumBid createAuctionFeaturesMinimumBid() {
         return new AuctionFeatures.MinimumBid();
@@ -576,6 +713,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.SuccessPrice }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.SuccessPrice }
      */
     public AuctionFeatures.SuccessPrice createAuctionFeaturesSuccessPrice() {
         return new AuctionFeatures.SuccessPrice();
@@ -584,6 +723,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AuctionFeatures.Reference }
      * 
+     * @return
+     *     the new instance of {@link AuctionFeatures.Reference }
      */
     public AuctionFeatures.Reference createAuctionFeaturesReference() {
         return new AuctionFeatures.Reference();
@@ -592,6 +733,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtraFeatures.BillsIncluded }
      * 
+     * @return
+     *     the new instance of {@link ExtraFeatures.BillsIncluded }
      */
     public ExtraFeatures.BillsIncluded createExtraFeaturesBillsIncluded() {
         return new ExtraFeatures.BillsIncluded();
@@ -600,6 +743,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtraFeatures.Costs }
      * 
+     * @return
+     *     the new instance of {@link ExtraFeatures.Costs }
      */
     public ExtraFeatures.Costs createExtraFeaturesCosts() {
         return new ExtraFeatures.Costs();
@@ -608,6 +753,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtraFeatures.Flatmate.Age }
      * 
+     * @return
+     *     the new instance of {@link ExtraFeatures.Flatmate.Age }
      */
     public ExtraFeatures.Flatmate.Age createExtraFeaturesFlatmateAge() {
         return new ExtraFeatures.Flatmate.Age();
@@ -616,6 +763,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Lots.Lot }
      * 
+     * @return
+     *     the new instance of {@link Lots.Lot }
      */
     public Lots.Lot createLotsLot() {
         return new Lots.Lot();
@@ -624,6 +773,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure.SubAdministrativeArea }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure.SubAdministrativeArea }
      */
     public LocationStructure.SubAdministrativeArea createLocationStructureSubAdministrativeArea() {
         return new LocationStructure.SubAdministrativeArea();
@@ -632,6 +783,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure.City }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure.City }
      */
     public LocationStructure.City createLocationStructureCity() {
         return new LocationStructure.City();
@@ -640,6 +793,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocationStructure.Locality.Thoroughfare }
      * 
+     * @return
+     *     the new instance of {@link LocationStructure.Locality.Thoroughfare }
      */
     public LocationStructure.Locality.Thoroughfare createLocationStructureLocalityThoroughfare() {
         return new LocationStructure.Locality.Thoroughfare();
@@ -648,6 +803,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Metadata.Multipage }
      * 
+     * @return
+     *     the new instance of {@link Metadata.Multipage }
      */
     public Metadata.Multipage createMetadataMultipage() {
         return new Metadata.Multipage();

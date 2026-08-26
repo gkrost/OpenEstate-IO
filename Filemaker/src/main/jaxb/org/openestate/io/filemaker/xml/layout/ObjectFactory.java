@@ -1,14 +1,14 @@
-
 package org.openestate.io.filemaker.xml.layout;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the org.openestate.io.filemaker.xml.layout package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
 public class ObjectFactory {
 
 
@@ -32,6 +33,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValueListsType }
      * 
+     * @return
+     *     the new instance of {@link ValueListsType }
      */
     public ValueListsType createValueListsType() {
         return new ValueListsType();
@@ -40,6 +43,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LayoutType }
      * 
+     * @return
+     *     the new instance of {@link LayoutType }
      */
     public LayoutType createLayoutType() {
         return new LayoutType();
@@ -48,6 +53,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LayoutType.FIELD }
      * 
+     * @return
+     *     the new instance of {@link LayoutType.FIELD }
      */
     public LayoutType.FIELD createLayoutTypeFIELD() {
         return new LayoutType.FIELD();
@@ -56,6 +63,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FMPXMLLAYOUT }
      * 
+     * @return
+     *     the new instance of {@link FMPXMLLAYOUT }
      */
     public FMPXMLLAYOUT createFMPXMLLAYOUT() {
         return new FMPXMLLAYOUT();
@@ -64,6 +73,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ProductType }
      * 
+     * @return
+     *     the new instance of {@link ProductType }
      */
     public ProductType createProductType() {
         return new ProductType();
@@ -72,6 +83,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValueListsType.VALUELIST }
      * 
+     * @return
+     *     the new instance of {@link ValueListsType.VALUELIST }
      */
     public ValueListsType.VALUELIST createValueListsTypeVALUELIST() {
         return new ValueListsType.VALUELIST();
@@ -80,6 +93,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LayoutType.FIELD.STYLE }
      * 
+     * @return
+     *     the new instance of {@link LayoutType.FIELD.STYLE }
      */
     public LayoutType.FIELD.STYLE createLayoutTypeFIELDSTYLE() {
         return new LayoutType.FIELD.STYLE();

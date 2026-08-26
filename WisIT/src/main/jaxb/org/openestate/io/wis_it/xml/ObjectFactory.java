@@ -1,14 +1,14 @@
-
 package org.openestate.io.wis_it.xml;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the org.openestate.io.wis_it.xml package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:59+02:00")
 public class ObjectFactory {
 
 
@@ -32,6 +33,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WIS }
      * 
+     * @return
+     *     the new instance of {@link WIS }
      */
     public WIS createWIS() {
         return new WIS();
@@ -40,6 +43,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WIS.BENUTZER }
      * 
+     * @return
+     *     the new instance of {@link WIS.BENUTZER }
      */
     public WIS.BENUTZER createWISBENUTZER() {
         return new WIS.BENUTZER();
@@ -48,6 +53,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WIS.OBJEKTE }
      * 
+     * @return
+     *     the new instance of {@link WIS.OBJEKTE }
      */
     public WIS.OBJEKTE createWISOBJEKTE() {
         return new WIS.OBJEKTE();
@@ -56,6 +63,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ObjectType }
      * 
+     * @return
+     *     the new instance of {@link ObjectType }
      */
     public ObjectType createObjectType() {
         return new ObjectType();

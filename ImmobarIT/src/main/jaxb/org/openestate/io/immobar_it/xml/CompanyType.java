@@ -1,63 +1,62 @@
-
 package org.openestate.io.immobar_it.xml;
 
 import java.io.Serializable;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
  * A company to transfer.
  * 
- * <p>Java class for CompanyType complex type.
+ * <p>Java class for CompanyType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="CompanyType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="company_name_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_address_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_location_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_name_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_address_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_location_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_postalcode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_province" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_country" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_mobile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="company_website" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
- *         &lt;element name="company_ISTAT" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="property" type="{}PropertyType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="CompanyType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="company_name_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_address_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_location_de" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_name_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_address_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_location_it" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_postalcode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_province" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_country" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_mobile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="company_website" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+ *         <element name="company_ISTAT" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="property" type="{}PropertyType" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -80,69 +79,133 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "companyISTAT",
     "property"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
-public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
+public class CompanyType implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
+    /**
+     * deutscher Firmenname
+     * 
+     */
     @XmlElement(name = "company_name_de")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyNameDe;
+    /**
+     * deutsche Firmenanschrift (Straße, Haus-Nr)
+     * 
+     */
     @XmlElement(name = "company_address_de")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyAddressDe;
+    /**
+     * deutsche Firmenanschrift (Ort, Region)
+     * 
+     */
     @XmlElement(name = "company_location_de")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyLocationDe;
+    /**
+     * italienischer Firmenname
+     * 
+     */
     @XmlElement(name = "company_name_it")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyNameIt;
+    /**
+     * italienische Firmenanschrift (Straße, Haus-Nr)
+     * 
+     */
     @XmlElement(name = "company_address_it")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyAddressIt;
+    /**
+     * italienische Firmenanschrift (Ort, Region)
+     * 
+     */
     @XmlElement(name = "company_location_it")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyLocationIt;
+    /**
+     * PLZ der Firma
+     * 
+     */
     @XmlElement(name = "company_postalcode")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyPostalcode;
+    /**
+     * Region der Firma (z.B. BZ, TN)
+     * 
+     */
     @XmlElement(name = "company_province")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyProvince;
+    /**
+     * Land der Firma (z.B. IT, AT, DE)
+     * 
+     */
     @XmlElement(name = "company_country")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyCountry;
+    /**
+     * Telefon-Nr der Firma
+     * 
+     */
     @XmlElement(name = "company_phone")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyPhone;
+    /**
+     * Fax-Nr der Firma
+     * 
+     */
     @XmlElement(name = "company_fax")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyFax;
+    /**
+     * Mobil-Nr der Firma
+     * 
+     */
     @XmlElement(name = "company_mobile")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyMobile;
+    /**
+     * E-Mailadresse der Firma
+     * 
+     */
     @XmlElement(name = "company_email")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyEmail;
+    /**
+     * Webseite der Firma
+     * 
+     */
     @XmlElement(name = "company_website", type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "anyURI")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected URI companyWebsite;
+    /**
+     * ISTAT-Code der Firma (regionaler Code)
+     * 
+     */
     @XmlElement(name = "company_ISTAT")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected String companyISTAT;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Liste von zu übertragenden Immobilien.
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     protected List<PropertyType> property;
 
     /**
-     * Gets the value of the companyNameDe property.
+     * deutscher Firmenname
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyNameDe() {
         return companyNameDe;
     }
@@ -154,21 +217,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyNameDe()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyNameDe(String value) {
         this.companyNameDe = value;
     }
 
     /**
-     * Gets the value of the companyAddressDe property.
+     * deutsche Firmenanschrift (Straße, Haus-Nr)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyAddressDe() {
         return companyAddressDe;
     }
@@ -180,21 +244,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyAddressDe()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyAddressDe(String value) {
         this.companyAddressDe = value;
     }
 
     /**
-     * Gets the value of the companyLocationDe property.
+     * deutsche Firmenanschrift (Ort, Region)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyLocationDe() {
         return companyLocationDe;
     }
@@ -206,21 +271,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyLocationDe()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyLocationDe(String value) {
         this.companyLocationDe = value;
     }
 
     /**
-     * Gets the value of the companyNameIt property.
+     * italienischer Firmenname
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyNameIt() {
         return companyNameIt;
     }
@@ -232,21 +298,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyNameIt()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyNameIt(String value) {
         this.companyNameIt = value;
     }
 
     /**
-     * Gets the value of the companyAddressIt property.
+     * italienische Firmenanschrift (Straße, Haus-Nr)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyAddressIt() {
         return companyAddressIt;
     }
@@ -258,21 +325,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyAddressIt()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyAddressIt(String value) {
         this.companyAddressIt = value;
     }
 
     /**
-     * Gets the value of the companyLocationIt property.
+     * italienische Firmenanschrift (Ort, Region)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyLocationIt() {
         return companyLocationIt;
     }
@@ -284,21 +352,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyLocationIt()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyLocationIt(String value) {
         this.companyLocationIt = value;
     }
 
     /**
-     * Gets the value of the companyPostalcode property.
+     * PLZ der Firma
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyPostalcode() {
         return companyPostalcode;
     }
@@ -310,21 +379,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyPostalcode()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyPostalcode(String value) {
         this.companyPostalcode = value;
     }
 
     /**
-     * Gets the value of the companyProvince property.
+     * Region der Firma (z.B. BZ, TN)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyProvince() {
         return companyProvince;
     }
@@ -336,21 +406,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyProvince()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyProvince(String value) {
         this.companyProvince = value;
     }
 
     /**
-     * Gets the value of the companyCountry property.
+     * Land der Firma (z.B. IT, AT, DE)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyCountry() {
         return companyCountry;
     }
@@ -362,21 +433,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyCountry()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyCountry(String value) {
         this.companyCountry = value;
     }
 
     /**
-     * Gets the value of the companyPhone property.
+     * Telefon-Nr der Firma
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyPhone() {
         return companyPhone;
     }
@@ -388,21 +460,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyPhone()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyPhone(String value) {
         this.companyPhone = value;
     }
 
     /**
-     * Gets the value of the companyFax property.
+     * Fax-Nr der Firma
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyFax() {
         return companyFax;
     }
@@ -414,21 +487,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyFax()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyFax(String value) {
         this.companyFax = value;
     }
 
     /**
-     * Gets the value of the companyMobile property.
+     * Mobil-Nr der Firma
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyMobile() {
         return companyMobile;
     }
@@ -440,21 +514,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyMobile()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyMobile(String value) {
         this.companyMobile = value;
     }
 
     /**
-     * Gets the value of the companyEmail property.
+     * E-Mailadresse der Firma
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyEmail() {
         return companyEmail;
     }
@@ -466,21 +541,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyEmail()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyEmail(String value) {
         this.companyEmail = value;
     }
 
     /**
-     * Gets the value of the companyWebsite property.
+     * Webseite der Firma
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public URI getCompanyWebsite() {
         return companyWebsite;
     }
@@ -490,23 +566,24 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
+     * @see #getCompanyWebsite()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyWebsite(URI value) {
         this.companyWebsite = value;
     }
 
     /**
-     * Gets the value of the companyISTAT property.
+     * ISTAT-Code der Firma (regionaler Code)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String getCompanyISTAT() {
         return companyISTAT;
     }
@@ -518,60 +595,69 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCompanyISTAT()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public void setCompanyISTAT(String value) {
         this.companyISTAT = value;
     }
 
     /**
+     * Liste von zu übertragenden Immobilien.
+     * 
      * Gets the value of the property property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the property property.
+     * <p>This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore, any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the property property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getProperty().add(newItem);
+     * getProperty().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PropertyType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the property property.
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public List<PropertyType> getProperty() {
         if (property == null) {
-            property = new ArrayList<PropertyType>();
+            property = new ArrayList<>();
         }
         return this.property;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             String theCompanyNameDe;
             theCompanyNameDe = this.getCompanyNameDe();
@@ -655,19 +741,22 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof CompanyType) {
             final CompanyType copy = ((CompanyType) draftCopy);
@@ -888,13 +977,15 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public Object createNewInstance() {
         return new CompanyType();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -1049,9 +1140,10 @@ public class CompanyType implements Serializable, Cloneable, CopyTo2, Equals2, T
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:12+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 

@@ -1,58 +1,57 @@
-
 package org.openestate.io.filemaker.xml.result;
 
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for MetaDataType complex type.
+ * <p>Java class for MetaDataType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="MetaDataType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="FIELD" maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attribute name="NAME" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                 &lt;attribute name="TYPE" use="required" type="{http://www.filemaker.com/fmpxmlresult}FieldType" /&gt;
- *                 &lt;attribute name="EMPTYOK" use="required" type="{http://www.filemaker.com/fmpxmlresult}BooleanType" /&gt;
- *                 &lt;attribute name="MAXREPEAT" use="required" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="MetaDataType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="FIELD" maxOccurs="unbounded" minOccurs="0">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <attribute name="NAME" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 <attribute name="TYPE" use="required" type="{http://www.filemaker.com/fmpxmlresult}FieldType" />
+ *                 <attribute name="EMPTYOK" use="required" type="{http://www.filemaker.com/fmpxmlresult}BooleanType" />
+ *                 <attribute name="MAXREPEAT" use="required" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -60,62 +59,68 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "MetaDataType", propOrder = {
     "field"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+public class MetaDataType implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(name = "FIELD")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     protected List<MetaDataType.FIELD> field;
 
     /**
      * Gets the value of the field property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the field property.
+     * <p>This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore, any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the field property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getFIELD().add(newItem);
+     * getFIELD().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link MetaDataType.FIELD }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the field property.
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public List<MetaDataType.FIELD> getFIELD() {
         if (field == null) {
-            field = new ArrayList<MetaDataType.FIELD>();
+            field = new ArrayList<>();
         }
         return this.field;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             List<MetaDataType.FIELD> theFIELD;
             theFIELD = (((this.field!= null)&&(!this.field.isEmpty()))?this.getFIELD():null);
@@ -124,19 +129,22 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof MetaDataType) {
             final MetaDataType copy = ((MetaDataType) draftCopy);
@@ -162,13 +170,15 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public Object createNewInstance() {
         return new MetaDataType();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -188,52 +198,53 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="NAME" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *       &lt;attribute name="TYPE" use="required" type="{http://www.filemaker.com/fmpxmlresult}FieldType" /&gt;
-     *       &lt;attribute name="EMPTYOK" use="required" type="{http://www.filemaker.com/fmpxmlresult}BooleanType" /&gt;
-     *       &lt;attribute name="MAXREPEAT" use="required" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <attribute name="NAME" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       <attribute name="TYPE" use="required" type="{http://www.filemaker.com/fmpxmlresult}FieldType" />
+     *       <attribute name="EMPTYOK" use="required" type="{http://www.filemaker.com/fmpxmlresult}BooleanType" />
+     *       <attribute name="MAXREPEAT" use="required" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-    public static class FIELD implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+    public static class FIELD implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlAttribute(name = "NAME", required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         protected String name;
         @XmlAttribute(name = "TYPE", required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         protected FieldType type;
         @XmlAttribute(name = "EMPTYOK", required = true)
         @XmlJavaTypeAdapter(Adapter1 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         protected Boolean emptyok;
         @XmlAttribute(name = "MAXREPEAT", required = true)
         @XmlSchemaType(name = "nonNegativeInteger")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         protected BigInteger maxrepeat;
 
         /**
@@ -244,7 +255,7 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public String getNAME() {
             return name;
         }
@@ -257,7 +268,7 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public void setNAME(String value) {
             this.name = value;
         }
@@ -270,7 +281,7 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link FieldType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public FieldType getTYPE() {
             return type;
         }
@@ -283,7 +294,7 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link FieldType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public void setTYPE(FieldType value) {
             this.type = value;
         }
@@ -293,10 +304,10 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link Boolean }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public Boolean getEMPTYOK() {
             return emptyok;
         }
@@ -306,10 +317,10 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link Boolean }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public void setEMPTYOK(Boolean value) {
             this.emptyok = value;
         }
@@ -322,7 +333,7 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public BigInteger getMAXREPEAT() {
             return maxrepeat;
         }
@@ -335,29 +346,32 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
          *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public void setMAXREPEAT(BigInteger value) {
             this.maxrepeat = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 String theNAME;
                 theNAME = this.getNAME();
@@ -381,19 +395,22 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof MetaDataType.FIELD) {
                 final MetaDataType.FIELD copy = ((MetaDataType.FIELD) draftCopy);
@@ -453,13 +470,15 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public Object createNewInstance() {
             return new MetaDataType.FIELD();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -506,9 +525,10 @@ public class MetaDataType implements Serializable, Cloneable, CopyTo2, Equals2, 
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:17+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:01+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 

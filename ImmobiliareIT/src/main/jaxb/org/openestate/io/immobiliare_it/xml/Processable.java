@@ -1,55 +1,54 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Calendar;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for processable complex type.
+ * <p>Java class for processable complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="processable"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="published-on" type="{http://feed.immobiliare.it}dateUpdatedType" minOccurs="0"/&gt;
- *         &lt;element name="date-updated" type="{http://feed.immobiliare.it}dateUpdatedType" minOccurs="0"/&gt;
- *         &lt;element name="agent" type="{http://feed.immobiliare.it}agent"/&gt;
- *         &lt;element name="location" type="{http://feed.immobiliare.it}locationStructure"/&gt;
- *         &lt;element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/&gt;
- *         &lt;element name="videos" type="{http://feed.immobiliare.it}videos" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="operation" type="{http://feed.immobiliare.it}operation" /&gt;
- *       &lt;attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="processable">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="published-on" type="{http://feed.immobiliare.it}dateUpdatedType" minOccurs="0"/>
+ *         <element name="date-updated" type="{http://feed.immobiliare.it}dateUpdatedType" minOccurs="0"/>
+ *         <element name="agent" type="{http://feed.immobiliare.it}agent"/>
+ *         <element name="location" type="{http://feed.immobiliare.it}locationStructure"/>
+ *         <element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/>
+ *         <element name="videos" type="{http://feed.immobiliare.it}videos" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="operation" type="{http://feed.immobiliare.it}operation" />
+ *       <attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -67,40 +66,40 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     Property.class,
     Project.class
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-public abstract class Processable implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+public abstract class Processable implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(name = "unique-id", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected String uniqueId;
     @XmlElement(name = "published-on", type = String.class)
     @XmlJavaTypeAdapter(Adapter7 .class)
     @XmlSchemaType(name = "dateTime")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Calendar publishedOn;
     @XmlElement(name = "date-updated", type = String.class)
     @XmlJavaTypeAdapter(Adapter7 .class)
     @XmlSchemaType(name = "dateTime")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Calendar dateUpdated;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Agent agent;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected LocationStructure location;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Pictures pictures;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Videos videos;
     @XmlAttribute(name = "operation")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected OperationType operation;
     @XmlAttribute(name = "ID")
     @XmlJavaTypeAdapter(Adapter4 .class)
     @XmlSchemaType(name = "long")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected BigInteger id;
 
     /**
@@ -111,7 +110,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String getUniqueId() {
         return uniqueId;
     }
@@ -124,7 +123,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setUniqueId(String value) {
         this.uniqueId = value;
     }
@@ -134,10 +133,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Calendar getPublishedOn() {
         return publishedOn;
     }
@@ -147,10 +146,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setPublishedOn(Calendar value) {
         this.publishedOn = value;
     }
@@ -160,10 +159,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Calendar getDateUpdated() {
         return dateUpdated;
     }
@@ -173,10 +172,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setDateUpdated(Calendar value) {
         this.dateUpdated = value;
     }
@@ -189,7 +188,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Agent }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Agent getAgent() {
         return agent;
     }
@@ -202,7 +201,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Agent }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setAgent(Agent value) {
         this.agent = value;
     }
@@ -215,7 +214,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link LocationStructure }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public LocationStructure getLocation() {
         return location;
     }
@@ -228,7 +227,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link LocationStructure }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setLocation(LocationStructure value) {
         this.location = value;
     }
@@ -241,7 +240,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Pictures }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Pictures getPictures() {
         return pictures;
     }
@@ -254,7 +253,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Pictures }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setPictures(Pictures value) {
         this.pictures = value;
     }
@@ -267,7 +266,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Videos }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Videos getVideos() {
         return videos;
     }
@@ -280,7 +279,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link Videos }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setVideos(Videos value) {
         this.videos = value;
     }
@@ -293,7 +292,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link OperationType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public OperationType getOperation() {
         return operation;
     }
@@ -306,7 +305,7 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      *     {@link OperationType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setOperation(OperationType value) {
         this.operation = value;
     }
@@ -316,10 +315,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public BigInteger getID() {
         return id;
     }
@@ -329,32 +328,35 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setID(BigInteger value) {
         this.id = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             String theUniqueId;
             theUniqueId = this.getUniqueId();
@@ -403,19 +405,22 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         if (null == target) {
             throw new IllegalArgumentException("Target argument must not be null for abstract copyable classes.");
         }
@@ -542,8 +547,9 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
         return target;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -635,9 +641,10 @@ public abstract class Processable implements Serializable, Cloneable, CopyTo2, E
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 

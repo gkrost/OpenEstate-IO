@@ -1,87 +1,85 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for PropertyTypeBusiness.
+ * <p>Java class for PropertyTypeBusiness</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="PropertyTypeBusiness"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Centro commerciale"/&gt;
- *     &lt;enumeration value="Azienda agricola"/&gt;
- *     &lt;enumeration value="Ristorante"/&gt;
- *     &lt;enumeration value="Bar"/&gt;
- *     &lt;enumeration value="Pizzeria"/&gt;
- *     &lt;enumeration value="Pizza Al Taglio"/&gt;
- *     &lt;enumeration value="Pub"/&gt;
- *     &lt;enumeration value="Alimentari"/&gt;
- *     &lt;enumeration value="Rosticceria"/&gt;
- *     &lt;enumeration value="Pasticceria"/&gt;
- *     &lt;enumeration value="Discoteca"/&gt;
- *     &lt;enumeration value="Hotel"/&gt;
- *     &lt;enumeration value="Bed and Breakfast"/&gt;
- *     &lt;enumeration value="Pensione"/&gt;
- *     &lt;enumeration value="Gelateria"/&gt;
- *     &lt;enumeration value="Panetteria"/&gt;
- *     &lt;enumeration value="Altro | Alimentare"/&gt;
- *     &lt;enumeration value="Negozio"/&gt;
- *     &lt;enumeration value="Ferramenta"/&gt;
- *     &lt;enumeration value="Casalinghi"/&gt;
- *     &lt;enumeration value="Palestra"/&gt;
- *     &lt;enumeration value="Abbigliamento"/&gt;
- *     &lt;enumeration value="Estetica / Solarium"/&gt;
- *     &lt;enumeration value="Parrucchiere uomo/donna"/&gt;
- *     &lt;enumeration value="Auto officina"/&gt;
- *     &lt;enumeration value="Videonoleggio"/&gt;
- *     &lt;enumeration value="Tabaccheria"/&gt;
- *     &lt;enumeration value="Tintoria"/&gt;
- *     &lt;enumeration value="Lavanderia"/&gt;
- *     &lt;enumeration value="Cartoleria"/&gt;
- *     &lt;enumeration value="Libreria"/&gt;
- *     &lt;enumeration value="Informatica"/&gt;
- *     &lt;enumeration value="Telefonia"/&gt;
- *     &lt;enumeration value="Edicola"/&gt;
- *     &lt;enumeration value="Altro | Non alimentare"/&gt;
- *     &lt;enumeration value="Giochi"/&gt;
- *     &lt;enumeration value="Scommesse"/&gt;
- *     &lt;enumeration value="Edificabile residenziale"/&gt;
- *     &lt;enumeration value="Edificabile commerciale"/&gt;
- *     &lt;enumeration value="Edificabile industriale"/&gt;
- *     &lt;enumeration value="Agricolo"/&gt;
- *     &lt;enumeration value="Capannone"/&gt;
- *     &lt;enumeration value="Azienda Agricola"/&gt;
- *     &lt;enumeration value="Garage"/&gt;
- *     &lt;enumeration value="Negozio"/&gt;
- *     &lt;enumeration value="Ufficio"/&gt;
- *     &lt;enumeration value="Stabile"/&gt;
- *     &lt;enumeration value="Capannone Industriale"/&gt;
- *     &lt;enumeration value="Casa di cura"/&gt;
- *     &lt;enumeration value="Magazzino"/&gt;
- *     &lt;enumeration value="Showroom"/&gt;
- *     &lt;enumeration value="Scuderia"/&gt;
- *     &lt;enumeration value="Stabilimento Balneare"/&gt;
- *     &lt;enumeration value="Laboratorio"/&gt;
- *     &lt;enumeration value="Albergo"/&gt;
- *     &lt;enumeration value="Altro"/&gt;
- *     &lt;enumeration value="Agriturismo"/&gt;
- *     &lt;enumeration value="Filiale bancaria"/&gt;
- *     &lt;enumeration value="Consorzio agrario"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="PropertyTypeBusiness">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Centro commerciale"/>
+ *     <enumeration value="Azienda agricola"/>
+ *     <enumeration value="Ristorante"/>
+ *     <enumeration value="Bar"/>
+ *     <enumeration value="Pizzeria"/>
+ *     <enumeration value="Pizza Al Taglio"/>
+ *     <enumeration value="Pub"/>
+ *     <enumeration value="Alimentari"/>
+ *     <enumeration value="Rosticceria"/>
+ *     <enumeration value="Pasticceria"/>
+ *     <enumeration value="Discoteca"/>
+ *     <enumeration value="Hotel"/>
+ *     <enumeration value="Bed and Breakfast"/>
+ *     <enumeration value="Pensione"/>
+ *     <enumeration value="Gelateria"/>
+ *     <enumeration value="Panetteria"/>
+ *     <enumeration value="Altro | Alimentare"/>
+ *     <enumeration value="Negozio"/>
+ *     <enumeration value="Ferramenta"/>
+ *     <enumeration value="Casalinghi"/>
+ *     <enumeration value="Palestra"/>
+ *     <enumeration value="Abbigliamento"/>
+ *     <enumeration value="Estetica / Solarium"/>
+ *     <enumeration value="Parrucchiere uomo/donna"/>
+ *     <enumeration value="Auto officina"/>
+ *     <enumeration value="Videonoleggio"/>
+ *     <enumeration value="Tabaccheria"/>
+ *     <enumeration value="Tintoria"/>
+ *     <enumeration value="Lavanderia"/>
+ *     <enumeration value="Cartoleria"/>
+ *     <enumeration value="Libreria"/>
+ *     <enumeration value="Informatica"/>
+ *     <enumeration value="Telefonia"/>
+ *     <enumeration value="Edicola"/>
+ *     <enumeration value="Altro | Non alimentare"/>
+ *     <enumeration value="Giochi"/>
+ *     <enumeration value="Scommesse"/>
+ *     <enumeration value="Edificabile residenziale"/>
+ *     <enumeration value="Edificabile commerciale"/>
+ *     <enumeration value="Edificabile industriale"/>
+ *     <enumeration value="Agricolo"/>
+ *     <enumeration value="Capannone"/>
+ *     <enumeration value="Azienda Agricola"/>
+ *     <enumeration value="Garage"/>
+ *     <enumeration value="Negozio"/>
+ *     <enumeration value="Ufficio"/>
+ *     <enumeration value="Stabile"/>
+ *     <enumeration value="Capannone Industriale"/>
+ *     <enumeration value="Casa di cura"/>
+ *     <enumeration value="Magazzino"/>
+ *     <enumeration value="Showroom"/>
+ *     <enumeration value="Scuderia"/>
+ *     <enumeration value="Stabilimento Balneare"/>
+ *     <enumeration value="Laboratorio"/>
+ *     <enumeration value="Albergo"/>
+ *     <enumeration value="Altro"/>
+ *     <enumeration value="Agriturismo"/>
+ *     <enumeration value="Filiale bancaria"/>
+ *     <enumeration value="Consorzio agrario"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "PropertyTypeBusiness")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public enum BusinessPropertyType {
 
     @XmlEnumValue("Centro commerciale")
@@ -206,10 +204,26 @@ public enum BusinessPropertyType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static BusinessPropertyType fromValue(String v) {
         for (BusinessPropertyType c: BusinessPropertyType.values()) {
             if (c.value.equals(v)) {

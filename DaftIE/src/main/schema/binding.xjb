@@ -90,7 +90,7 @@
             <jaxb:bindings node="/xsd:schema/xsd:element[@name='geokoordinaten']//xsd:attribute[@name='breitengrad']">
               <jaxb:property>
                 <jaxb:baseType>
-                  <jaxb:javaType name="Double" parseMethod="javax.xml.bind.DatatypeConverter.parseDouble" printMethod="javax.xml.bind.DatatypeConverter.printDouble"/>
+                  <jaxb:javaType name="Double" parseMethod="jakarta.xml.bind.DatatypeConverter.parseDouble" printMethod="jakarta.xml.bind.DatatypeConverter.printDouble"/>
                 </jaxb:baseType>
               </jaxb:property>
             </jaxb:bindings>
@@ -98,7 +98,7 @@
             <jaxb:bindings node="/xsd:schema/xsd:element[@name='geokoordinaten']//xsd:attribute[@name='laengengrad']">
               <jaxb:property>
                 <jaxb:baseType>
-                  <jaxb:javaType name="Double" parseMethod="javax.xml.bind.DatatypeConverter.parseDouble" printMethod="javax.xml.bind.DatatypeConverter.printDouble"/>
+                  <jaxb:javaType name="Double" parseMethod="jakarta.xml.bind.DatatypeConverter.parseDouble" printMethod="jakarta.xml.bind.DatatypeConverter.printDouble"/>
                 </jaxb:baseType>
               </jaxb:property>
             </jaxb:bindings>

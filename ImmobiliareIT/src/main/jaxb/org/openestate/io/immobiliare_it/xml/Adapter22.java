@@ -1,7 +1,6 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import org.openestate.io.immobiliare_it.xml.types.EnergyScaleType;
 
 public class Adapter22

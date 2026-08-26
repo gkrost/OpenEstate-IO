@@ -1,96 +1,95 @@
-
 package org.openestate.io.daft_ie.xml;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for overseasSaleAdType complex type.
+ * <p>Java class for overseasSaleAdType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="overseasSaleAdType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="country" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="region" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="area" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="property_type" type="{}propertyType"/&gt;
- *         &lt;element name="house_type" type="{}houseType"/&gt;
- *         &lt;element name="commercial_type" type="{}commercialType"/&gt;
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="price" type="{}positiveInteger"/&gt;
- *         &lt;element name="price_type"&gt;
- *           &lt;simpleType&gt;
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *               &lt;enumeration value="region"/&gt;
- *               &lt;enumeration value="excess"/&gt;
- *               &lt;enumeration value="from"/&gt;
- *               &lt;enumeration value="on application"/&gt;
- *             &lt;/restriction&gt;
- *           &lt;/simpleType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="bathroom_number" type="{}positiveInteger"/&gt;
- *         &lt;element name="bedroom_number" type="{}positiveInteger"/&gt;
- *         &lt;element name="is_new_development" type="{}bool" minOccurs="0"/&gt;
- *         &lt;element name="units_available" type="{}positiveInteger" minOccurs="0"/&gt;
- *         &lt;element name="new_development_availability" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="square_metres" type="{}positiveDecimal" minOccurs="0"/&gt;
- *         &lt;element name="acres" type="{}positiveDecimal" minOccurs="0"/&gt;
- *         &lt;element name="directions" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="co2_rating" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="energy_rating" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="viewing_details" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="phone1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="phone2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="contact_name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="phone_info" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="main_email" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="cc_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="external_id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="agent_id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="property_status"&gt;
- *           &lt;simpleType&gt;
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *               &lt;enumeration value="for-sale"/&gt;
- *               &lt;enumeration value="sale-agreed"/&gt;
- *               &lt;enumeration value="sold"/&gt;
- *             &lt;/restriction&gt;
- *           &lt;/simpleType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="photos" type="{}photosType" minOccurs="0"/&gt;
- *         &lt;element name="features" type="{}featuresType" minOccurs="0"/&gt;
- *         &lt;element name="pdfs" type="{}pdfsType" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="overseasSaleAdType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="country" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="region" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="area" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="address" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="property_type" type="{}propertyType"/>
+ *         <element name="house_type" type="{}houseType"/>
+ *         <element name="commercial_type" type="{}commercialType"/>
+ *         <element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="price" type="{}positiveInteger"/>
+ *         <element name="price_type">
+ *           <simpleType>
+ *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               <enumeration value="region"/>
+ *               <enumeration value="excess"/>
+ *               <enumeration value="from"/>
+ *               <enumeration value="on application"/>
+ *             </restriction>
+ *           </simpleType>
+ *         </element>
+ *         <element name="bathroom_number" type="{}positiveInteger"/>
+ *         <element name="bedroom_number" type="{}positiveInteger"/>
+ *         <element name="is_new_development" type="{}bool" minOccurs="0"/>
+ *         <element name="units_available" type="{}positiveInteger" minOccurs="0"/>
+ *         <element name="new_development_availability" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="square_metres" type="{}positiveDecimal" minOccurs="0"/>
+ *         <element name="acres" type="{}positiveDecimal" minOccurs="0"/>
+ *         <element name="directions" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="co2_rating" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="energy_rating" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="viewing_details" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="phone1" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="phone2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="contact_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="phone_info" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="main_email" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="cc_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="external_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="agent_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="property_status">
+ *           <simpleType>
+ *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               <enumeration value="for-sale"/>
+ *               <enumeration value="sale-agreed"/>
+ *               <enumeration value="sold"/>
+ *             </restriction>
+ *           </simpleType>
+ *         </element>
+ *         <element name="photos" type="{}photosType" minOccurs="0"/>
+ *         <element name="features" type="{}featuresType" minOccurs="0"/>
+ *         <element name="pdfs" type="{}pdfsType" minOccurs="0"/>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -130,131 +129,271 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "features",
     "pdfs"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
-public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
+public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
+    /**
+     * Country of property
+     * 
+     */
     @XmlElement(required = true, type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter8 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected String country;
+    /**
+     * Administrative level of country immediately below country level
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String region;
+    /**
+     * Administrative level beneath 'region'
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String area;
+    /**
+     * Address of property beneath area level
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String address;
+    /**
+     * Type of property.
+     * 
+     */
     @XmlElement(name = "property_type", required = true)
     @XmlSchemaType(name = "string")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected PropertyType propertyType;
+    /**
+     * If property_type is 'house', there should be a complementary attribute to
+     *                         declare, from the following option set
+     * 
+     */
     @XmlElement(name = "house_type", required = true)
     @XmlSchemaType(name = "string")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected HouseType houseType;
+    /**
+     * If property_type is 'commercial', there should be a complementary attribute to
+     *                         declare, form the following option set
+     * 
+     */
     @XmlElement(name = "commercial_type", required = true)
     @XmlSchemaType(name = "string")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected CommercialType commercialType;
+    /**
+     * Detailed property description
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String description;
+    /**
+     * Price of the property in euros
+     * 
+     */
     @XmlElement(required = true, type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter6 .class)
     @XmlSchemaType(name = "integer")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigInteger price;
+    /**
+     * The price type describes the nature of the price value above. There are also a
+     *                         set of options for this field
+     * 
+     */
     @XmlElement(name = "price_type", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected OverseasSaleAdType.PriceType priceType;
+    /**
+     * Number of bathrooms in the property
+     * 
+     */
     @XmlElement(name = "bathroom_number", required = true, type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter6 .class)
     @XmlSchemaType(name = "integer")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigInteger bathroomNumber;
+    /**
+     * Number of bedrooms in the property
+     * 
+     */
     @XmlElement(name = "bedroom_number", required = true, type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter6 .class)
     @XmlSchemaType(name = "integer")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigInteger bedroomNumber;
+    /**
+     * If set to 1, the property is marked as a new development, 0 means it is a
+     *                         second-hand property
+     * 
+     */
     @XmlElement(name = "is_new_development", type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter4 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected Boolean isNewDevelopment;
+    /**
+     * If is_new_development is set, this field may specify the number of units
+     *                         available in the development
+     * 
+     */
     @XmlElement(name = "units_available", type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter6 .class)
     @XmlSchemaType(name = "integer")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigInteger unitsAvailable;
+    /**
+     * If is_new_development is set, this field may specify any additional feature of
+     *                         the development
+     * 
+     */
     @XmlElement(name = "new_development_availability")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String newDevelopmentAvailability;
+    /**
+     * The size of the property measured in square metres
+     * 
+     */
     @XmlElement(name = "square_metres", type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter5 .class)
     @XmlSchemaType(name = "decimal")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigDecimal squareMetres;
+    /**
+     * The size of area of the property measured in acres
+     * 
+     */
     @XmlElement(type = java.lang.String.class)
     @XmlJavaTypeAdapter(Adapter5 .class)
     @XmlSchemaType(name = "decimal")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected BigDecimal acres;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Directions to the property
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String directions;
+    /**
+     * Information about the co2 rating of the property.
+     * 
+     */
     @XmlElement(name = "co2_rating")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String co2Rating;
+    /**
+     * Information about the energy rating of the property
+     * 
+     */
     @XmlElement(name = "energy_rating")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String energyRating;
+    /**
+     * Information about when and how to visit the property for a viewing
+     * 
+     */
     @XmlElement(name = "viewing_details")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String viewingDetails;
+    /**
+     * Primary contact phone number of the landlord or the representing agent
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String phone1;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Secondary contact phone number of the landlord or the representing agent
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String phone2;
+    /**
+     * Name of the contact person
+     * 
+     */
     @XmlElement(name = "contact_name", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String contactName;
+    /**
+     * State the restraints, if any, on contacting the contact person by phone
+     * 
+     */
     @XmlElement(name = "phone_info")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String phoneInfo;
+    /**
+     * Email address of the primary contact for this property
+     * 
+     */
     @XmlElement(name = "main_email", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String mainEmail;
+    /**
+     * Secondary email address
+     * 
+     */
     @XmlElement(name = "cc_email")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String ccEmail;
+    /**
+     * Primary key / unique ID that is used to identify this property on the client's
+     *                         side
+     * 
+     */
     @XmlElement(name = "external_id", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String externalId;
+    /**
+     * Unique identifier for vendor of this property, supplied by Daft.ie
+     * 
+     */
     @XmlElement(name = "agent_id", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected java.lang.String agentId;
+    /**
+     * Current status of the property. Properties marked 'sold' will be removed from the
+     *                         website.
+     * 
+     */
     @XmlElement(name = "property_status", required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected OverseasSaleAdType.PropertyStatus propertyStatus;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Images associated with the property
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected PhotosType photos;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Features associated with the property
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected FeaturesType features;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Brochures associated with the property
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     protected PdfsType pdfs;
 
     /**
-     * Gets the value of the country property.
+     * Country of property
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public String getCountry() {
         return country;
     }
@@ -264,23 +403,24 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link String }
      *     
+     * @see #getCountry()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setCountry(String value) {
         this.country = value;
     }
 
     /**
-     * Gets the value of the region property.
+     * Administrative level of country immediately below country level
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getRegion() {
         return region;
     }
@@ -292,21 +432,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getRegion()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setRegion(java.lang.String value) {
         this.region = value;
     }
 
     /**
-     * Gets the value of the area property.
+     * Administrative level beneath 'region'
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getArea() {
         return area;
     }
@@ -318,21 +459,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getArea()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setArea(java.lang.String value) {
         this.area = value;
     }
 
     /**
-     * Gets the value of the address property.
+     * Address of property beneath area level
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getAddress() {
         return address;
     }
@@ -344,21 +486,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getAddress()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setAddress(java.lang.String value) {
         this.address = value;
     }
 
     /**
-     * Gets the value of the propertyType property.
+     * Type of property.
      * 
      * @return
      *     possible object is
      *     {@link PropertyType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public PropertyType getPropertyType() {
         return propertyType;
     }
@@ -370,21 +513,23 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link PropertyType }
      *     
+     * @see #getPropertyType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPropertyType(PropertyType value) {
         this.propertyType = value;
     }
 
     /**
-     * Gets the value of the houseType property.
+     * If property_type is 'house', there should be a complementary attribute to
+     *                         declare, from the following option set
      * 
      * @return
      *     possible object is
      *     {@link HouseType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public HouseType getHouseType() {
         return houseType;
     }
@@ -396,21 +541,23 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link HouseType }
      *     
+     * @see #getHouseType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setHouseType(HouseType value) {
         this.houseType = value;
     }
 
     /**
-     * Gets the value of the commercialType property.
+     * If property_type is 'commercial', there should be a complementary attribute to
+     *                         declare, form the following option set
      * 
      * @return
      *     possible object is
      *     {@link CommercialType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public CommercialType getCommercialType() {
         return commercialType;
     }
@@ -422,21 +569,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link CommercialType }
      *     
+     * @see #getCommercialType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setCommercialType(CommercialType value) {
         this.commercialType = value;
     }
 
     /**
-     * Gets the value of the description property.
+     * Detailed property description
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getDescription() {
         return description;
     }
@@ -448,21 +596,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getDescription()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setDescription(java.lang.String value) {
         this.description = value;
     }
 
     /**
-     * Gets the value of the price property.
+     * Price of the property in euros
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigInteger getPrice() {
         return price;
     }
@@ -472,23 +621,25 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
+     * @see #getPrice()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPrice(BigInteger value) {
         this.price = value;
     }
 
     /**
-     * Gets the value of the priceType property.
+     * The price type describes the nature of the price value above. There are also a
+     *                         set of options for this field
      * 
      * @return
      *     possible object is
      *     {@link OverseasSaleAdType.PriceType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public OverseasSaleAdType.PriceType getPriceType() {
         return priceType;
     }
@@ -500,21 +651,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link OverseasSaleAdType.PriceType }
      *     
+     * @see #getPriceType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPriceType(OverseasSaleAdType.PriceType value) {
         this.priceType = value;
     }
 
     /**
-     * Gets the value of the bathroomNumber property.
+     * Number of bathrooms in the property
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigInteger getBathroomNumber() {
         return bathroomNumber;
     }
@@ -524,23 +676,24 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
+     * @see #getBathroomNumber()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setBathroomNumber(BigInteger value) {
         this.bathroomNumber = value;
     }
 
     /**
-     * Gets the value of the bedroomNumber property.
+     * Number of bedrooms in the property
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigInteger getBedroomNumber() {
         return bedroomNumber;
     }
@@ -550,23 +703,25 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
+     * @see #getBedroomNumber()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setBedroomNumber(BigInteger value) {
         this.bedroomNumber = value;
     }
 
     /**
-     * Gets the value of the isNewDevelopment property.
+     * If set to 1, the property is marked as a new development, 0 means it is a
+     *                         second-hand property
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public Boolean getIsNewDevelopment() {
         return isNewDevelopment;
     }
@@ -576,23 +731,25 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link Boolean }
      *     
+     * @see #getIsNewDevelopment()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setIsNewDevelopment(Boolean value) {
         this.isNewDevelopment = value;
     }
 
     /**
-     * Gets the value of the unitsAvailable property.
+     * If is_new_development is set, this field may specify the number of units
+     *                         available in the development
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigInteger getUnitsAvailable() {
         return unitsAvailable;
     }
@@ -602,23 +759,25 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigInteger }
      *     
+     * @see #getUnitsAvailable()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setUnitsAvailable(BigInteger value) {
         this.unitsAvailable = value;
     }
 
     /**
-     * Gets the value of the newDevelopmentAvailability property.
+     * If is_new_development is set, this field may specify any additional feature of
+     *                         the development
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getNewDevelopmentAvailability() {
         return newDevelopmentAvailability;
     }
@@ -630,21 +789,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getNewDevelopmentAvailability()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setNewDevelopmentAvailability(java.lang.String value) {
         this.newDevelopmentAvailability = value;
     }
 
     /**
-     * Gets the value of the squareMetres property.
+     * The size of the property measured in square metres
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigDecimal getSquareMetres() {
         return squareMetres;
     }
@@ -654,23 +814,24 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigDecimal }
      *     
+     * @see #getSquareMetres()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setSquareMetres(BigDecimal value) {
         this.squareMetres = value;
     }
 
     /**
-     * Gets the value of the acres property.
+     * The size of area of the property measured in acres
      * 
      * @return
      *     possible object is
-     *     {@link java.lang.String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public BigDecimal getAcres() {
         return acres;
     }
@@ -680,23 +841,24 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      * 
      * @param value
      *     allowed object is
-     *     {@link java.lang.String }
+     *     {@link BigDecimal }
      *     
+     * @see #getAcres()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setAcres(BigDecimal value) {
         this.acres = value;
     }
 
     /**
-     * Gets the value of the directions property.
+     * Directions to the property
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getDirections() {
         return directions;
     }
@@ -708,21 +870,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getDirections()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setDirections(java.lang.String value) {
         this.directions = value;
     }
 
     /**
-     * Gets the value of the co2Rating property.
+     * Information about the co2 rating of the property.
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getCo2Rating() {
         return co2Rating;
     }
@@ -734,21 +897,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getCo2Rating()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setCo2Rating(java.lang.String value) {
         this.co2Rating = value;
     }
 
     /**
-     * Gets the value of the energyRating property.
+     * Information about the energy rating of the property
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getEnergyRating() {
         return energyRating;
     }
@@ -760,21 +924,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getEnergyRating()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setEnergyRating(java.lang.String value) {
         this.energyRating = value;
     }
 
     /**
-     * Gets the value of the viewingDetails property.
+     * Information about when and how to visit the property for a viewing
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getViewingDetails() {
         return viewingDetails;
     }
@@ -786,21 +951,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getViewingDetails()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setViewingDetails(java.lang.String value) {
         this.viewingDetails = value;
     }
 
     /**
-     * Gets the value of the phone1 property.
+     * Primary contact phone number of the landlord or the representing agent
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getPhone1() {
         return phone1;
     }
@@ -812,21 +978,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getPhone1()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPhone1(java.lang.String value) {
         this.phone1 = value;
     }
 
     /**
-     * Gets the value of the phone2 property.
+     * Secondary contact phone number of the landlord or the representing agent
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getPhone2() {
         return phone2;
     }
@@ -838,21 +1005,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getPhone2()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPhone2(java.lang.String value) {
         this.phone2 = value;
     }
 
     /**
-     * Gets the value of the contactName property.
+     * Name of the contact person
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getContactName() {
         return contactName;
     }
@@ -864,21 +1032,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getContactName()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setContactName(java.lang.String value) {
         this.contactName = value;
     }
 
     /**
-     * Gets the value of the phoneInfo property.
+     * State the restraints, if any, on contacting the contact person by phone
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getPhoneInfo() {
         return phoneInfo;
     }
@@ -890,21 +1059,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getPhoneInfo()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPhoneInfo(java.lang.String value) {
         this.phoneInfo = value;
     }
 
     /**
-     * Gets the value of the mainEmail property.
+     * Email address of the primary contact for this property
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getMainEmail() {
         return mainEmail;
     }
@@ -916,21 +1086,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getMainEmail()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setMainEmail(java.lang.String value) {
         this.mainEmail = value;
     }
 
     /**
-     * Gets the value of the ccEmail property.
+     * Secondary email address
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getCcEmail() {
         return ccEmail;
     }
@@ -942,21 +1113,23 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getCcEmail()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setCcEmail(java.lang.String value) {
         this.ccEmail = value;
     }
 
     /**
-     * Gets the value of the externalId property.
+     * Primary key / unique ID that is used to identify this property on the client's
+     *                         side
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getExternalId() {
         return externalId;
     }
@@ -968,21 +1141,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getExternalId()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setExternalId(java.lang.String value) {
         this.externalId = value;
     }
 
     /**
-     * Gets the value of the agentId property.
+     * Unique identifier for vendor of this property, supplied by Daft.ie
      * 
      * @return
      *     possible object is
      *     {@link java.lang.String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String getAgentId() {
         return agentId;
     }
@@ -994,21 +1168,23 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link java.lang.String }
      *     
+     * @see #getAgentId()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setAgentId(java.lang.String value) {
         this.agentId = value;
     }
 
     /**
-     * Gets the value of the propertyStatus property.
+     * Current status of the property. Properties marked 'sold' will be removed from the
+     *                         website.
      * 
      * @return
      *     possible object is
      *     {@link OverseasSaleAdType.PropertyStatus }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public OverseasSaleAdType.PropertyStatus getPropertyStatus() {
         return propertyStatus;
     }
@@ -1020,21 +1196,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link OverseasSaleAdType.PropertyStatus }
      *     
+     * @see #getPropertyStatus()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPropertyStatus(OverseasSaleAdType.PropertyStatus value) {
         this.propertyStatus = value;
     }
 
     /**
-     * Gets the value of the photos property.
+     * Images associated with the property
      * 
      * @return
      *     possible object is
      *     {@link PhotosType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public PhotosType getPhotos() {
         return photos;
     }
@@ -1046,21 +1223,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link PhotosType }
      *     
+     * @see #getPhotos()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPhotos(PhotosType value) {
         this.photos = value;
     }
 
     /**
-     * Gets the value of the features property.
+     * Features associated with the property
      * 
      * @return
      *     possible object is
      *     {@link FeaturesType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public FeaturesType getFeatures() {
         return features;
     }
@@ -1072,21 +1250,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link FeaturesType }
      *     
+     * @see #getFeatures()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setFeatures(FeaturesType value) {
         this.features = value;
     }
 
     /**
-     * Gets the value of the pdfs property.
+     * Brochures associated with the property
      * 
      * @return
      *     possible object is
      *     {@link PdfsType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public PdfsType getPdfs() {
         return pdfs;
     }
@@ -1098,30 +1277,34 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
      *     allowed object is
      *     {@link PdfsType }
      *     
+     * @see #getPdfs()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public void setPdfs(PdfsType value) {
         this.pdfs = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public java.lang.String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             String theCountry;
             theCountry = this.getCountry();
@@ -1290,19 +1473,22 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof OverseasSaleAdType) {
             final OverseasSaleAdType copy = ((OverseasSaleAdType) draftCopy);
@@ -1739,13 +1925,15 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public Object createNewInstance() {
         return new OverseasSaleAdType();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -2053,33 +2241,33 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="region"/&gt;
-     *     &lt;enumeration value="excess"/&gt;
-     *     &lt;enumeration value="from"/&gt;
-     *     &lt;enumeration value="on application"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="region"/>
+     *     <enumeration value="excess"/>
+     *     <enumeration value="from"/>
+     *     <enumeration value="on application"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public enum PriceType {
 
         @XmlEnumValue("region")
@@ -2096,10 +2284,26 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public java.lang.String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static OverseasSaleAdType.PriceType fromValue(java.lang.String v) {
             for (OverseasSaleAdType.PriceType c: OverseasSaleAdType.PriceType.values()) {
                 if (c.value.equals(v)) {
@@ -2113,24 +2317,23 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="for-sale"/&gt;
-     *     &lt;enumeration value="sale-agreed"/&gt;
-     *     &lt;enumeration value="sold"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="for-sale"/>
+     *     <enumeration value="sale-agreed"/>
+     *     <enumeration value="sold"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:29:52+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:16:52+02:00")
     public enum PropertyStatus {
 
         @XmlEnumValue("for-sale")
@@ -2145,10 +2348,26 @@ public class OverseasSaleAdType implements Serializable, Cloneable, CopyTo2, Equ
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public java.lang.String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static OverseasSaleAdType.PropertyStatus fromValue(java.lang.String v) {
             for (OverseasSaleAdType.PropertyStatus c: OverseasSaleAdType.PropertyStatus.values()) {
                 if (c.value.equals(v)) {

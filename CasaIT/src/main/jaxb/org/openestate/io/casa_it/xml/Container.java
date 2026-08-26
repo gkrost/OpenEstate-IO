@@ -1,4 +1,3 @@
-
 package org.openestate.io.casa_it.xml;
 
 import java.io.Serializable;
@@ -6,408 +5,408 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for anonymous complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice&gt;
- *         &lt;element name="realestateitems"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="realestate" maxOccurs="unbounded"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="address" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="city" use="required"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                           &lt;length value="6"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                                     &lt;attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                                     &lt;attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                                     &lt;attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="description" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="value" use="required"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                           &lt;minLength value="20"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="building" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="age"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;minInclusive value="-1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="expenses"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
- *                                           &lt;minInclusive value="-1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="units"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;minInclusive value="-1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="totalfloors"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;minInclusive value="-1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="price" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="value"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
- *                                           &lt;minInclusive value="-1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="min" use="required"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
- *                                           &lt;minInclusive value="0"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="max" use="required"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
- *                                           &lt;minInclusive value="1"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="box" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="size"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;minInclusive value="0"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="type"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;enumeration value="-1"/&gt;
- *                                           &lt;enumeration value="0"/&gt;
- *                                           &lt;enumeration value="1"/&gt;
- *                                           &lt;enumeration value="2"/&gt;
- *                                           &lt;enumeration value="3"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="garden" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="size"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;minInclusive value="0"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="type"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                           &lt;enumeration value="-1"/&gt;
- *                                           &lt;enumeration value="0"/&gt;
- *                                           &lt;enumeration value="1"/&gt;
- *                                           &lt;enumeration value="2"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="configuration" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *                                     &lt;attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *                                     &lt;attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="googlemapcoordinate" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *                                     &lt;attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *                                     &lt;attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
- *                                     &lt;attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *                                     &lt;attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="images" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;sequence&gt;
- *                                       &lt;element name="advertismentimage" maxOccurs="14"&gt;
- *                                         &lt;complexType&gt;
- *                                           &lt;complexContent&gt;
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                               &lt;attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                                               &lt;attribute name="imagetype" use="required"&gt;
- *                                                 &lt;simpleType&gt;
- *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                                     &lt;enumeration value="Image"/&gt;
- *                                                     &lt;enumeration value="Map"/&gt;
- *                                                   &lt;/restriction&gt;
- *                                                 &lt;/simpleType&gt;
- *                                               &lt;/attribute&gt;
- *                                             &lt;/restriction&gt;
- *                                           &lt;/complexContent&gt;
- *                                         &lt;/complexType&gt;
- *                                       &lt;/element&gt;
- *                                     &lt;/sequence&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                           &lt;attribute name="action" use="required"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="0"/&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
- *                           &lt;attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                           &lt;attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
- *                           &lt;attribute name="contracttype" use="required"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="condition"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="-1"/&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                                 &lt;enumeration value="3"/&gt;
- *                                 &lt;enumeration value="4"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                           &lt;attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                           &lt;attribute name="heatingtype"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="-1"/&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                                 &lt;enumeration value="3"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="housetypology" use="required"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="3"/&gt;
- *                                 &lt;enumeration value="4"/&gt;
- *                                 &lt;enumeration value="5"/&gt;
- *                                 &lt;enumeration value="6"/&gt;
- *                                 &lt;enumeration value="7"/&gt;
- *                                 &lt;enumeration value="8"/&gt;
- *                                 &lt;enumeration value="9"/&gt;
- *                                 &lt;enumeration value="10"/&gt;
- *                                 &lt;enumeration value="11"/&gt;
- *                                 &lt;enumeration value="12"/&gt;
- *                                 &lt;enumeration value="13"/&gt;
- *                                 &lt;enumeration value="14"/&gt;
- *                                 &lt;enumeration value="15"/&gt;
- *                                 &lt;enumeration value="16"/&gt;
- *                                 &lt;enumeration value="17"/&gt;
- *                                 &lt;enumeration value="18"/&gt;
- *                                 &lt;enumeration value="19"/&gt;
- *                                 &lt;enumeration value="20"/&gt;
- *                                 &lt;enumeration value="21"/&gt;
- *                                 &lt;enumeration value="22"/&gt;
- *                                 &lt;enumeration value="23"/&gt;
- *                                 &lt;enumeration value="24"/&gt;
- *                                 &lt;enumeration value="26"/&gt;
- *                                 &lt;enumeration value="27"/&gt;
- *                                 &lt;enumeration value="28"/&gt;
- *                                 &lt;enumeration value="29"/&gt;
- *                                 &lt;enumeration value="30"/&gt;
- *                                 &lt;enumeration value="31"/&gt;
- *                                 &lt;enumeration value="32"/&gt;
- *                                 &lt;enumeration value="33"/&gt;
- *                                 &lt;enumeration value="34"/&gt;
- *                                 &lt;enumeration value="35"/&gt;
- *                                 &lt;enumeration value="36"/&gt;
- *                                 &lt;enumeration value="37"/&gt;
- *                                 &lt;enumeration value="38"/&gt;
- *                                 &lt;enumeration value="39"/&gt;
- *                                 &lt;enumeration value="40"/&gt;
- *                                 &lt;enumeration value="41"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="bathrooms"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;minInclusive value="-1"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="floor"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="-2"/&gt;
- *                                 &lt;enumeration value="-1"/&gt;
- *                                 &lt;enumeration value="0"/&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                                 &lt;enumeration value="3"/&gt;
- *                                 &lt;enumeration value="4"/&gt;
- *                                 &lt;enumeration value="5"/&gt;
- *                                 &lt;enumeration value="6"/&gt;
- *                                 &lt;enumeration value="7"/&gt;
- *                                 &lt;enumeration value="8"/&gt;
- *                                 &lt;enumeration value="9"/&gt;
- *                                 &lt;enumeration value="10"/&gt;
- *                                 &lt;enumeration value="11"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="rooms"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;minInclusive value="-1"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="occupationstate"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="-1"/&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                                 &lt;enumeration value="3"/&gt;
- *                                 &lt;enumeration value="4"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="realestatetype" use="required"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
- *                                 &lt;enumeration value="1"/&gt;
- *                                 &lt;enumeration value="2"/&gt;
- *                                 &lt;enumeration value="4"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/choice&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <choice>
+ *         <element name="realestateitems">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="realestate" maxOccurs="unbounded">
+ *                     <complexType>
+ *                       <complexContent>
+ *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           <sequence>
+ *                             <element name="address" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="city" use="required">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                           <length value="6"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                     <attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                     <attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                     <attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="description" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="value" use="required">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                           <minLength value="20"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="building" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="age">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <minInclusive value="-1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="expenses">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+ *                                           <minInclusive value="-1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="units">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <minInclusive value="-1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="totalfloors">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <minInclusive value="-1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="price" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="value">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+ *                                           <minInclusive value="-1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="min" use="required">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+ *                                           <minInclusive value="0"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="max" use="required">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+ *                                           <minInclusive value="1"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="box" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="size">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <minInclusive value="0"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="type">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <enumeration value="-1"/>
+ *                                           <enumeration value="0"/>
+ *                                           <enumeration value="1"/>
+ *                                           <enumeration value="2"/>
+ *                                           <enumeration value="3"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="garden" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="size">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <minInclusive value="0"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                     <attribute name="type">
+ *                                       <simpleType>
+ *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                           <enumeration value="-1"/>
+ *                                           <enumeration value="0"/>
+ *                                           <enumeration value="1"/>
+ *                                           <enumeration value="2"/>
+ *                                         </restriction>
+ *                                       </simpleType>
+ *                                     </attribute>
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="configuration" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *                                     <attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *                                     <attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="googlemapcoordinate" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *                                     <attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *                                     <attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                                     <attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *                                     <attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                             <element name="images" minOccurs="0">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <sequence>
+ *                                       <element name="advertismentimage" maxOccurs="14">
+ *                                         <complexType>
+ *                                           <complexContent>
+ *                                             <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                               <attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                               <attribute name="imagetype" use="required">
+ *                                                 <simpleType>
+ *                                                   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                                     <enumeration value="Image"/>
+ *                                                     <enumeration value="Map"/>
+ *                                                   </restriction>
+ *                                                 </simpleType>
+ *                                               </attribute>
+ *                                             </restriction>
+ *                                           </complexContent>
+ *                                         </complexType>
+ *                                       </element>
+ *                                     </sequence>
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                           </sequence>
+ *                           <attribute name="action" use="required">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="0"/>
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                           <attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                           <attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                           <attribute name="contracttype" use="required">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="condition">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="-1"/>
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                                 <enumeration value="3"/>
+ *                                 <enumeration value="4"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                           <attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                           <attribute name="heatingtype">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="-1"/>
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                                 <enumeration value="3"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="housetypology" use="required">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="3"/>
+ *                                 <enumeration value="4"/>
+ *                                 <enumeration value="5"/>
+ *                                 <enumeration value="6"/>
+ *                                 <enumeration value="7"/>
+ *                                 <enumeration value="8"/>
+ *                                 <enumeration value="9"/>
+ *                                 <enumeration value="10"/>
+ *                                 <enumeration value="11"/>
+ *                                 <enumeration value="12"/>
+ *                                 <enumeration value="13"/>
+ *                                 <enumeration value="14"/>
+ *                                 <enumeration value="15"/>
+ *                                 <enumeration value="16"/>
+ *                                 <enumeration value="17"/>
+ *                                 <enumeration value="18"/>
+ *                                 <enumeration value="19"/>
+ *                                 <enumeration value="20"/>
+ *                                 <enumeration value="21"/>
+ *                                 <enumeration value="22"/>
+ *                                 <enumeration value="23"/>
+ *                                 <enumeration value="24"/>
+ *                                 <enumeration value="26"/>
+ *                                 <enumeration value="27"/>
+ *                                 <enumeration value="28"/>
+ *                                 <enumeration value="29"/>
+ *                                 <enumeration value="30"/>
+ *                                 <enumeration value="31"/>
+ *                                 <enumeration value="32"/>
+ *                                 <enumeration value="33"/>
+ *                                 <enumeration value="34"/>
+ *                                 <enumeration value="35"/>
+ *                                 <enumeration value="36"/>
+ *                                 <enumeration value="37"/>
+ *                                 <enumeration value="38"/>
+ *                                 <enumeration value="39"/>
+ *                                 <enumeration value="40"/>
+ *                                 <enumeration value="41"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="bathrooms">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <minInclusive value="-1"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="floor">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="-2"/>
+ *                                 <enumeration value="-1"/>
+ *                                 <enumeration value="0"/>
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                                 <enumeration value="3"/>
+ *                                 <enumeration value="4"/>
+ *                                 <enumeration value="5"/>
+ *                                 <enumeration value="6"/>
+ *                                 <enumeration value="7"/>
+ *                                 <enumeration value="8"/>
+ *                                 <enumeration value="9"/>
+ *                                 <enumeration value="10"/>
+ *                                 <enumeration value="11"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="rooms">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <minInclusive value="-1"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="occupationstate">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="-1"/>
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                                 <enumeration value="3"/>
+ *                                 <enumeration value="4"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="realestatetype" use="required">
+ *                             <simpleType>
+ *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+ *                                 <enumeration value="1"/>
+ *                                 <enumeration value="2"/>
+ *                                 <enumeration value="4"/>
+ *                               </restriction>
+ *                             </simpleType>
+ *                           </attribute>
+ *                           <attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *                         </restriction>
+ *                       </complexContent>
+ *                     </complexType>
+ *                   </element>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *       </choice>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -416,11 +415,11 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "realestateitems"
 })
 @XmlRootElement(name = "container")
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+public class Container implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     protected Container.Realestateitems realestateitems;
 
     /**
@@ -431,7 +430,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
      *     {@link Container.Realestateitems }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public Container.Realestateitems getRealestateitems() {
         return realestateitems;
     }
@@ -444,29 +443,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
      *     {@link Container.Realestateitems }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public void setRealestateitems(Container.Realestateitems value) {
         this.realestateitems = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             Container.Realestateitems theRealestateitems;
             theRealestateitems = this.getRealestateitems();
@@ -475,19 +477,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof Container) {
             final Container copy = ((Container) draftCopy);
@@ -508,13 +513,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public Object createNewInstance() {
         return new Container();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -534,383 +541,384 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="realestate" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="address" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="city" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;length value="6"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                           &lt;attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                           &lt;attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                           &lt;attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="description" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="value" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;minLength value="20"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="building" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="age"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;minInclusive value="-1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="expenses"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;minInclusive value="-1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="units"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;minInclusive value="-1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="totalfloors"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;minInclusive value="-1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="price" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="value"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;minInclusive value="-1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="min" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;minInclusive value="0"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="max" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;minInclusive value="1"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="box" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="size"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;minInclusive value="0"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="type"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;enumeration value="-1"/&gt;
-     *                                 &lt;enumeration value="0"/&gt;
-     *                                 &lt;enumeration value="1"/&gt;
-     *                                 &lt;enumeration value="2"/&gt;
-     *                                 &lt;enumeration value="3"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="garden" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="size"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;minInclusive value="0"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="type"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                                 &lt;enumeration value="-1"/&gt;
-     *                                 &lt;enumeration value="0"/&gt;
-     *                                 &lt;enumeration value="1"/&gt;
-     *                                 &lt;enumeration value="2"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="configuration" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-     *                           &lt;attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-     *                           &lt;attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="googlemapcoordinate" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-     *                           &lt;attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-     *                           &lt;attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-     *                           &lt;attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-     *                           &lt;attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="images" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="advertismentimage" maxOccurs="14"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                                     &lt;attribute name="imagetype" use="required"&gt;
-     *                                       &lt;simpleType&gt;
-     *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                           &lt;enumeration value="Image"/&gt;
-     *                                           &lt;enumeration value="Map"/&gt;
-     *                                         &lt;/restriction&gt;
-     *                                       &lt;/simpleType&gt;
-     *                                     &lt;/attribute&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *                 &lt;attribute name="action" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="0"/&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-     *                 &lt;attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *                 &lt;attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-     *                 &lt;attribute name="contracttype" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="condition"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="-1"/&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                       &lt;enumeration value="3"/&gt;
-     *                       &lt;enumeration value="4"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *                 &lt;attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *                 &lt;attribute name="heatingtype"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="-1"/&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                       &lt;enumeration value="3"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="housetypology" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="3"/&gt;
-     *                       &lt;enumeration value="4"/&gt;
-     *                       &lt;enumeration value="5"/&gt;
-     *                       &lt;enumeration value="6"/&gt;
-     *                       &lt;enumeration value="7"/&gt;
-     *                       &lt;enumeration value="8"/&gt;
-     *                       &lt;enumeration value="9"/&gt;
-     *                       &lt;enumeration value="10"/&gt;
-     *                       &lt;enumeration value="11"/&gt;
-     *                       &lt;enumeration value="12"/&gt;
-     *                       &lt;enumeration value="13"/&gt;
-     *                       &lt;enumeration value="14"/&gt;
-     *                       &lt;enumeration value="15"/&gt;
-     *                       &lt;enumeration value="16"/&gt;
-     *                       &lt;enumeration value="17"/&gt;
-     *                       &lt;enumeration value="18"/&gt;
-     *                       &lt;enumeration value="19"/&gt;
-     *                       &lt;enumeration value="20"/&gt;
-     *                       &lt;enumeration value="21"/&gt;
-     *                       &lt;enumeration value="22"/&gt;
-     *                       &lt;enumeration value="23"/&gt;
-     *                       &lt;enumeration value="24"/&gt;
-     *                       &lt;enumeration value="26"/&gt;
-     *                       &lt;enumeration value="27"/&gt;
-     *                       &lt;enumeration value="28"/&gt;
-     *                       &lt;enumeration value="29"/&gt;
-     *                       &lt;enumeration value="30"/&gt;
-     *                       &lt;enumeration value="31"/&gt;
-     *                       &lt;enumeration value="32"/&gt;
-     *                       &lt;enumeration value="33"/&gt;
-     *                       &lt;enumeration value="34"/&gt;
-     *                       &lt;enumeration value="35"/&gt;
-     *                       &lt;enumeration value="36"/&gt;
-     *                       &lt;enumeration value="37"/&gt;
-     *                       &lt;enumeration value="38"/&gt;
-     *                       &lt;enumeration value="39"/&gt;
-     *                       &lt;enumeration value="40"/&gt;
-     *                       &lt;enumeration value="41"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="bathrooms"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;minInclusive value="-1"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="floor"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="-2"/&gt;
-     *                       &lt;enumeration value="-1"/&gt;
-     *                       &lt;enumeration value="0"/&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                       &lt;enumeration value="3"/&gt;
-     *                       &lt;enumeration value="4"/&gt;
-     *                       &lt;enumeration value="5"/&gt;
-     *                       &lt;enumeration value="6"/&gt;
-     *                       &lt;enumeration value="7"/&gt;
-     *                       &lt;enumeration value="8"/&gt;
-     *                       &lt;enumeration value="9"/&gt;
-     *                       &lt;enumeration value="10"/&gt;
-     *                       &lt;enumeration value="11"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="rooms"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;minInclusive value="-1"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="occupationstate"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="-1"/&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                       &lt;enumeration value="3"/&gt;
-     *                       &lt;enumeration value="4"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="realestatetype" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-     *                       &lt;enumeration value="1"/&gt;
-     *                       &lt;enumeration value="2"/&gt;
-     *                       &lt;enumeration value="4"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <sequence>
+     *         <element name="realestate" maxOccurs="unbounded">
+     *           <complexType>
+     *             <complexContent>
+     *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 <sequence>
+     *                   <element name="address" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="city" use="required">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                                 <length value="6"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                           <attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                           <attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                           <attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="description" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="value" use="required">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                                 <minLength value="20"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="building" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="age">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <minInclusive value="-1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="expenses">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+     *                                 <minInclusive value="-1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="units">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <minInclusive value="-1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="totalfloors">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <minInclusive value="-1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="price" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="value">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+     *                                 <minInclusive value="-1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="min" use="required">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+     *                                 <minInclusive value="0"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="max" use="required">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+     *                                 <minInclusive value="1"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="box" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="size">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <minInclusive value="0"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="type">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <enumeration value="-1"/>
+     *                                 <enumeration value="0"/>
+     *                                 <enumeration value="1"/>
+     *                                 <enumeration value="2"/>
+     *                                 <enumeration value="3"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="garden" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="size">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <minInclusive value="0"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                           <attribute name="type">
+     *                             <simpleType>
+     *                               <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                                 <enumeration value="-1"/>
+     *                                 <enumeration value="0"/>
+     *                                 <enumeration value="1"/>
+     *                                 <enumeration value="2"/>
+     *                               </restriction>
+     *                             </simpleType>
+     *                           </attribute>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="configuration" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+     *                           <attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+     *                           <attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="googlemapcoordinate" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+     *                           <attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+     *                           <attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                           <attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+     *                           <attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="images" minOccurs="0">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <sequence>
+     *                             <element name="advertismentimage" maxOccurs="14">
+     *                               <complexType>
+     *                                 <complexContent>
+     *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                                     <attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                                     <attribute name="imagetype" use="required">
+     *                                       <simpleType>
+     *                                         <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                                           <enumeration value="Image"/>
+     *                                           <enumeration value="Map"/>
+     *                                         </restriction>
+     *                                       </simpleType>
+     *                                     </attribute>
+     *                                   </restriction>
+     *                                 </complexContent>
+     *                               </complexType>
+     *                             </element>
+     *                           </sequence>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                 </sequence>
+     *                 <attribute name="action" use="required">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="0"/>
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                 <attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                 <attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                 <attribute name="contracttype" use="required">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="condition">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="-1"/>
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                       <enumeration value="3"/>
+     *                       <enumeration value="4"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *                 <attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *                 <attribute name="heatingtype">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="-1"/>
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                       <enumeration value="3"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="housetypology" use="required">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="3"/>
+     *                       <enumeration value="4"/>
+     *                       <enumeration value="5"/>
+     *                       <enumeration value="6"/>
+     *                       <enumeration value="7"/>
+     *                       <enumeration value="8"/>
+     *                       <enumeration value="9"/>
+     *                       <enumeration value="10"/>
+     *                       <enumeration value="11"/>
+     *                       <enumeration value="12"/>
+     *                       <enumeration value="13"/>
+     *                       <enumeration value="14"/>
+     *                       <enumeration value="15"/>
+     *                       <enumeration value="16"/>
+     *                       <enumeration value="17"/>
+     *                       <enumeration value="18"/>
+     *                       <enumeration value="19"/>
+     *                       <enumeration value="20"/>
+     *                       <enumeration value="21"/>
+     *                       <enumeration value="22"/>
+     *                       <enumeration value="23"/>
+     *                       <enumeration value="24"/>
+     *                       <enumeration value="26"/>
+     *                       <enumeration value="27"/>
+     *                       <enumeration value="28"/>
+     *                       <enumeration value="29"/>
+     *                       <enumeration value="30"/>
+     *                       <enumeration value="31"/>
+     *                       <enumeration value="32"/>
+     *                       <enumeration value="33"/>
+     *                       <enumeration value="34"/>
+     *                       <enumeration value="35"/>
+     *                       <enumeration value="36"/>
+     *                       <enumeration value="37"/>
+     *                       <enumeration value="38"/>
+     *                       <enumeration value="39"/>
+     *                       <enumeration value="40"/>
+     *                       <enumeration value="41"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="bathrooms">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <minInclusive value="-1"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="floor">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="-2"/>
+     *                       <enumeration value="-1"/>
+     *                       <enumeration value="0"/>
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                       <enumeration value="3"/>
+     *                       <enumeration value="4"/>
+     *                       <enumeration value="5"/>
+     *                       <enumeration value="6"/>
+     *                       <enumeration value="7"/>
+     *                       <enumeration value="8"/>
+     *                       <enumeration value="9"/>
+     *                       <enumeration value="10"/>
+     *                       <enumeration value="11"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="rooms">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <minInclusive value="-1"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="occupationstate">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="-1"/>
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                       <enumeration value="3"/>
+     *                       <enumeration value="4"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="realestatetype" use="required">
+     *                   <simpleType>
+     *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+     *                       <enumeration value="1"/>
+     *                       <enumeration value="2"/>
+     *                       <enumeration value="4"/>
+     *                     </restriction>
+     *                   </simpleType>
+     *                 </attribute>
+     *                 <attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+     *               </restriction>
+     *             </complexContent>
+     *           </complexType>
+     *         </element>
+     *       </sequence>
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
@@ -918,62 +926,68 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
     @XmlType(name = "", propOrder = {
         "realestate"
     })
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-    public static class Realestateitems implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+    public static class Realestateitems implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlElement(required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         protected List<Container.Realestateitems.Realestate> realestate;
 
         /**
          * Gets the value of the realestate property.
          * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the realestate property.
+         * <p>This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore, any modification you make to the
+         * returned list will be present inside the Jakarta XML Binding object.
+         * This is why there is not a {@code set} method for the realestate property.</p>
          * 
          * <p>
          * For example, to add a new item, do as follows:
+         * </p>
          * <pre>
-         *    getRealestate().add(newItem);
+         * getRealestate().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Container.Realestateitems.Realestate }
+         * </p>
          * 
          * 
+         * @return
+         *     The value of the realestate property.
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public List<Container.Realestateitems.Realestate> getRealestate() {
             if (realestate == null) {
-                realestate = new ArrayList<Container.Realestateitems.Realestate>();
+                realestate = new ArrayList<>();
             }
             return this.realestate;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 List<Container.Realestateitems.Realestate> theRealestate;
                 theRealestate = (((this.realestate!= null)&&(!this.realestate.isEmpty()))?this.getRealestate():null);
@@ -982,19 +996,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof Container.Realestateitems) {
                 final Container.Realestateitems copy = ((Container.Realestateitems) draftCopy);
@@ -1020,13 +1037,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public Object createNewInstance() {
             return new Container.Realestateitems();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -1046,373 +1065,374 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Java class for anonymous complex type</p>.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
          * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="address" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="city" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;length value="6"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *                 &lt;attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *                 &lt;attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *                 &lt;attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="description" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="value" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;minLength value="20"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="building" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="age"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;minInclusive value="-1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="expenses"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;minInclusive value="-1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="units"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;minInclusive value="-1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="totalfloors"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;minInclusive value="-1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="price" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="value"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;minInclusive value="-1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="min" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;minInclusive value="0"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="max" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;minInclusive value="1"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="box" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="size"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;minInclusive value="0"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="type"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;enumeration value="-1"/&gt;
-         *                       &lt;enumeration value="0"/&gt;
-         *                       &lt;enumeration value="1"/&gt;
-         *                       &lt;enumeration value="2"/&gt;
-         *                       &lt;enumeration value="3"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="garden" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="size"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;minInclusive value="0"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="type"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *                       &lt;enumeration value="-1"/&gt;
-         *                       &lt;enumeration value="0"/&gt;
-         *                       &lt;enumeration value="1"/&gt;
-         *                       &lt;enumeration value="2"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="configuration" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-         *                 &lt;attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-         *                 &lt;attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="googlemapcoordinate" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-         *                 &lt;attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-         *                 &lt;attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-         *                 &lt;attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-         *                 &lt;attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="images" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="advertismentimage" maxOccurs="14"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *                           &lt;attribute name="imagetype" use="required"&gt;
-         *                             &lt;simpleType&gt;
-         *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                                 &lt;enumeration value="Image"/&gt;
-         *                                 &lt;enumeration value="Map"/&gt;
-         *                               &lt;/restriction&gt;
-         *                             &lt;/simpleType&gt;
-         *                           &lt;/attribute&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *       &lt;attribute name="action" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="0"/&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-         *       &lt;attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-         *       &lt;attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-         *       &lt;attribute name="contracttype" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="condition"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="-1"/&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *             &lt;enumeration value="3"/&gt;
-         *             &lt;enumeration value="4"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *       &lt;attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *       &lt;attribute name="heatingtype"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="-1"/&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *             &lt;enumeration value="3"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="housetypology" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="3"/&gt;
-         *             &lt;enumeration value="4"/&gt;
-         *             &lt;enumeration value="5"/&gt;
-         *             &lt;enumeration value="6"/&gt;
-         *             &lt;enumeration value="7"/&gt;
-         *             &lt;enumeration value="8"/&gt;
-         *             &lt;enumeration value="9"/&gt;
-         *             &lt;enumeration value="10"/&gt;
-         *             &lt;enumeration value="11"/&gt;
-         *             &lt;enumeration value="12"/&gt;
-         *             &lt;enumeration value="13"/&gt;
-         *             &lt;enumeration value="14"/&gt;
-         *             &lt;enumeration value="15"/&gt;
-         *             &lt;enumeration value="16"/&gt;
-         *             &lt;enumeration value="17"/&gt;
-         *             &lt;enumeration value="18"/&gt;
-         *             &lt;enumeration value="19"/&gt;
-         *             &lt;enumeration value="20"/&gt;
-         *             &lt;enumeration value="21"/&gt;
-         *             &lt;enumeration value="22"/&gt;
-         *             &lt;enumeration value="23"/&gt;
-         *             &lt;enumeration value="24"/&gt;
-         *             &lt;enumeration value="26"/&gt;
-         *             &lt;enumeration value="27"/&gt;
-         *             &lt;enumeration value="28"/&gt;
-         *             &lt;enumeration value="29"/&gt;
-         *             &lt;enumeration value="30"/&gt;
-         *             &lt;enumeration value="31"/&gt;
-         *             &lt;enumeration value="32"/&gt;
-         *             &lt;enumeration value="33"/&gt;
-         *             &lt;enumeration value="34"/&gt;
-         *             &lt;enumeration value="35"/&gt;
-         *             &lt;enumeration value="36"/&gt;
-         *             &lt;enumeration value="37"/&gt;
-         *             &lt;enumeration value="38"/&gt;
-         *             &lt;enumeration value="39"/&gt;
-         *             &lt;enumeration value="40"/&gt;
-         *             &lt;enumeration value="41"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="bathrooms"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;minInclusive value="-1"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="floor"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="-2"/&gt;
-         *             &lt;enumeration value="-1"/&gt;
-         *             &lt;enumeration value="0"/&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *             &lt;enumeration value="3"/&gt;
-         *             &lt;enumeration value="4"/&gt;
-         *             &lt;enumeration value="5"/&gt;
-         *             &lt;enumeration value="6"/&gt;
-         *             &lt;enumeration value="7"/&gt;
-         *             &lt;enumeration value="8"/&gt;
-         *             &lt;enumeration value="9"/&gt;
-         *             &lt;enumeration value="10"/&gt;
-         *             &lt;enumeration value="11"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="rooms"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;minInclusive value="-1"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="occupationstate"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="-1"/&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *             &lt;enumeration value="3"/&gt;
-         *             &lt;enumeration value="4"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="realestatetype" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-         *             &lt;enumeration value="1"/&gt;
-         *             &lt;enumeration value="2"/&gt;
-         *             &lt;enumeration value="4"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
+         * <pre>{@code
+         * <complexType>
+         *   <complexContent>
+         *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       <sequence>
+         *         <element name="address" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="city" use="required">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *                       <length value="6"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *                 <attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *                 <attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *                 <attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="description" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="value" use="required">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *                       <minLength value="20"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="building" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="age">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <minInclusive value="-1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="expenses">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+         *                       <minInclusive value="-1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="units">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <minInclusive value="-1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="totalfloors">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <minInclusive value="-1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="price" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="value">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+         *                       <minInclusive value="-1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="min" use="required">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+         *                       <minInclusive value="0"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="max" use="required">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+         *                       <minInclusive value="1"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="box" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="size">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <minInclusive value="0"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="type">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <enumeration value="-1"/>
+         *                       <enumeration value="0"/>
+         *                       <enumeration value="1"/>
+         *                       <enumeration value="2"/>
+         *                       <enumeration value="3"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="garden" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="size">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <minInclusive value="0"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *                 <attribute name="type">
+         *                   <simpleType>
+         *                     <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *                       <enumeration value="-1"/>
+         *                       <enumeration value="0"/>
+         *                       <enumeration value="1"/>
+         *                       <enumeration value="2"/>
+         *                     </restriction>
+         *                   </simpleType>
+         *                 </attribute>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="configuration" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+         *                 <attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+         *                 <attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="googlemapcoordinate" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+         *                 <attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+         *                 <attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *                 <attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+         *                 <attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="images" minOccurs="0">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <sequence>
+         *                   <element name="advertismentimage" maxOccurs="14">
+         *                     <complexType>
+         *                       <complexContent>
+         *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                           <attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *                           <attribute name="imagetype" use="required">
+         *                             <simpleType>
+         *                               <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *                                 <enumeration value="Image"/>
+         *                                 <enumeration value="Map"/>
+         *                               </restriction>
+         *                             </simpleType>
+         *                           </attribute>
+         *                         </restriction>
+         *                       </complexContent>
+         *                     </complexType>
+         *                   </element>
+         *                 </sequence>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *       </sequence>
+         *       <attribute name="action" use="required">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="0"/>
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="agencycode" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *       <attribute name="reference" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *       <attribute name="referenceID" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *       <attribute name="contracttype" use="required">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="condition">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="-1"/>
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *             <enumeration value="3"/>
+         *             <enumeration value="4"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="hasbalcony" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *       <attribute name="hasterrace" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *       <attribute name="heatingtype">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="-1"/>
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *             <enumeration value="3"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="housetypology" use="required">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="1"/>
+         *             <enumeration value="3"/>
+         *             <enumeration value="4"/>
+         *             <enumeration value="5"/>
+         *             <enumeration value="6"/>
+         *             <enumeration value="7"/>
+         *             <enumeration value="8"/>
+         *             <enumeration value="9"/>
+         *             <enumeration value="10"/>
+         *             <enumeration value="11"/>
+         *             <enumeration value="12"/>
+         *             <enumeration value="13"/>
+         *             <enumeration value="14"/>
+         *             <enumeration value="15"/>
+         *             <enumeration value="16"/>
+         *             <enumeration value="17"/>
+         *             <enumeration value="18"/>
+         *             <enumeration value="19"/>
+         *             <enumeration value="20"/>
+         *             <enumeration value="21"/>
+         *             <enumeration value="22"/>
+         *             <enumeration value="23"/>
+         *             <enumeration value="24"/>
+         *             <enumeration value="26"/>
+         *             <enumeration value="27"/>
+         *             <enumeration value="28"/>
+         *             <enumeration value="29"/>
+         *             <enumeration value="30"/>
+         *             <enumeration value="31"/>
+         *             <enumeration value="32"/>
+         *             <enumeration value="33"/>
+         *             <enumeration value="34"/>
+         *             <enumeration value="35"/>
+         *             <enumeration value="36"/>
+         *             <enumeration value="37"/>
+         *             <enumeration value="38"/>
+         *             <enumeration value="39"/>
+         *             <enumeration value="40"/>
+         *             <enumeration value="41"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="bathrooms">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <minInclusive value="-1"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="floor">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="-2"/>
+         *             <enumeration value="-1"/>
+         *             <enumeration value="0"/>
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *             <enumeration value="3"/>
+         *             <enumeration value="4"/>
+         *             <enumeration value="5"/>
+         *             <enumeration value="6"/>
+         *             <enumeration value="7"/>
+         *             <enumeration value="8"/>
+         *             <enumeration value="9"/>
+         *             <enumeration value="10"/>
+         *             <enumeration value="11"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="rooms">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <minInclusive value="-1"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="occupationstate">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="-1"/>
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *             <enumeration value="3"/>
+         *             <enumeration value="4"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="realestatetype" use="required">
+         *         <simpleType>
+         *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+         *             <enumeration value="1"/>
+         *             <enumeration value="2"/>
+         *             <enumeration value="4"/>
+         *           </restriction>
+         *         </simpleType>
+         *       </attribute>
+         *       <attribute name="size" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+         *     </restriction>
+         *   </complexContent>
+         * </complexType>
+         * }</pre>
          * 
          * 
          */
@@ -1428,75 +1448,75 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
             "googlemapcoordinate",
             "images"
         })
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-        public static class Realestate implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+        public static class Realestate implements Serializable, Cloneable, CopyTo, Equals, ToString
         {
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Address address;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Description description;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Building building;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Price price;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Box box;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Garden garden;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Configuration configuration;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Googlemapcoordinate googlemapcoordinate;
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Container.Realestateitems.Realestate.Images images;
             @XmlAttribute(name = "action", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger action;
             @XmlAttribute(name = "agencycode", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected int agencycode;
             @XmlAttribute(name = "reference", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected String reference;
             @XmlAttribute(name = "referenceID")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Integer referenceID;
             @XmlAttribute(name = "contracttype", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger contracttype;
             @XmlAttribute(name = "condition")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger condition;
             @XmlAttribute(name = "hasbalcony")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Boolean hasbalcony;
             @XmlAttribute(name = "hasterrace")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected Boolean hasterrace;
             @XmlAttribute(name = "heatingtype")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger heatingtype;
             @XmlAttribute(name = "housetypology", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger housetypology;
             @XmlAttribute(name = "bathrooms")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger bathrooms;
             @XmlAttribute(name = "floor")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger floor;
             @XmlAttribute(name = "rooms")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger rooms;
             @XmlAttribute(name = "occupationstate")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger occupationstate;
             @XmlAttribute(name = "realestatetype", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger realestatetype;
             @XmlAttribute(name = "size", required = true)
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             protected BigInteger size;
 
             /**
@@ -1507,7 +1527,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Address }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Address getAddress() {
                 return address;
             }
@@ -1520,7 +1540,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Address }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setAddress(Container.Realestateitems.Realestate.Address value) {
                 this.address = value;
             }
@@ -1533,7 +1553,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Description }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Description getDescription() {
                 return description;
             }
@@ -1546,7 +1566,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Description }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setDescription(Container.Realestateitems.Realestate.Description value) {
                 this.description = value;
             }
@@ -1559,7 +1579,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Building }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Building getBuilding() {
                 return building;
             }
@@ -1572,7 +1592,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Building }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setBuilding(Container.Realestateitems.Realestate.Building value) {
                 this.building = value;
             }
@@ -1585,7 +1605,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Price }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Price getPrice() {
                 return price;
             }
@@ -1598,7 +1618,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Price }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setPrice(Container.Realestateitems.Realestate.Price value) {
                 this.price = value;
             }
@@ -1611,7 +1631,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Box }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Box getBox() {
                 return box;
             }
@@ -1624,7 +1644,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Box }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setBox(Container.Realestateitems.Realestate.Box value) {
                 this.box = value;
             }
@@ -1637,7 +1657,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Garden }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Garden getGarden() {
                 return garden;
             }
@@ -1650,7 +1670,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Garden }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setGarden(Container.Realestateitems.Realestate.Garden value) {
                 this.garden = value;
             }
@@ -1663,7 +1683,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Configuration }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Configuration getConfiguration() {
                 return configuration;
             }
@@ -1676,7 +1696,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Configuration }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setConfiguration(Container.Realestateitems.Realestate.Configuration value) {
                 this.configuration = value;
             }
@@ -1689,7 +1709,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Googlemapcoordinate }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Googlemapcoordinate getGooglemapcoordinate() {
                 return googlemapcoordinate;
             }
@@ -1702,7 +1722,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Googlemapcoordinate }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setGooglemapcoordinate(Container.Realestateitems.Realestate.Googlemapcoordinate value) {
                 this.googlemapcoordinate = value;
             }
@@ -1715,7 +1735,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Images }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Container.Realestateitems.Realestate.Images getImages() {
                 return images;
             }
@@ -1728,7 +1748,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Container.Realestateitems.Realestate.Images }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setImages(Container.Realestateitems.Realestate.Images value) {
                 this.images = value;
             }
@@ -1741,7 +1761,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getAction() {
                 return action;
             }
@@ -1754,7 +1774,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setAction(BigInteger value) {
                 this.action = value;
             }
@@ -1763,7 +1783,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              * Gets the value of the agencycode property.
              * 
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public int getAgencycode() {
                 return agencycode;
             }
@@ -1772,7 +1792,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              * Sets the value of the agencycode property.
              * 
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setAgencycode(int value) {
                 this.agencycode = value;
             }
@@ -1785,7 +1805,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link String }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public String getReference() {
                 return reference;
             }
@@ -1798,7 +1818,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link String }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setReference(String value) {
                 this.reference = value;
             }
@@ -1811,7 +1831,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Integer }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Integer getReferenceID() {
                 return referenceID;
             }
@@ -1824,7 +1844,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Integer }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setReferenceID(Integer value) {
                 this.referenceID = value;
             }
@@ -1837,7 +1857,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getContracttype() {
                 return contracttype;
             }
@@ -1850,7 +1870,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setContracttype(BigInteger value) {
                 this.contracttype = value;
             }
@@ -1863,7 +1883,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getCondition() {
                 return condition;
             }
@@ -1876,7 +1896,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setCondition(BigInteger value) {
                 this.condition = value;
             }
@@ -1889,7 +1909,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Boolean }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Boolean getHasbalcony() {
                 return hasbalcony;
             }
@@ -1902,7 +1922,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Boolean }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setHasbalcony(Boolean value) {
                 this.hasbalcony = value;
             }
@@ -1915,7 +1935,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Boolean }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Boolean getHasterrace() {
                 return hasterrace;
             }
@@ -1928,7 +1948,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link Boolean }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setHasterrace(Boolean value) {
                 this.hasterrace = value;
             }
@@ -1941,7 +1961,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getHeatingtype() {
                 return heatingtype;
             }
@@ -1954,7 +1974,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setHeatingtype(BigInteger value) {
                 this.heatingtype = value;
             }
@@ -1967,7 +1987,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getHousetypology() {
                 return housetypology;
             }
@@ -1980,7 +2000,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setHousetypology(BigInteger value) {
                 this.housetypology = value;
             }
@@ -1993,7 +2013,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getBathrooms() {
                 return bathrooms;
             }
@@ -2006,7 +2026,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setBathrooms(BigInteger value) {
                 this.bathrooms = value;
             }
@@ -2019,7 +2039,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getFloor() {
                 return floor;
             }
@@ -2032,7 +2052,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setFloor(BigInteger value) {
                 this.floor = value;
             }
@@ -2045,7 +2065,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getRooms() {
                 return rooms;
             }
@@ -2058,7 +2078,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setRooms(BigInteger value) {
                 this.rooms = value;
             }
@@ -2071,7 +2091,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getOccupationstate() {
                 return occupationstate;
             }
@@ -2084,7 +2104,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setOccupationstate(BigInteger value) {
                 this.occupationstate = value;
             }
@@ -2097,7 +2117,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getRealestatetype() {
                 return realestatetype;
             }
@@ -2110,7 +2130,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setRealestatetype(BigInteger value) {
                 this.realestatetype = value;
             }
@@ -2123,7 +2143,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public BigInteger getSize() {
                 return size;
             }
@@ -2136,29 +2156,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
              *     {@link BigInteger }
              *     
              */
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public void setSize(BigInteger value) {
                 this.size = value;
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public String toString() {
-                final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                 final StringBuilder buffer = new StringBuilder();
                 append(null, buffer, strategy);
                 return buffer.toString();
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                 strategy.appendStart(locator, this, buffer);
                 appendFields(locator, buffer, strategy);
                 strategy.appendEnd(locator, this, buffer);
                 return buffer;
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                 {
                     Container.Realestateitems.Realestate.Address theAddress;
                     theAddress = this.getAddress();
@@ -2287,19 +2310,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                 return buffer;
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Object clone() {
                 return copyTo(createNewInstance());
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Object copyTo(Object target) {
-                final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                 return copyTo(null, target, strategy);
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                 final Object draftCopy = ((target == null)?createNewInstance():target);
                 if (draftCopy instanceof Container.Realestateitems.Realestate) {
                     final Container.Realestateitems.Realestate copy = ((Container.Realestateitems.Realestate) draftCopy);
@@ -2631,13 +2657,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                 return draftCopy;
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public Object createNewInstance() {
                 return new Container.Realestateitems.Realestate();
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                 if ((object == null)||(this.getClass()!= object.getClass())) {
                     return false;
                 }
@@ -2873,60 +2901,61 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                 return true;
             }
 
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+            @Override
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
             public boolean equals(Object object) {
-                final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                 return equals(null, null, object, strategy);
             }
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="city" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;length value="6"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-             *       &lt;attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-             *       &lt;attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-             *       &lt;attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="city" use="required">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+             *             <length value="6"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="zone" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *       <attribute name="street" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *       <attribute name="number" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *       <attribute name="zip" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Address implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Address implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "city", required = true)
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String city;
                 @XmlAttribute(name = "zone")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String zone;
                 @XmlAttribute(name = "street")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String street;
                 @XmlAttribute(name = "number")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String number;
                 @XmlAttribute(name = "zip")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String zip;
 
                 /**
@@ -2937,7 +2966,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getCity() {
                     return city;
                 }
@@ -2950,7 +2979,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setCity(String value) {
                     this.city = value;
                 }
@@ -2963,7 +2992,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getZone() {
                     return zone;
                 }
@@ -2976,7 +3005,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setZone(String value) {
                     this.zone = value;
                 }
@@ -2989,7 +3018,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getStreet() {
                     return street;
                 }
@@ -3002,7 +3031,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setStreet(String value) {
                     this.street = value;
                 }
@@ -3015,7 +3044,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getNumber() {
                     return number;
                 }
@@ -3028,7 +3057,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setNumber(String value) {
                     this.number = value;
                 }
@@ -3041,7 +3070,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getZip() {
                     return zip;
                 }
@@ -3054,29 +3083,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setZip(String value) {
                     this.zip = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         String theCity;
                         theCity = this.getCity();
@@ -3105,19 +3137,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Address) {
                         final Container.Realestateitems.Realestate.Address copy = ((Container.Realestateitems.Realestate.Address) draftCopy);
@@ -3190,13 +3225,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Address();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -3252,9 +3289,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -3262,50 +3300,50 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="size"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;minInclusive value="0"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="type"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;enumeration value="-1"/&gt;
-             *             &lt;enumeration value="0"/&gt;
-             *             &lt;enumeration value="1"/&gt;
-             *             &lt;enumeration value="2"/&gt;
-             *             &lt;enumeration value="3"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="size">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <minInclusive value="0"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="type">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <enumeration value="-1"/>
+             *             <enumeration value="0"/>
+             *             <enumeration value="1"/>
+             *             <enumeration value="2"/>
+             *             <enumeration value="3"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Box implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Box implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "size")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger size;
                 @XmlAttribute(name = "type")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger type;
 
                 /**
@@ -3316,7 +3354,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getSize() {
                     return size;
                 }
@@ -3329,7 +3367,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setSize(BigInteger value) {
                     this.size = value;
                 }
@@ -3342,7 +3380,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getType() {
                     return type;
                 }
@@ -3355,29 +3393,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setType(BigInteger value) {
                     this.type = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         BigInteger theSize;
                         theSize = this.getSize();
@@ -3391,19 +3432,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Box) {
                         final Container.Realestateitems.Realestate.Box copy = ((Container.Realestateitems.Realestate.Box) draftCopy);
@@ -3437,13 +3481,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Box();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -3472,9 +3518,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -3482,70 +3529,70 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="age"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;minInclusive value="-1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="expenses"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;minInclusive value="-1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="units"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;minInclusive value="-1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="totalfloors"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;minInclusive value="-1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="age">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <minInclusive value="-1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="expenses">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+             *             <minInclusive value="-1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="units">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <minInclusive value="-1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="totalfloors">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <minInclusive value="-1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="haslift" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Building implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Building implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "age")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger age;
                 @XmlAttribute(name = "expenses")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal expenses;
                 @XmlAttribute(name = "units")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger units;
                 @XmlAttribute(name = "totalfloors")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger totalfloors;
                 @XmlAttribute(name = "haslift")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected Boolean haslift;
 
                 /**
@@ -3556,7 +3603,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getAge() {
                     return age;
                 }
@@ -3569,7 +3616,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setAge(BigInteger value) {
                     this.age = value;
                 }
@@ -3582,7 +3629,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getExpenses() {
                     return expenses;
                 }
@@ -3595,7 +3642,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setExpenses(BigDecimal value) {
                     this.expenses = value;
                 }
@@ -3608,7 +3655,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getUnits() {
                     return units;
                 }
@@ -3621,7 +3668,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setUnits(BigInteger value) {
                     this.units = value;
                 }
@@ -3634,7 +3681,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getTotalfloors() {
                     return totalfloors;
                 }
@@ -3647,7 +3694,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setTotalfloors(BigInteger value) {
                     this.totalfloors = value;
                 }
@@ -3660,7 +3707,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Boolean getHaslift() {
                     return haslift;
                 }
@@ -3673,29 +3720,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setHaslift(Boolean value) {
                     this.haslift = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         BigInteger theAge;
                         theAge = this.getAge();
@@ -3724,19 +3774,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Building) {
                         final Container.Realestateitems.Realestate.Building copy = ((Container.Realestateitems.Realestate.Building) draftCopy);
@@ -3809,13 +3862,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Building();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -3871,9 +3926,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -3881,38 +3937,38 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-             *       &lt;attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-             *       &lt;attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="isaddressvisibleonsite" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+             *       <attribute name="ismapvisible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+             *       <attribute name="isrealestatevisibleonmap" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Configuration implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Configuration implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "isaddressvisibleonsite")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected Boolean isaddressvisibleonsite;
                 @XmlAttribute(name = "ismapvisible")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected Boolean ismapvisible;
                 @XmlAttribute(name = "isrealestatevisibleonmap")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected Boolean isrealestatevisibleonmap;
 
                 /**
@@ -3923,7 +3979,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Boolean getIsaddressvisibleonsite() {
                     if (isaddressvisibleonsite == null) {
                         return false;
@@ -3940,7 +3996,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setIsaddressvisibleonsite(Boolean value) {
                     this.isaddressvisibleonsite = value;
                 }
@@ -3953,7 +4009,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Boolean getIsmapvisible() {
                     if (ismapvisible == null) {
                         return false;
@@ -3970,7 +4026,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setIsmapvisible(Boolean value) {
                     this.ismapvisible = value;
                 }
@@ -3983,7 +4039,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Boolean getIsrealestatevisibleonmap() {
                     if (isrealestatevisibleonmap == null) {
                         return false;
@@ -4000,29 +4056,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Boolean }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setIsrealestatevisibleonmap(Boolean value) {
                     this.isrealestatevisibleonmap = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         Boolean theIsaddressvisibleonsite;
                         theIsaddressvisibleonsite = this.getIsaddressvisibleonsite();
@@ -4041,19 +4100,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Configuration) {
                         final Container.Realestateitems.Realestate.Configuration copy = ((Container.Realestateitems.Realestate.Configuration) draftCopy);
@@ -4100,13 +4162,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Configuration();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -4144,9 +4208,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -4154,36 +4219,36 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="value" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;minLength value="20"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="value" use="required">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+             *             <minLength value="20"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Description implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Description implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "value", required = true)
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected String value;
 
                 /**
@@ -4194,7 +4259,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String getValue() {
                     return value;
                 }
@@ -4207,29 +4272,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link String }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setValue(String value) {
                     this.value = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         String theValue;
                         theValue = this.getValue();
@@ -4238,19 +4306,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Description) {
                         final Container.Realestateitems.Realestate.Description copy = ((Container.Realestateitems.Realestate.Description) draftCopy);
@@ -4271,13 +4342,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Description();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -4297,9 +4370,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -4307,49 +4381,49 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="size"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;minInclusive value="0"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="type"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
-             *             &lt;enumeration value="-1"/&gt;
-             *             &lt;enumeration value="0"/&gt;
-             *             &lt;enumeration value="1"/&gt;
-             *             &lt;enumeration value="2"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="size">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <minInclusive value="0"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="type">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}integer">
+             *             <enumeration value="-1"/>
+             *             <enumeration value="0"/>
+             *             <enumeration value="1"/>
+             *             <enumeration value="2"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Garden implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Garden implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "size")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger size;
                 @XmlAttribute(name = "type")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigInteger type;
 
                 /**
@@ -4360,7 +4434,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getSize() {
                     return size;
                 }
@@ -4373,7 +4447,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setSize(BigInteger value) {
                     this.size = value;
                 }
@@ -4386,7 +4460,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigInteger getType() {
                     return type;
                 }
@@ -4399,29 +4473,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigInteger }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setType(BigInteger value) {
                     this.type = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         BigInteger theSize;
                         theSize = this.getSize();
@@ -4435,19 +4512,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Garden) {
                         final Container.Realestateitems.Realestate.Garden copy = ((Container.Realestateitems.Realestate.Garden) draftCopy);
@@ -4481,13 +4561,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Garden();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -4516,9 +4598,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -4526,54 +4609,54 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-             *       &lt;attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-             *       &lt;attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
-             *       &lt;attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-             *       &lt;attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="latitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+             *       <attribute name="longitude" type="{http://www.w3.org/2001/XMLSchema}double" />
+             *       <attribute name="mapzoom" type="{http://www.w3.org/2001/XMLSchema}int" />
+             *       <attribute name="latitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+             *       <attribute name="longitudemapcenter" type="{http://www.w3.org/2001/XMLSchema}double" />
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Googlemapcoordinate implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Googlemapcoordinate implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "latitude")
                 @XmlJavaTypeAdapter(Adapter1 .class)
                 @XmlSchemaType(name = "double")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal latitude;
                 @XmlAttribute(name = "longitude")
                 @XmlJavaTypeAdapter(Adapter1 .class)
                 @XmlSchemaType(name = "double")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal longitude;
                 @XmlAttribute(name = "mapzoom")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected Integer mapzoom;
                 @XmlAttribute(name = "latitudemapcenter")
                 @XmlJavaTypeAdapter(Adapter1 .class)
                 @XmlSchemaType(name = "double")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal latitudemapcenter;
                 @XmlAttribute(name = "longitudemapcenter")
                 @XmlJavaTypeAdapter(Adapter1 .class)
                 @XmlSchemaType(name = "double")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal longitudemapcenter;
 
                 /**
@@ -4581,10 +4664,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @return
                  *     possible object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getLatitude() {
                     return latitude;
                 }
@@ -4594,10 +4677,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @param value
                  *     allowed object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setLatitude(BigDecimal value) {
                     this.latitude = value;
                 }
@@ -4607,10 +4690,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @return
                  *     possible object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getLongitude() {
                     return longitude;
                 }
@@ -4620,10 +4703,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @param value
                  *     allowed object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setLongitude(BigDecimal value) {
                     this.longitude = value;
                 }
@@ -4636,7 +4719,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Integer }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Integer getMapzoom() {
                     return mapzoom;
                 }
@@ -4649,7 +4732,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link Integer }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setMapzoom(Integer value) {
                     this.mapzoom = value;
                 }
@@ -4659,10 +4742,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @return
                  *     possible object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getLatitudemapcenter() {
                     return latitudemapcenter;
                 }
@@ -4672,10 +4755,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @param value
                  *     allowed object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setLatitudemapcenter(BigDecimal value) {
                     this.latitudemapcenter = value;
                 }
@@ -4685,10 +4768,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @return
                  *     possible object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getLongitudemapcenter() {
                     return longitudemapcenter;
                 }
@@ -4698,32 +4781,35 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  * 
                  * @param value
                  *     allowed object is
-                 *     {@link String }
+                 *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setLongitudemapcenter(BigDecimal value) {
                     this.longitudemapcenter = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         BigDecimal theLatitude;
                         theLatitude = this.getLatitude();
@@ -4752,19 +4838,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Googlemapcoordinate) {
                         final Container.Realestateitems.Realestate.Googlemapcoordinate copy = ((Container.Realestateitems.Realestate.Googlemapcoordinate) draftCopy);
@@ -4837,13 +4926,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Googlemapcoordinate();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -4899,9 +4990,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
@@ -4909,37 +5001,37 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="advertismentimage" maxOccurs="14"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-             *                 &lt;attribute name="imagetype" use="required"&gt;
-             *                   &lt;simpleType&gt;
-             *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *                       &lt;enumeration value="Image"/&gt;
-             *                       &lt;enumeration value="Map"/&gt;
-             *                     &lt;/restriction&gt;
-             *                   &lt;/simpleType&gt;
-             *                 &lt;/attribute&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <sequence>
+             *         <element name="advertismentimage" maxOccurs="14">
+             *           <complexType>
+             *             <complexContent>
+             *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *                 <attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *                 <attribute name="imagetype" use="required">
+             *                   <simpleType>
+             *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+             *                       <enumeration value="Image"/>
+             *                       <enumeration value="Map"/>
+             *                     </restriction>
+             *                   </simpleType>
+             *                 </attribute>
+             *               </restriction>
+             *             </complexContent>
+             *           </complexType>
+             *         </element>
+             *       </sequence>
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
@@ -4947,62 +5039,68 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
             @XmlType(name = "", propOrder = {
                 "advertismentimage"
             })
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Images implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Images implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlElement(required = true)
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected List<Container.Realestateitems.Realestate.Images.Advertismentimage> advertismentimage;
 
                 /**
                  * Gets the value of the advertismentimage property.
                  * 
-                 * <p>
-                 * This accessor method returns a reference to the live list,
-                 * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the advertismentimage property.
+                 * <p>This accessor method returns a reference to the live list,
+                 * not a snapshot. Therefore, any modification you make to the
+                 * returned list will be present inside the Jakarta XML Binding object.
+                 * This is why there is not a {@code set} method for the advertismentimage property.</p>
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
+                 * </p>
                  * <pre>
-                 *    getAdvertismentimage().add(newItem);
+                 * getAdvertismentimage().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Container.Realestateitems.Realestate.Images.Advertismentimage }
+                 * </p>
                  * 
                  * 
+                 * @return
+                 *     The value of the advertismentimage property.
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public List<Container.Realestateitems.Realestate.Images.Advertismentimage> getAdvertismentimage() {
                     if (advertismentimage == null) {
-                        advertismentimage = new ArrayList<Container.Realestateitems.Realestate.Images.Advertismentimage>();
+                        advertismentimage = new ArrayList<>();
                     }
                     return this.advertismentimage;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         List<Container.Realestateitems.Realestate.Images.Advertismentimage> theAdvertismentimage;
                         theAdvertismentimage = (((this.advertismentimage!= null)&&(!this.advertismentimage.isEmpty()))?this.getAdvertismentimage():null);
@@ -5011,19 +5109,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Images) {
                         final Container.Realestateitems.Realestate.Images copy = ((Container.Realestateitems.Realestate.Images) draftCopy);
@@ -5049,13 +5150,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Images();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -5075,49 +5178,50 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Java class for anonymous complex type</p>.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>The following schema fragment specifies the expected content contained within this class.</p>
                  * 
-                 * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-                 *       &lt;attribute name="imagetype" use="required"&gt;
-                 *         &lt;simpleType&gt;
-                 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-                 *             &lt;enumeration value="Image"/&gt;
-                 *             &lt;enumeration value="Map"/&gt;
-                 *           &lt;/restriction&gt;
-                 *         &lt;/simpleType&gt;
-                 *       &lt;/attribute&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
-                 * </pre>
+                 * <pre>{@code
+                 * <complexType>
+                 *   <complexContent>
+                 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+                 *       <attribute name="path" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+                 *       <attribute name="imagetype" use="required">
+                 *         <simpleType>
+                 *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+                 *             <enumeration value="Image"/>
+                 *             <enumeration value="Map"/>
+                 *           </restriction>
+                 *         </simpleType>
+                 *       </attribute>
+                 *     </restriction>
+                 *   </complexContent>
+                 * </complexType>
+                 * }</pre>
                  * 
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public static class Advertismentimage implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public static class Advertismentimage implements Serializable, Cloneable, CopyTo, Equals, ToString
                 {
 
                     @XmlAttribute(name = "path", required = true)
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     protected String path;
                     @XmlAttribute(name = "imagetype", required = true)
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     protected String imagetype;
 
                     /**
@@ -5128,7 +5232,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                      *     {@link String }
                      *     
                      */
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public String getPath() {
                         return path;
                     }
@@ -5141,7 +5245,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                      *     {@link String }
                      *     
                      */
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public void setPath(String value) {
                         this.path = value;
                     }
@@ -5154,7 +5258,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                      *     {@link String }
                      *     
                      */
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public String getImagetype() {
                         return imagetype;
                     }
@@ -5167,29 +5271,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                      *     {@link String }
                      *     
                      */
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public void setImagetype(String value) {
                         this.imagetype = value;
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public String toString() {
-                        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                         final StringBuilder buffer = new StringBuilder();
                         append(null, buffer, strategy);
                         return buffer.toString();
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                         strategy.appendStart(locator, this, buffer);
                         appendFields(locator, buffer, strategy);
                         strategy.appendEnd(locator, this, buffer);
                         return buffer;
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                         {
                             String thePath;
                             thePath = this.getPath();
@@ -5203,19 +5310,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                         return buffer;
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public Object clone() {
                         return copyTo(createNewInstance());
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public Object copyTo(Object target) {
-                        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                         return copyTo(null, target, strategy);
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                         final Object draftCopy = ((target == null)?createNewInstance():target);
                         if (draftCopy instanceof Container.Realestateitems.Realestate.Images.Advertismentimage) {
                             final Container.Realestateitems.Realestate.Images.Advertismentimage copy = ((Container.Realestateitems.Realestate.Images.Advertismentimage) draftCopy);
@@ -5249,13 +5359,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                         return draftCopy;
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public Object createNewInstance() {
                         return new Container.Realestateitems.Realestate.Images.Advertismentimage();
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                         if ((object == null)||(this.getClass()!= object.getClass())) {
                             return false;
                         }
@@ -5284,9 +5396,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                         return true;
                     }
 
-                    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                    @Override
+                    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                     public boolean equals(Object object) {
-                        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                         return equals(null, null, object, strategy);
                     }
 
@@ -5296,56 +5409,56 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Java class for anonymous complex type</p>.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>The following schema fragment specifies the expected content contained within this class.</p>
              * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="value"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;minInclusive value="-1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="min" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;minInclusive value="0"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="max" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;minInclusive value="1"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
+             * <pre>{@code
+             * <complexType>
+             *   <complexContent>
+             *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       <attribute name="value">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+             *             <minInclusive value="-1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="min" use="required">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+             *             <minInclusive value="0"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *       <attribute name="max" use="required">
+             *         <simpleType>
+             *           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+             *             <minInclusive value="1"/>
+             *           </restriction>
+             *         </simpleType>
+             *       </attribute>
+             *     </restriction>
+             *   </complexContent>
+             * </complexType>
+             * }</pre>
              * 
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
-            @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-            public static class Price implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+            @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+            public static class Price implements Serializable, Cloneable, CopyTo, Equals, ToString
             {
 
                 @XmlAttribute(name = "value")
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal value;
                 @XmlAttribute(name = "min", required = true)
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal min;
                 @XmlAttribute(name = "max", required = true)
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 protected BigDecimal max;
 
                 /**
@@ -5356,7 +5469,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getValue() {
                     return value;
                 }
@@ -5369,7 +5482,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setValue(BigDecimal value) {
                     this.value = value;
                 }
@@ -5382,7 +5495,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getMin() {
                     return min;
                 }
@@ -5395,7 +5508,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setMin(BigDecimal value) {
                     this.min = value;
                 }
@@ -5408,7 +5521,7 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public BigDecimal getMax() {
                     return max;
                 }
@@ -5421,29 +5534,32 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                  *     {@link BigDecimal }
                  *     
                  */
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public void setMax(BigDecimal value) {
                     this.max = value;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public String toString() {
-                    final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+                    final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
                     final StringBuilder buffer = new StringBuilder();
                     append(null, buffer, strategy);
                     return buffer.toString();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     strategy.appendStart(locator, this, buffer);
                     appendFields(locator, buffer, strategy);
                     strategy.appendEnd(locator, this, buffer);
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
                     {
                         BigDecimal theValue;
                         theValue = this.getValue();
@@ -5462,19 +5578,22 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return buffer;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object clone() {
                     return copyTo(createNewInstance());
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object copyTo(Object target) {
-                    final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+                    final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
                     return copyTo(null, target, strategy);
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
                     final Object draftCopy = ((target == null)?createNewInstance():target);
                     if (draftCopy instanceof Container.Realestateitems.Realestate.Price) {
                         final Container.Realestateitems.Realestate.Price copy = ((Container.Realestateitems.Realestate.Price) draftCopy);
@@ -5521,13 +5640,15 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return draftCopy;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public Object createNewInstance() {
                     return new Container.Realestateitems.Realestate.Price();
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
-                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
+                public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
                     if ((object == null)||(this.getClass()!= object.getClass())) {
                         return false;
                     }
@@ -5565,9 +5686,10 @@ public class Container implements Serializable, Cloneable, CopyTo2, Equals2, ToS
                     return true;
                 }
 
-                @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:28:55+02:00", comments = "JAXB RI v2.3.0")
+                @Override
+                @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
                 public boolean equals(Object object) {
-                    final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+                    final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
                     return equals(null, null, object, strategy);
                 }
 

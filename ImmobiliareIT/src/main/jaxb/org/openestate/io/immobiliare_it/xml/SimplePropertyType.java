@@ -1,58 +1,56 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for propertyTypeSimple.
+ * <p>Java class for propertyTypeSimple</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="propertyTypeSimple"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Appartamento"/&gt;
- *     &lt;enumeration value="Attico"/&gt;
- *     &lt;enumeration value="Mansarda"/&gt;
- *     &lt;enumeration value="Garage"/&gt;
- *     &lt;enumeration value="Casa indipendente"/&gt;
- *     &lt;enumeration value="Palazzo"/&gt;
- *     &lt;enumeration value="Stabile"/&gt;
- *     &lt;enumeration value="Rustico"/&gt;
- *     &lt;enumeration value="Casale"/&gt;
- *     &lt;enumeration value="Villa"/&gt;
- *     &lt;enumeration value="Villetta a schiera"/&gt;
- *     &lt;enumeration value="Loft"/&gt;
- *     &lt;enumeration value="Open Space"/&gt;
- *     &lt;enumeration value="Multipropriet\u00e0"/&gt;
- *     &lt;enumeration value="Villetta"/&gt;
- *     &lt;enumeration value="Agriturismo"/&gt;
- *     &lt;enumeration value="Bed and Breakfast"/&gt;
- *     &lt;enumeration value="Barca"/&gt;
- *     &lt;enumeration value="Bungalow"/&gt;
- *     &lt;enumeration value="Chalet"/&gt;
- *     &lt;enumeration value="Baita"/&gt;
- *     &lt;enumeration value="Hotel"/&gt;
- *     &lt;enumeration value="Parco Vacanze"/&gt;
- *     &lt;enumeration value="Residence"/&gt;
- *     &lt;enumeration value="Roulotte"/&gt;
- *     &lt;enumeration value="Stanza"/&gt;
- *     &lt;enumeration value="Camera"/&gt;
- *     &lt;enumeration value="Casa per ferie (gruppi)"/&gt;
- *     &lt;enumeration value="Other"/&gt;
- *     &lt;enumeration value="Altro"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="propertyTypeSimple">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Appartamento"/>
+ *     <enumeration value="Attico"/>
+ *     <enumeration value="Mansarda"/>
+ *     <enumeration value="Garage"/>
+ *     <enumeration value="Casa indipendente"/>
+ *     <enumeration value="Palazzo"/>
+ *     <enumeration value="Stabile"/>
+ *     <enumeration value="Rustico"/>
+ *     <enumeration value="Casale"/>
+ *     <enumeration value="Villa"/>
+ *     <enumeration value="Villetta a schiera"/>
+ *     <enumeration value="Loft"/>
+ *     <enumeration value="Open Space"/>
+ *     <enumeration value="Multiproprietà"/>
+ *     <enumeration value="Villetta"/>
+ *     <enumeration value="Agriturismo"/>
+ *     <enumeration value="Bed and Breakfast"/>
+ *     <enumeration value="Barca"/>
+ *     <enumeration value="Bungalow"/>
+ *     <enumeration value="Chalet"/>
+ *     <enumeration value="Baita"/>
+ *     <enumeration value="Hotel"/>
+ *     <enumeration value="Parco Vacanze"/>
+ *     <enumeration value="Residence"/>
+ *     <enumeration value="Roulotte"/>
+ *     <enumeration value="Stanza"/>
+ *     <enumeration value="Camera"/>
+ *     <enumeration value="Casa per ferie (gruppi)"/>
+ *     <enumeration value="Other"/>
+ *     <enumeration value="Altro"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "propertyTypeSimple")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public enum SimplePropertyType {
 
     @XmlEnumValue("Appartamento")
@@ -121,10 +119,26 @@ public enum SimplePropertyType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static SimplePropertyType fromValue(String v) {
         for (SimplePropertyType c: SimplePropertyType.values()) {
             if (c.value.equals(v)) {

@@ -1,56 +1,55 @@
-
 package org.openestate.io.kyero.xml;
 
 import java.io.Serializable;
 import java.net.URI;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for urlType complex type.
+ * <p>Java class for urlType complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="urlType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;all&gt;
- *         &lt;element name="ca" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="de" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="da" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="en" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="es" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="fi" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="fr" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="it" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="nl" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="no" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="pt" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="ru" type="{}urlDataType" minOccurs="0"/&gt;
- *         &lt;element name="sv" type="{}urlDataType" minOccurs="0"/&gt;
- *       &lt;/all&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="urlType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *         <element name="ca" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="de" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="da" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="en" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="es" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="fi" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="fr" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="it" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="nl" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="no" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="pt" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="ru" type="{}urlDataType" minOccurs="0"/>
+ *         <element name="sv" type="{}urlDataType" minOccurs="0"/>
+ *       </all>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -58,74 +57,74 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "urlType", propOrder = {
 
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
-public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
+public class UrlType implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI ca;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI de;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI da;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI en;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI es;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI fi;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI fr;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI it;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI nl;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI no;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI pt;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI ru;
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
     @XmlSchemaType(name = "token")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     protected URI sv;
 
     /**
@@ -133,10 +132,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getCa() {
         return ca;
     }
@@ -146,10 +145,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setCa(URI value) {
         this.ca = value;
     }
@@ -159,10 +158,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getDe() {
         return de;
     }
@@ -172,10 +171,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setDe(URI value) {
         this.de = value;
     }
@@ -185,10 +184,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getDa() {
         return da;
     }
@@ -198,10 +197,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setDa(URI value) {
         this.da = value;
     }
@@ -211,10 +210,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getEn() {
         return en;
     }
@@ -224,10 +223,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setEn(URI value) {
         this.en = value;
     }
@@ -237,10 +236,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getEs() {
         return es;
     }
@@ -250,10 +249,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setEs(URI value) {
         this.es = value;
     }
@@ -263,10 +262,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getFi() {
         return fi;
     }
@@ -276,10 +275,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setFi(URI value) {
         this.fi = value;
     }
@@ -289,10 +288,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getFr() {
         return fr;
     }
@@ -302,10 +301,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setFr(URI value) {
         this.fr = value;
     }
@@ -315,10 +314,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getIt() {
         return it;
     }
@@ -328,10 +327,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setIt(URI value) {
         this.it = value;
     }
@@ -341,10 +340,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getNl() {
         return nl;
     }
@@ -354,10 +353,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setNl(URI value) {
         this.nl = value;
     }
@@ -367,10 +366,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getNo() {
         return no;
     }
@@ -380,10 +379,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setNo(URI value) {
         this.no = value;
     }
@@ -393,10 +392,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getPt() {
         return pt;
     }
@@ -406,10 +405,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setPt(URI value) {
         this.pt = value;
     }
@@ -419,10 +418,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getRu() {
         return ru;
     }
@@ -432,10 +431,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setRu(URI value) {
         this.ru = value;
     }
@@ -445,10 +444,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public URI getSv() {
         return sv;
     }
@@ -458,32 +457,35 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public void setSv(URI value) {
         this.sv = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             URI theCa;
             theCa = this.getCa();
@@ -552,19 +554,22 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof UrlType) {
             final UrlType copy = ((UrlType) draftCopy);
@@ -741,13 +746,15 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public Object createNewInstance() {
         return new UrlType();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -875,9 +882,10 @@ public class UrlType implements Serializable, Cloneable, CopyTo2, Equals2, ToStr
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 

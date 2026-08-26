@@ -1,14 +1,14 @@
-
 package org.openestate.io.casa_it.xml;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the org.openestate.io.casa_it.xml package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:03:50+02:00")
 public class ObjectFactory {
 
 
@@ -32,6 +33,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container }
      * 
+     * @return
+     *     the new instance of {@link Container }
      */
     public Container createContainer() {
         return new Container();
@@ -40,6 +43,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems }
      */
     public Container.Realestateitems createContainerRealestateitems() {
         return new Container.Realestateitems();
@@ -48,6 +53,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate }
      */
     public Container.Realestateitems.Realestate createContainerRealestateitemsRealestate() {
         return new Container.Realestateitems.Realestate();
@@ -56,6 +63,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Images }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Images }
      */
     public Container.Realestateitems.Realestate.Images createContainerRealestateitemsRealestateImages() {
         return new Container.Realestateitems.Realestate.Images();
@@ -64,6 +73,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Address }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Address }
      */
     public Container.Realestateitems.Realestate.Address createContainerRealestateitemsRealestateAddress() {
         return new Container.Realestateitems.Realestate.Address();
@@ -72,6 +83,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Description }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Description }
      */
     public Container.Realestateitems.Realestate.Description createContainerRealestateitemsRealestateDescription() {
         return new Container.Realestateitems.Realestate.Description();
@@ -80,6 +93,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Building }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Building }
      */
     public Container.Realestateitems.Realestate.Building createContainerRealestateitemsRealestateBuilding() {
         return new Container.Realestateitems.Realestate.Building();
@@ -88,6 +103,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Price }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Price }
      */
     public Container.Realestateitems.Realestate.Price createContainerRealestateitemsRealestatePrice() {
         return new Container.Realestateitems.Realestate.Price();
@@ -96,6 +113,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Box }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Box }
      */
     public Container.Realestateitems.Realestate.Box createContainerRealestateitemsRealestateBox() {
         return new Container.Realestateitems.Realestate.Box();
@@ -104,6 +123,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Garden }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Garden }
      */
     public Container.Realestateitems.Realestate.Garden createContainerRealestateitemsRealestateGarden() {
         return new Container.Realestateitems.Realestate.Garden();
@@ -112,6 +133,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Configuration }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Configuration }
      */
     public Container.Realestateitems.Realestate.Configuration createContainerRealestateitemsRealestateConfiguration() {
         return new Container.Realestateitems.Realestate.Configuration();
@@ -120,6 +143,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Googlemapcoordinate }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Googlemapcoordinate }
      */
     public Container.Realestateitems.Realestate.Googlemapcoordinate createContainerRealestateitemsRealestateGooglemapcoordinate() {
         return new Container.Realestateitems.Realestate.Googlemapcoordinate();
@@ -128,6 +153,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Container.Realestateitems.Realestate.Images.Advertismentimage }
      * 
+     * @return
+     *     the new instance of {@link Container.Realestateitems.Realestate.Images.Advertismentimage }
      */
     public Container.Realestateitems.Realestate.Images.Advertismentimage createContainerRealestateitemsRealestateImagesAdvertismentimage() {
         return new Container.Realestateitems.Realestate.Images.Advertismentimage();

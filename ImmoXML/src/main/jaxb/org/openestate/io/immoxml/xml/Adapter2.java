@@ -2,7 +2,7 @@
 package org.openestate.io.immoxml.xml;
 
 import java.math.BigDecimal;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class Adapter2
     extends XmlAdapter<String, BigDecimal>

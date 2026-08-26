@@ -1,30 +1,28 @@
-
 package org.openestate.io.kyero.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for currencyType.
+ * <p>Java class for currencyType</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="currencyType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="EUR"/&gt;
- *     &lt;enumeration value="GBP"/&gt;
- *     &lt;enumeration value="USD"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="currencyType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="EUR"/>
+ *     <enumeration value="GBP"/>
+ *     <enumeration value="USD"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "currencyType")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:31:05+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:41+02:00")
 public enum CurrencyType {
 
     EUR,

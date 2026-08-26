@@ -77,8 +77,8 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics-runtime</artifactId>
+            <groupId>org.jvnet.jaxb</groupId>
+            <artifactId>jaxb-plugins-runtime</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -132,41 +132,14 @@
                 </executions>
             </plugin>
 
-            <!-- JAXB -->
-            <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb23-plugin</artifactId>
-                <configuration>
-                    <generateDirectory>${project.basedir}/src/main/jaxb</generateDirectory>
-                    <schemaDirectory>${project.basedir}/src/main/schema</schemaDirectory>
-                    <scanDependenciesForBindings>false</scanDependenciesForBindings>
-
-                    <readOnly>false</readOnly>
-                    <noFileHeader>true</noFileHeader>
-                    <enableIntrospection>true</enableIntrospection>
-                    <markGenerated>true</markGenerated>
-                    <removeOldOutput>true</removeOldOutput>
-                    <cleanPackageDirectories>true</cleanPackageDirectories>
-                    <forceRegenerate>false</forceRegenerate>
-
-                    <episode>true</episode>
-                    <episodeFile>${project.basedir}/src/main/jaxb/META-INF/sun-jaxb.episode</episodeFile>
-
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <locale>en</locale>
-                    <debug>false</debug>
-                    <verbose>false</verbose>
-
-                    <specVersion>2.3</specVersion>
-                    <extension>true</extension>
-                    <strict>true</strict>
-                    <args>
-                        <arg>-XtoString</arg>
-                        <arg>-Xcopyable</arg>
-                        <arg>-Xequals</arg>
-                    </args>
-                </configuration>
-            </plugin>
+            <!--
+            JAXB codegen is intentionally NOT run for this module: the ImmoXML schema is
+            proprietary (see src/main/schema/README.txt) and is never present in this checkout,
+            so XJC has nothing valid to compile against. The build relies entirely on the
+            pre-generated sources already committed under src/main/jaxb (added as a source root
+            below via build-helper). Regenerate manually with mvn-jaxb-xjc.sh once you have a
+            licensed copy of the schema in place.
+            -->
 
         </plugins>
     </build>

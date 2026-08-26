@@ -1,8 +1,7 @@
-
 package org.openestate.io.trovit.xml;
 
 import java.math.BigInteger;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class Adapter10
     extends XmlAdapter<String, BigInteger>

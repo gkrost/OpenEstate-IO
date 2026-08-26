@@ -15,8 +15,8 @@
  */
 package org.openestate.io.casa_it;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.openestate.io.casa_it.xml.Container;
 import org.openestate.io.core.XmlDocument;

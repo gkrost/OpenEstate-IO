@@ -1,62 +1,61 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
 import java.io.Serializable;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for air-conditioning complex type.
+ * <p>Java class for air-conditioning complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="air-conditioning"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;all&gt;
- *         &lt;element name="effect"&gt;
- *           &lt;simpleType&gt;
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *               &lt;enumeration value="Freddo"/&gt;
- *               &lt;enumeration value="Caldo"/&gt;
- *               &lt;enumeration value="Freddo/Caldo"/&gt;
- *             &lt;/restriction&gt;
- *           &lt;/simpleType&gt;
- *         &lt;/element&gt;
- *       &lt;/all&gt;
- *       &lt;attribute name="type"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *             &lt;enumeration value="Autonomo"/&gt;
- *             &lt;enumeration value="Centralizzato"/&gt;
- *             &lt;enumeration value="Predisposizione impianto"/&gt;
- *             &lt;enumeration value="Assente"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="air-conditioning">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *         <element name="effect">
+ *           <simpleType>
+ *             <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               <enumeration value="Freddo"/>
+ *               <enumeration value="Caldo"/>
+ *               <enumeration value="Freddo/Caldo"/>
+ *             </restriction>
+ *           </simpleType>
+ *         </element>
+ *       </all>
+ *       <attribute name="type">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *             <enumeration value="Autonomo"/>
+ *             <enumeration value="Centralizzato"/>
+ *             <enumeration value="Predisposizione impianto"/>
+ *             <enumeration value="Assente"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -64,15 +63,15 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "air-conditioning", propOrder = {
 
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+public class AirConditioning implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected AirConditioning.Effect effect;
     @XmlAttribute(name = "type")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected AirConditioning.Type type;
 
     /**
@@ -83,7 +82,7 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
      *     {@link AirConditioning.Effect }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public AirConditioning.Effect getEffect() {
         return effect;
     }
@@ -96,7 +95,7 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
      *     {@link AirConditioning.Effect }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setEffect(AirConditioning.Effect value) {
         this.effect = value;
     }
@@ -109,7 +108,7 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
      *     {@link AirConditioning.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public AirConditioning.Type getType() {
         return type;
     }
@@ -122,29 +121,32 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
      *     {@link AirConditioning.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setType(AirConditioning.Type value) {
         this.type = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             AirConditioning.Effect theEffect;
             theEffect = this.getEffect();
@@ -158,19 +160,22 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof AirConditioning) {
             final AirConditioning copy = ((AirConditioning) draftCopy);
@@ -204,13 +209,15 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object createNewInstance() {
         return new AirConditioning();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -239,32 +246,32 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="Freddo"/&gt;
-     *     &lt;enumeration value="Caldo"/&gt;
-     *     &lt;enumeration value="Freddo/Caldo"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="Freddo"/>
+     *     <enumeration value="Caldo"/>
+     *     <enumeration value="Freddo/Caldo"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public enum Effect {
 
         @XmlEnumValue("Freddo")
@@ -279,10 +286,26 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static AirConditioning.Effect fromValue(String v) {
             for (AirConditioning.Effect c: AirConditioning.Effect.values()) {
                 if (c.value.equals(v)) {
@@ -296,25 +319,24 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="Autonomo"/&gt;
-     *     &lt;enumeration value="Centralizzato"/&gt;
-     *     &lt;enumeration value="Predisposizione impianto"/&gt;
-     *     &lt;enumeration value="Assente"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="Autonomo"/>
+     *     <enumeration value="Centralizzato"/>
+     *     <enumeration value="Predisposizione impianto"/>
+     *     <enumeration value="Assente"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public enum Type {
 
         @XmlEnumValue("Autonomo")
@@ -331,10 +353,26 @@ public class AirConditioning implements Serializable, Cloneable, CopyTo2, Equals
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static AirConditioning.Type fromValue(String v) {
             for (AirConditioning.Type c: AirConditioning.Type.values()) {
                 if (c.value.equals(v)) {

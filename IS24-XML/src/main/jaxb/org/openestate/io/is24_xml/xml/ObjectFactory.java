@@ -1,17 +1,17 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the org.openestate.io.is24_xml.xml package. 
- * <p>An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -22,56 +22,57 @@ import javax.xml.namespace.QName;
  * 
  */
 @XmlRegistry
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public class ObjectFactory {
 
-    private final static QName _VirtuelleImmobilie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "VirtuelleImmobilie");
-    private final static QName _Immobilie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Immobilie");
-    private final static QName _Grundstueck_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Grundstueck");
-    private final static QName _TypenHaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "TypenHaus");
-    private final static QName _ImmobilieBaseTypApiSuchfelder_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfelder");
-    private final static QName _EinzelhandelTypLastenaufzug_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Lastenaufzug");
-    private final static QName _GrundstueckEmpfohleneNutzungAckerland_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Ackerland");
-    private final static QName _GrundstueckEmpfohleneNutzungBauerwartungsland_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Bauerwartungsland");
-    private final static QName _GrundstueckEmpfohleneNutzungBootsstaende_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Bootsstaende");
-    private final static QName _GrundstueckEmpfohleneNutzungBuero_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Buero");
-    private final static QName _GrundstueckEmpfohleneNutzungCamping_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Camping");
-    private final static QName _GrundstueckEmpfohleneNutzungDoppelhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Doppelhaus");
-    private final static QName _GrundstueckEmpfohleneNutzungEinfamilienhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einfamilienhaus");
-    private final static QName _GrundstueckEmpfohleneNutzungEinzelhandelGross_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einzelhandel-gross");
-    private final static QName _GrundstueckEmpfohleneNutzungEinzelhandelKlein_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einzelhandel-klein");
-    private final static QName _GrundstueckEmpfohleneNutzungGaragen_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Garagen");
-    private final static QName _GrundstueckEmpfohleneNutzungGarten_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Garten");
-    private final static QName _GrundstueckEmpfohleneNutzungGastronomie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gastronomie");
-    private final static QName _GrundstueckEmpfohleneNutzungGewerbe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gewerbe");
-    private final static QName _GrundstueckEmpfohleneNutzungHotel_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Hotel");
-    private final static QName _GrundstueckEmpfohleneNutzungIndustrie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Industrie");
-    private final static QName _GrundstueckEmpfohleneNutzungKeineBebauung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "keineBebauung");
-    private final static QName _GrundstueckEmpfohleneNutzungKleingewerbe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kleingewerbe");
-    private final static QName _GrundstueckEmpfohleneNutzungLager_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Lager");
-    private final static QName _GrundstueckEmpfohleneNutzungMehrfamilienhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Mehrfamilienhaus");
-    private final static QName _GrundstueckEmpfohleneNutzungObstpflanzung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Obstpflanzung");
-    private final static QName _GrundstueckEmpfohleneNutzungParkhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Parkhaus");
-    private final static QName _GrundstueckEmpfohleneNutzungProduktion_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Produktion");
-    private final static QName _GrundstueckEmpfohleneNutzungReihenhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Reihenhaus");
-    private final static QName _GrundstueckEmpfohleneNutzungStellplaetze_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Stellplaetze");
-    private final static QName _GrundstueckEmpfohleneNutzungVilla_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Villa");
-    private final static QName _GrundstueckEmpfohleneNutzungWald_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Wald");
-    private final static QName _BefeuerungsArtTypKeineAngabe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "KeineAngabe");
-    private final static QName _BefeuerungsArtTypErdwaerme_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Erdwaerme");
-    private final static QName _BefeuerungsArtTypSolarheizung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Solarheizung");
-    private final static QName _BefeuerungsArtTypPelletheizung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Pelletheizung");
-    private final static QName _BefeuerungsArtTypGas_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gas");
-    private final static QName _BefeuerungsArtTypOel_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Oel");
-    private final static QName _BefeuerungsArtTypFernwaerme_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Fernwaerme");
-    private final static QName _BefeuerungsArtTypStrom_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Strom");
-    private final static QName _BefeuerungsArtTypKohle_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kohle");
-    private final static QName _VermarktungGewerbeTyp2Kauf_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kauf");
-    private final static QName _VermarktungGewerbeTypMiete_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Miete");
-    private final static QName _VermarktungGrundstueckWohnenMieteTypPacht_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Pacht");
-    private final static QName _VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Erbpacht");
-    private final static QName _ApiSuchfelderTypApiSuchfeld1_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld1");
-    private final static QName _ApiSuchfelderTypApiSuchfeld2_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld2");
-    private final static QName _ApiSuchfelderTypApiSuchfeld3_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld3");
+    private static final QName _VirtuelleImmobilie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "VirtuelleImmobilie");
+    private static final QName _Immobilie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Immobilie");
+    private static final QName _Grundstueck_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Grundstueck");
+    private static final QName _TypenHaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "TypenHaus");
+    private static final QName _ImmobilieBaseTypApiSuchfelder_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfelder");
+    private static final QName _EinzelhandelTypLastenaufzug_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Lastenaufzug");
+    private static final QName _GrundstueckEmpfohleneNutzungAckerland_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Ackerland");
+    private static final QName _GrundstueckEmpfohleneNutzungBauerwartungsland_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Bauerwartungsland");
+    private static final QName _GrundstueckEmpfohleneNutzungBootsstaende_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Bootsstaende");
+    private static final QName _GrundstueckEmpfohleneNutzungBuero_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Buero");
+    private static final QName _GrundstueckEmpfohleneNutzungCamping_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Camping");
+    private static final QName _GrundstueckEmpfohleneNutzungDoppelhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Doppelhaus");
+    private static final QName _GrundstueckEmpfohleneNutzungEinfamilienhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einfamilienhaus");
+    private static final QName _GrundstueckEmpfohleneNutzungEinzelhandelGross_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einzelhandel-gross");
+    private static final QName _GrundstueckEmpfohleneNutzungEinzelhandelKlein_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Einzelhandel-klein");
+    private static final QName _GrundstueckEmpfohleneNutzungGaragen_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Garagen");
+    private static final QName _GrundstueckEmpfohleneNutzungGarten_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Garten");
+    private static final QName _GrundstueckEmpfohleneNutzungGastronomie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gastronomie");
+    private static final QName _GrundstueckEmpfohleneNutzungGewerbe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gewerbe");
+    private static final QName _GrundstueckEmpfohleneNutzungHotel_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Hotel");
+    private static final QName _GrundstueckEmpfohleneNutzungIndustrie_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Industrie");
+    private static final QName _GrundstueckEmpfohleneNutzungKeineBebauung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "keineBebauung");
+    private static final QName _GrundstueckEmpfohleneNutzungKleingewerbe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kleingewerbe");
+    private static final QName _GrundstueckEmpfohleneNutzungLager_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Lager");
+    private static final QName _GrundstueckEmpfohleneNutzungMehrfamilienhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Mehrfamilienhaus");
+    private static final QName _GrundstueckEmpfohleneNutzungObstpflanzung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Obstpflanzung");
+    private static final QName _GrundstueckEmpfohleneNutzungParkhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Parkhaus");
+    private static final QName _GrundstueckEmpfohleneNutzungProduktion_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Produktion");
+    private static final QName _GrundstueckEmpfohleneNutzungReihenhaus_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Reihenhaus");
+    private static final QName _GrundstueckEmpfohleneNutzungStellplaetze_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Stellplaetze");
+    private static final QName _GrundstueckEmpfohleneNutzungVilla_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Villa");
+    private static final QName _GrundstueckEmpfohleneNutzungWald_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Wald");
+    private static final QName _BefeuerungsArtTypKeineAngabe_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "KeineAngabe");
+    private static final QName _BefeuerungsArtTypErdwaerme_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Erdwaerme");
+    private static final QName _BefeuerungsArtTypSolarheizung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Solarheizung");
+    private static final QName _BefeuerungsArtTypPelletheizung_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Pelletheizung");
+    private static final QName _BefeuerungsArtTypGas_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Gas");
+    private static final QName _BefeuerungsArtTypOel_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Oel");
+    private static final QName _BefeuerungsArtTypFernwaerme_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Fernwaerme");
+    private static final QName _BefeuerungsArtTypStrom_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Strom");
+    private static final QName _BefeuerungsArtTypKohle_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kohle");
+    private static final QName _VermarktungGewerbeTyp2Kauf_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Kauf");
+    private static final QName _VermarktungGewerbeTypMiete_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Miete");
+    private static final QName _VermarktungGrundstueckWohnenMieteTypPacht_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Pacht");
+    private static final QName _VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "Erbpacht");
+    private static final QName _ApiSuchfelderTypApiSuchfeld1_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld1");
+    private static final QName _ApiSuchfelderTypApiSuchfeld2_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld2");
+    private static final QName _ApiSuchfelderTypApiSuchfeld3_QNAME = new QName("http://www.immobilienscout24.de/immobilientransfer", "ApiSuchfeld3");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.openestate.io.is24_xml.xml
@@ -83,6 +84,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WohnungKauf.Type }
      * 
+     * @return
+     *     the new instance of {@link WohnungKauf.Type }
      */
     public WohnungKauf.Type createWohnungKaufType() {
         return new WohnungKauf.Type();
@@ -91,6 +94,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WohnungMiete.Type }
      * 
+     * @return
+     *     the new instance of {@link WohnungMiete.Type }
      */
     public WohnungMiete.Type createWohnungMieteType() {
         return new WohnungMiete.Type();
@@ -99,6 +104,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HausKauf.Type }
      * 
+     * @return
+     *     the new instance of {@link HausKauf.Type }
      */
     public HausKauf.Type createHausKaufType() {
         return new HausKauf.Type();
@@ -107,6 +114,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HausMiete.Type }
      * 
+     * @return
+     *     the new instance of {@link HausMiete.Type }
      */
     public HausMiete.Type createHausMieteType() {
         return new HausMiete.Type();
@@ -115,6 +124,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WAZ.Type }
      * 
+     * @return
+     *     the new instance of {@link WAZ.Type }
      */
     public WAZ.Type createWAZType() {
         return new WAZ.Type();
@@ -123,6 +134,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckWohnenKauf.Type }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckWohnenKauf.Type }
      */
     public GrundstueckWohnenKauf.Type createGrundstueckWohnenKaufType() {
         return new GrundstueckWohnenKauf.Type();
@@ -131,6 +144,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckWohnenMiete.Type }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckWohnenMiete.Type }
      */
     public GrundstueckWohnenMiete.Type createGrundstueckWohnenMieteType() {
         return new GrundstueckWohnenMiete.Type();
@@ -139,6 +154,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckGewerbe.Type }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckGewerbe.Type }
      */
     public GrundstueckGewerbe.Type createGrundstueckGewerbeType() {
         return new GrundstueckGewerbe.Type();
@@ -147,6 +164,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BueroPraxis.Type }
      * 
+     * @return
+     *     the new instance of {@link BueroPraxis.Type }
      */
     public BueroPraxis.Type createBueroPraxisType() {
         return new BueroPraxis.Type();
@@ -155,6 +174,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Einzelhandel.Type }
      * 
+     * @return
+     *     the new instance of {@link Einzelhandel.Type }
      */
     public Einzelhandel.Type createEinzelhandelType() {
         return new Einzelhandel.Type();
@@ -163,6 +184,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Gastronomie.Type }
      * 
+     * @return
+     *     the new instance of {@link Gastronomie.Type }
      */
     public Gastronomie.Type createGastronomieType() {
         return new Gastronomie.Type();
@@ -171,6 +194,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HalleProduktion.Type }
      * 
+     * @return
+     *     the new instance of {@link HalleProduktion.Type }
      */
     public HalleProduktion.Type createHalleProduktionType() {
         return new HalleProduktion.Type();
@@ -179,6 +204,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SonstigeGewerbe.Type }
      * 
+     * @return
+     *     the new instance of {@link SonstigeGewerbe.Type }
      */
     public SonstigeGewerbe.Type createSonstigeGewerbeType() {
         return new SonstigeGewerbe.Type();
@@ -187,6 +214,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Anlageobjekt.Type }
      * 
+     * @return
+     *     the new instance of {@link Anlageobjekt.Type }
      */
     public Anlageobjekt.Type createAnlageobjektType() {
         return new Anlageobjekt.Type();
@@ -195,6 +224,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GarageMiete.Type }
      * 
+     * @return
+     *     the new instance of {@link GarageMiete.Type }
      */
     public GarageMiete.Type createGarageMieteType() {
         return new GarageMiete.Type();
@@ -203,6 +234,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GarageKauf.Type }
      * 
+     * @return
+     *     the new instance of {@link GarageKauf.Type }
      */
     public GarageKauf.Type createGarageKaufType() {
         return new GarageKauf.Type();
@@ -211,6 +244,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Zwangsversteigerung.Type }
      * 
+     * @return
+     *     the new instance of {@link Zwangsversteigerung.Type }
      */
     public Zwangsversteigerung.Type createZwangsversteigerungType() {
         return new Zwangsversteigerung.Type();
@@ -219,6 +254,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WGZimmer.Type }
      * 
+     * @return
+     *     the new instance of {@link WGZimmer.Type }
      */
     public WGZimmer.Type createWGZimmerType() {
         return new WGZimmer.Type();
@@ -227,6 +264,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WazTyp }
      * 
+     * @return
+     *     the new instance of {@link WazTyp }
      */
     public WazTyp createWazTyp() {
         return new WazTyp();
@@ -235,6 +274,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGewerbeTyp2 }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGewerbeTyp2 }
      */
     public VermarktungGewerbeTyp2 createVermarktungGewerbeTyp2() {
         return new VermarktungGewerbeTyp2();
@@ -243,6 +284,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGewerbeTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGewerbeTyp }
      */
     public VermarktungGewerbeTyp createVermarktungGewerbeTyp() {
         return new VermarktungGewerbeTyp();
@@ -251,6 +294,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenMieteTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenMieteTyp }
      */
     public VermarktungGrundstueckWohnenMieteTyp createVermarktungGrundstueckWohnenMieteTyp() {
         return new VermarktungGrundstueckWohnenMieteTyp();
@@ -259,6 +304,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenKaufTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenKaufTyp }
      */
     public VermarktungGrundstueckWohnenKaufTyp createVermarktungGrundstueckWohnenKaufTyp() {
         return new VermarktungGrundstueckWohnenKaufTyp();
@@ -267,6 +314,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckTypAlt }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckTypAlt }
      */
     public VermarktungGrundstueckTypAlt createVermarktungGrundstueckTypAlt() {
         return new VermarktungGrundstueckTypAlt();
@@ -275,6 +324,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckGewerbeTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckGewerbeTyp }
      */
     public VermarktungGrundstueckGewerbeTyp createVermarktungGrundstueckGewerbeTyp() {
         return new VermarktungGrundstueckGewerbeTyp();
@@ -283,6 +334,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ImmobilienTransferTyp }
      * 
+     * @return
+     *     the new instance of {@link ImmobilienTransferTyp }
      */
     public ImmobilienTransferTyp createImmobilienTransferTyp() {
         return new ImmobilienTransferTyp();
@@ -291,6 +344,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Grundstueck }
      * 
+     * @return
+     *     the new instance of {@link Grundstueck }
      */
     public Grundstueck createGrundstueck() {
         return new Grundstueck();
@@ -299,6 +354,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TypenHaus }
      * 
+     * @return
+     *     the new instance of {@link TypenHaus }
      */
     public TypenHaus createTypenHaus() {
         return new TypenHaus();
@@ -307,6 +364,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ApiSuchfelderTyp }
      * 
+     * @return
+     *     the new instance of {@link ApiSuchfelderTyp }
      */
     public ApiSuchfelderTyp createApiSuchfelderTyp() {
         return new ApiSuchfelderTyp();
@@ -315,6 +374,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KontaktAdresseTyp }
      * 
+     * @return
+     *     the new instance of {@link KontaktAdresseTyp }
      */
     public KontaktAdresseTyp createKontaktAdresseTyp() {
         return new KontaktAdresseTyp();
@@ -323,6 +384,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ImmobilienAdresseBaseTyp }
      * 
+     * @return
+     *     the new instance of {@link ImmobilienAdresseBaseTyp }
      */
     public ImmobilienAdresseBaseTyp createImmobilienAdresseBaseTyp() {
         return new ImmobilienAdresseBaseTyp();
@@ -331,6 +394,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ImmobilienAdresseTyp }
      * 
+     * @return
+     *     the new instance of {@link ImmobilienAdresseTyp }
      */
     public ImmobilienAdresseTyp createImmobilienAdresseTyp() {
         return new ImmobilienAdresseTyp();
@@ -339,6 +404,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AnbieterTyp }
      * 
+     * @return
+     *     the new instance of {@link AnbieterTyp }
      */
     public AnbieterTyp createAnbieterTyp() {
         return new AnbieterTyp();
@@ -347,6 +414,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ManuellGeoCodingTyp }
      * 
+     * @return
+     *     the new instance of {@link ManuellGeoCodingTyp }
      */
     public ManuellGeoCodingTyp createManuellGeoCodingTyp() {
         return new ManuellGeoCodingTyp();
@@ -355,6 +424,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnergieausweisTyp }
      * 
+     * @return
+     *     the new instance of {@link EnergieausweisTyp }
      */
     public EnergieausweisTyp createEnergieausweisTyp() {
         return new EnergieausweisTyp();
@@ -363,6 +434,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungWohnMieteTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungWohnMieteTyp }
      */
     public VermarktungWohnMieteTyp createVermarktungWohnMieteTyp() {
         return new VermarktungWohnMieteTyp();
@@ -371,6 +444,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungWohnKaufTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungWohnKaufTyp }
      */
     public VermarktungWohnKaufTyp createVermarktungWohnKaufTyp() {
         return new VermarktungWohnKaufTyp();
@@ -379,6 +454,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGarageMieteTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGarageMieteTyp }
      */
     public VermarktungGarageMieteTyp createVermarktungGarageMieteTyp() {
         return new VermarktungGarageMieteTyp();
@@ -387,6 +464,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGarageKaufTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGarageKaufTyp }
      */
     public VermarktungGarageKaufTyp createVermarktungGarageKaufTyp() {
         return new VermarktungGarageKaufTyp();
@@ -395,6 +474,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungWGZimmerTyp }
      * 
+     * @return
+     *     the new instance of {@link VermarktungWGZimmerTyp }
      */
     public VermarktungWGZimmerTyp createVermarktungWGZimmerTyp() {
         return new VermarktungWGZimmerTyp();
@@ -403,6 +484,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HebeanlageTyp }
      * 
+     * @return
+     *     the new instance of {@link HebeanlageTyp }
      */
     public HebeanlageTyp createHebeanlageTyp() {
         return new HebeanlageTyp();
@@ -411,6 +494,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WazMieteBaseTyp }
      * 
+     * @return
+     *     the new instance of {@link WazMieteBaseTyp }
      */
     public WazMieteBaseTyp createWazMieteBaseTyp() {
         return new WazMieteBaseTyp();
@@ -419,6 +504,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MultimediaAnhangTyp }
      * 
+     * @return
+     *     the new instance of {@link MultimediaAnhangTyp }
      */
     public MultimediaAnhangTyp createMultimediaAnhangTyp() {
         return new MultimediaAnhangTyp();
@@ -427,6 +514,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BefeuerungsArtTyp }
      * 
+     * @return
+     *     the new instance of {@link BefeuerungsArtTyp }
      */
     public BefeuerungsArtTyp createBefeuerungsArtTyp() {
         return new BefeuerungsArtTyp();
@@ -435,6 +524,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckEmpfohleneNutzung }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckEmpfohleneNutzung }
      */
     public GrundstueckEmpfohleneNutzung createGrundstueckEmpfohleneNutzung() {
         return new GrundstueckEmpfohleneNutzung();
@@ -443,6 +534,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckWohnenEmpfohleneNutzung }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckWohnenEmpfohleneNutzung }
      */
     public GrundstueckWohnenEmpfohleneNutzung createGrundstueckWohnenEmpfohleneNutzung() {
         return new GrundstueckWohnenEmpfohleneNutzung();
@@ -451,6 +544,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GrundstueckGewerbeEmpfohleneNutzung }
      * 
+     * @return
+     *     the new instance of {@link GrundstueckGewerbeEmpfohleneNutzung }
      */
     public GrundstueckGewerbeEmpfohleneNutzung createGrundstueckGewerbeEmpfohleneNutzung() {
         return new GrundstueckGewerbeEmpfohleneNutzung();
@@ -459,6 +554,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AmtsgerichtTyp }
      * 
+     * @return
+     *     the new instance of {@link AmtsgerichtTyp }
      */
     public AmtsgerichtTyp createAmtsgerichtTyp() {
         return new AmtsgerichtTyp();
@@ -467,6 +564,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VersteigerungsterminTyp }
      * 
+     * @return
+     *     the new instance of {@link VersteigerungsterminTyp }
      */
     public VersteigerungsterminTyp createVersteigerungsterminTyp() {
         return new VersteigerungsterminTyp();
@@ -475,6 +574,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WohnungTyp }
      * 
+     * @return
+     *     the new instance of {@link WohnungTyp }
      */
     public WohnungTyp createWohnungTyp() {
         return new WohnungTyp();
@@ -483,6 +584,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HausTyp }
      * 
+     * @return
+     *     the new instance of {@link HausTyp }
      */
     public HausTyp createHausTyp() {
         return new HausTyp();
@@ -491,6 +594,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TypenHausTyp }
      * 
+     * @return
+     *     the new instance of {@link TypenHausTyp }
      */
     public TypenHausTyp createTypenHausTyp() {
         return new TypenHausTyp();
@@ -499,6 +604,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BueroPraxisTyp }
      * 
+     * @return
+     *     the new instance of {@link BueroPraxisTyp }
      */
     public BueroPraxisTyp createBueroPraxisTyp() {
         return new BueroPraxisTyp();
@@ -507,6 +614,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EinzelhandelTyp }
      * 
+     * @return
+     *     the new instance of {@link EinzelhandelTyp }
      */
     public EinzelhandelTyp createEinzelhandelTyp() {
         return new EinzelhandelTyp();
@@ -515,6 +624,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GastronomieTyp }
      * 
+     * @return
+     *     the new instance of {@link GastronomieTyp }
      */
     public GastronomieTyp createGastronomieTyp() {
         return new GastronomieTyp();
@@ -523,6 +634,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HalleProduktionTyp }
      * 
+     * @return
+     *     the new instance of {@link HalleProduktionTyp }
      */
     public HalleProduktionTyp createHalleProduktionTyp() {
         return new HalleProduktionTyp();
@@ -531,6 +644,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SonstigeGewerbeTyp }
      * 
+     * @return
+     *     the new instance of {@link SonstigeGewerbeTyp }
      */
     public SonstigeGewerbeTyp createSonstigeGewerbeTyp() {
         return new SonstigeGewerbeTyp();
@@ -539,6 +654,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AnlageObjektTyp }
      * 
+     * @return
+     *     the new instance of {@link AnlageObjektTyp }
      */
     public AnlageObjektTyp createAnlageObjektTyp() {
         return new AnlageObjektTyp();
@@ -547,6 +664,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GarageTyp }
      * 
+     * @return
+     *     the new instance of {@link GarageTyp }
      */
     public GarageTyp createGarageTyp() {
         return new GarageTyp();
@@ -555,6 +674,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ZwangsversteigerungTyp }
      * 
+     * @return
+     *     the new instance of {@link ZwangsversteigerungTyp }
      */
     public ZwangsversteigerungTyp createZwangsversteigerungTyp() {
         return new ZwangsversteigerungTyp();
@@ -563,6 +684,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WGZimmerTyp }
      * 
+     * @return
+     *     the new instance of {@link WGZimmerTyp }
      */
     public WGZimmerTyp createWGZimmerTyp() {
         return new WGZimmerTyp();
@@ -571,6 +694,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WazTyp.Pauschalmiete }
      * 
+     * @return
+     *     the new instance of {@link WazTyp.Pauschalmiete }
      */
     public WazTyp.Pauschalmiete createWazTypPauschalmiete() {
         return new WazTyp.Pauschalmiete();
@@ -579,6 +704,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WazTyp.Monatsmiete }
      * 
+     * @return
+     *     the new instance of {@link WazTyp.Monatsmiete }
      */
     public WazTyp.Monatsmiete createWazTypMonatsmiete() {
         return new WazTyp.Monatsmiete();
@@ -587,6 +714,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGewerbeTyp2 .Miete }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGewerbeTyp2 .Miete }
      */
     public VermarktungGewerbeTyp2 .Miete createVermarktungGewerbeTyp2Miete() {
         return new VermarktungGewerbeTyp2 .Miete();
@@ -595,6 +724,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGewerbeTyp.Miete }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGewerbeTyp.Miete }
      */
     public VermarktungGewerbeTyp.Miete createVermarktungGewerbeTypMiete() {
         return new VermarktungGewerbeTyp.Miete();
@@ -603,6 +734,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGewerbeTyp.Kauf }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGewerbeTyp.Kauf }
      */
     public VermarktungGewerbeTyp.Kauf createVermarktungGewerbeTypKauf() {
         return new VermarktungGewerbeTyp.Kauf();
@@ -611,6 +744,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenMieteTyp.Pacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenMieteTyp.Pacht }
      */
     public VermarktungGrundstueckWohnenMieteTyp.Pacht createVermarktungGrundstueckWohnenMieteTypPacht() {
         return new VermarktungGrundstueckWohnenMieteTyp.Pacht();
@@ -619,6 +754,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenMieteTyp.Miete }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenMieteTyp.Miete }
      */
     public VermarktungGrundstueckWohnenMieteTyp.Miete createVermarktungGrundstueckWohnenMieteTypMiete() {
         return new VermarktungGrundstueckWohnenMieteTyp.Miete();
@@ -627,6 +764,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenKaufTyp.Kauf }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenKaufTyp.Kauf }
      */
     public VermarktungGrundstueckWohnenKaufTyp.Kauf createVermarktungGrundstueckWohnenKaufTypKauf() {
         return new VermarktungGrundstueckWohnenKaufTyp.Kauf();
@@ -635,6 +774,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckWohnenKaufTyp.Erbpacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckWohnenKaufTyp.Erbpacht }
      */
     public VermarktungGrundstueckWohnenKaufTyp.Erbpacht createVermarktungGrundstueckWohnenKaufTypErbpacht() {
         return new VermarktungGrundstueckWohnenKaufTyp.Erbpacht();
@@ -643,6 +784,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckTypAlt.Kauf }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckTypAlt.Kauf }
      */
     public VermarktungGrundstueckTypAlt.Kauf createVermarktungGrundstueckTypAltKauf() {
         return new VermarktungGrundstueckTypAlt.Kauf();
@@ -651,6 +794,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckTypAlt.Pacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckTypAlt.Pacht }
      */
     public VermarktungGrundstueckTypAlt.Pacht createVermarktungGrundstueckTypAltPacht() {
         return new VermarktungGrundstueckTypAlt.Pacht();
@@ -659,6 +804,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckTypAlt.Erbpacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckTypAlt.Erbpacht }
      */
     public VermarktungGrundstueckTypAlt.Erbpacht createVermarktungGrundstueckTypAltErbpacht() {
         return new VermarktungGrundstueckTypAlt.Erbpacht();
@@ -667,6 +814,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckGewerbeTyp.Kauf }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckGewerbeTyp.Kauf }
      */
     public VermarktungGrundstueckGewerbeTyp.Kauf createVermarktungGrundstueckGewerbeTypKauf() {
         return new VermarktungGrundstueckGewerbeTyp.Kauf();
@@ -675,6 +824,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckGewerbeTyp.Pacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckGewerbeTyp.Pacht }
      */
     public VermarktungGrundstueckGewerbeTyp.Pacht createVermarktungGrundstueckGewerbeTypPacht() {
         return new VermarktungGrundstueckGewerbeTyp.Pacht();
@@ -683,6 +834,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckGewerbeTyp.Erbpacht }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckGewerbeTyp.Erbpacht }
      */
     public VermarktungGrundstueckGewerbeTyp.Erbpacht createVermarktungGrundstueckGewerbeTypErbpacht() {
         return new VermarktungGrundstueckGewerbeTyp.Erbpacht();
@@ -691,6 +844,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link VermarktungGrundstueckGewerbeTyp.Miete }
      * 
+     * @return
+     *     the new instance of {@link VermarktungGrundstueckGewerbeTyp.Miete }
      */
     public VermarktungGrundstueckGewerbeTyp.Miete createVermarktungGrundstueckGewerbeTypMiete() {
         return new VermarktungGrundstueckGewerbeTyp.Miete();
@@ -699,6 +854,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ImmobilienTransferTyp.Anbieter }
      * 
+     * @return
+     *     the new instance of {@link ImmobilienTransferTyp.Anbieter }
      */
     public ImmobilienTransferTyp.Anbieter createImmobilienTransferTypAnbieter() {
         return new ImmobilienTransferTyp.Anbieter();
@@ -714,7 +871,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "VirtuelleImmobilie")
     public JAXBElement<VirtuelleImmobilieBaseTyp> createVirtuelleImmobilie(VirtuelleImmobilieBaseTyp value) {
-        return new JAXBElement<VirtuelleImmobilieBaseTyp>(_VirtuelleImmobilie_QNAME, VirtuelleImmobilieBaseTyp.class, null, value);
+        return new JAXBElement<>(_VirtuelleImmobilie_QNAME, VirtuelleImmobilieBaseTyp.class, null, value);
     }
 
     /**
@@ -727,7 +884,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Immobilie")
     public JAXBElement<ImmobilieBaseTyp> createImmobilie(ImmobilieBaseTyp value) {
-        return new JAXBElement<ImmobilieBaseTyp>(_Immobilie_QNAME, ImmobilieBaseTyp.class, null, value);
+        return new JAXBElement<>(_Immobilie_QNAME, ImmobilieBaseTyp.class, null, value);
     }
 
     /**
@@ -805,7 +962,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Grundstueck", substitutionHeadNamespace = "http://www.immobilienscout24.de/immobilientransfer", substitutionHeadName = "Immobilie")
     public JAXBElement<Grundstueck> createGrundstueck(Grundstueck value) {
-        return new JAXBElement<Grundstueck>(_Grundstueck_QNAME, Grundstueck.class, null, value);
+        return new JAXBElement<>(_Grundstueck_QNAME, Grundstueck.class, null, value);
     }
 
     /**
@@ -857,7 +1014,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "TypenHaus", substitutionHeadNamespace = "http://www.immobilienscout24.de/immobilientransfer", substitutionHeadName = "VirtuelleImmobilie")
     public JAXBElement<TypenHaus> createTypenHaus(TypenHaus value) {
-        return new JAXBElement<TypenHaus>(_TypenHaus_QNAME, TypenHaus.class, null, value);
+        return new JAXBElement<>(_TypenHaus_QNAME, TypenHaus.class, null, value);
     }
 
     /**
@@ -1013,7 +1170,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "ApiSuchfelder", scope = ImmobilieBaseTyp.class)
     public JAXBElement<ApiSuchfelderTyp> createImmobilieBaseTypApiSuchfelder(ApiSuchfelderTyp value) {
-        return new JAXBElement<ApiSuchfelderTyp>(_ImmobilieBaseTypApiSuchfelder_QNAME, ApiSuchfelderTyp.class, ImmobilieBaseTyp.class, value);
+        return new JAXBElement<>(_ImmobilieBaseTypApiSuchfelder_QNAME, ApiSuchfelderTyp.class, ImmobilieBaseTyp.class, value);
     }
 
     /**
@@ -1026,7 +1183,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Lastenaufzug", scope = EinzelhandelTyp.class)
     public JAXBElement<HebeanlageTyp> createEinzelhandelTypLastenaufzug(HebeanlageTyp value) {
-        return new JAXBElement<HebeanlageTyp>(_EinzelhandelTypLastenaufzug_QNAME, HebeanlageTyp.class, EinzelhandelTyp.class, value);
+        return new JAXBElement<>(_EinzelhandelTypLastenaufzug_QNAME, HebeanlageTyp.class, EinzelhandelTyp.class, value);
     }
 
     /**
@@ -1039,7 +1196,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "ApiSuchfelder", scope = VirtuelleImmobilieBaseTyp.class)
     public JAXBElement<ApiSuchfelderTyp> createVirtuelleImmobilieBaseTypApiSuchfelder(ApiSuchfelderTyp value) {
-        return new JAXBElement<ApiSuchfelderTyp>(_ImmobilieBaseTypApiSuchfelder_QNAME, ApiSuchfelderTyp.class, VirtuelleImmobilieBaseTyp.class, value);
+        return new JAXBElement<>(_ImmobilieBaseTypApiSuchfelder_QNAME, ApiSuchfelderTyp.class, VirtuelleImmobilieBaseTyp.class, value);
     }
 
     /**
@@ -1052,7 +1209,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Ackerland", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungAckerland(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungAckerland_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungAckerland_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1065,7 +1222,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Bauerwartungsland", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungBauerwartungsland(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungBauerwartungsland_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungBauerwartungsland_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1078,7 +1235,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Bootsstaende", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungBootsstaende(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungBootsstaende_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungBootsstaende_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1091,7 +1248,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Buero", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungBuero(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungBuero_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungBuero_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1104,7 +1261,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Camping", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungCamping(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungCamping_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungCamping_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1117,7 +1274,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Doppelhaus", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungDoppelhaus(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungDoppelhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungDoppelhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1130,7 +1287,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Einfamilienhaus", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungEinfamilienhaus(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungEinfamilienhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungEinfamilienhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1143,7 +1300,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Einzelhandel-gross", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungEinzelhandelGross(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungEinzelhandelGross_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungEinzelhandelGross_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1156,7 +1313,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Einzelhandel-klein", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungEinzelhandelKlein(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungEinzelhandelKlein_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungEinzelhandelKlein_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1169,7 +1326,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Garagen", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungGaragen(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungGaragen_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungGaragen_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1182,7 +1339,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Garten", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungGarten(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungGarten_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungGarten_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1195,7 +1352,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Gastronomie", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungGastronomie(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungGastronomie_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungGastronomie_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1208,7 +1365,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Gewerbe", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungGewerbe(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungGewerbe_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungGewerbe_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1221,7 +1378,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Hotel", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungHotel(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungHotel_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungHotel_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1234,7 +1391,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Industrie", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungIndustrie(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungIndustrie_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungIndustrie_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1247,7 +1404,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "keineBebauung", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungKeineBebauung(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungKeineBebauung_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungKeineBebauung_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1260,7 +1417,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kleingewerbe", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungKleingewerbe(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungKleingewerbe_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungKleingewerbe_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1273,7 +1430,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Lager", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungLager(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungLager_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungLager_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1286,7 +1443,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Mehrfamilienhaus", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungMehrfamilienhaus(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungMehrfamilienhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungMehrfamilienhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1299,7 +1456,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Obstpflanzung", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungObstpflanzung(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungObstpflanzung_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungObstpflanzung_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1312,7 +1469,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Parkhaus", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungParkhaus(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungParkhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungParkhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1325,7 +1482,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Produktion", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungProduktion(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungProduktion_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungProduktion_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1338,7 +1495,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Reihenhaus", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungReihenhaus(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungReihenhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungReihenhaus_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1351,7 +1508,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Stellplaetze", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungStellplaetze(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungStellplaetze_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungStellplaetze_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1364,7 +1521,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Villa", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungVilla(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungVilla_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungVilla_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1377,7 +1534,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Wald", scope = GrundstueckEmpfohleneNutzung.class)
     public JAXBElement<Object> createGrundstueckEmpfohleneNutzungWald(Object value) {
-        return new JAXBElement<Object>(_GrundstueckEmpfohleneNutzungWald_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
+        return new JAXBElement<>(_GrundstueckEmpfohleneNutzungWald_QNAME, Object.class, GrundstueckEmpfohleneNutzung.class, value);
     }
 
     /**
@@ -1390,7 +1547,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "KeineAngabe", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypKeineAngabe(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypKeineAngabe_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypKeineAngabe_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1403,7 +1560,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Erdwaerme", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypErdwaerme(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypErdwaerme_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypErdwaerme_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1416,7 +1573,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Solarheizung", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypSolarheizung(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypSolarheizung_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypSolarheizung_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1429,7 +1586,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Pelletheizung", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypPelletheizung(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypPelletheizung_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypPelletheizung_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1442,7 +1599,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Gas", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypGas(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypGas_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypGas_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1455,7 +1612,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Oel", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypOel(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypOel_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypOel_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1468,7 +1625,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Fernwaerme", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypFernwaerme(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypFernwaerme_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypFernwaerme_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1481,7 +1638,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Strom", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypStrom(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypStrom_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypStrom_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1494,7 +1651,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kohle", scope = BefeuerungsArtTyp.class)
     public JAXBElement<Object> createBefeuerungsArtTypKohle(Object value) {
-        return new JAXBElement<Object>(_BefeuerungsArtTypKohle_QNAME, Object.class, BefeuerungsArtTyp.class, value);
+        return new JAXBElement<>(_BefeuerungsArtTypKohle_QNAME, Object.class, BefeuerungsArtTyp.class, value);
     }
 
     /**
@@ -1507,7 +1664,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kauf", scope = VermarktungGewerbeTyp2 .class)
     public JAXBElement<Object> createVermarktungGewerbeTyp2Kauf(Object value) {
-        return new JAXBElement<Object>(_VermarktungGewerbeTyp2Kauf_QNAME, Object.class, VermarktungGewerbeTyp2 .class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTyp2Kauf_QNAME, Object.class, VermarktungGewerbeTyp2 .class, value);
     }
 
     /**
@@ -1520,7 +1677,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Miete", scope = VermarktungGewerbeTyp.class)
     public JAXBElement<VermarktungGewerbeTyp.Miete> createVermarktungGewerbeTypMiete(VermarktungGewerbeTyp.Miete value) {
-        return new JAXBElement<VermarktungGewerbeTyp.Miete>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGewerbeTyp.Miete.class, VermarktungGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGewerbeTyp.Miete.class, VermarktungGewerbeTyp.class, value);
     }
 
     /**
@@ -1533,7 +1690,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kauf", scope = VermarktungGewerbeTyp.class)
     public JAXBElement<VermarktungGewerbeTyp.Kauf> createVermarktungGewerbeTypKauf(VermarktungGewerbeTyp.Kauf value) {
-        return new JAXBElement<VermarktungGewerbeTyp.Kauf>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGewerbeTyp.Kauf.class, VermarktungGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGewerbeTyp.Kauf.class, VermarktungGewerbeTyp.class, value);
     }
 
     /**
@@ -1546,7 +1703,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Pacht", scope = VermarktungGrundstueckWohnenMieteTyp.class)
     public JAXBElement<VermarktungGrundstueckWohnenMieteTyp.Pacht> createVermarktungGrundstueckWohnenMieteTypPacht(VermarktungGrundstueckWohnenMieteTyp.Pacht value) {
-        return new JAXBElement<VermarktungGrundstueckWohnenMieteTyp.Pacht>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckWohnenMieteTyp.Pacht.class, VermarktungGrundstueckWohnenMieteTyp.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckWohnenMieteTyp.Pacht.class, VermarktungGrundstueckWohnenMieteTyp.class, value);
     }
 
     /**
@@ -1559,7 +1716,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Miete", scope = VermarktungGrundstueckWohnenMieteTyp.class)
     public JAXBElement<VermarktungGrundstueckWohnenMieteTyp.Miete> createVermarktungGrundstueckWohnenMieteTypMiete(VermarktungGrundstueckWohnenMieteTyp.Miete value) {
-        return new JAXBElement<VermarktungGrundstueckWohnenMieteTyp.Miete>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGrundstueckWohnenMieteTyp.Miete.class, VermarktungGrundstueckWohnenMieteTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGrundstueckWohnenMieteTyp.Miete.class, VermarktungGrundstueckWohnenMieteTyp.class, value);
     }
 
     /**
@@ -1572,7 +1729,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kauf", scope = VermarktungGrundstueckWohnenKaufTyp.class)
     public JAXBElement<VermarktungGrundstueckWohnenKaufTyp.Kauf> createVermarktungGrundstueckWohnenKaufTypKauf(VermarktungGrundstueckWohnenKaufTyp.Kauf value) {
-        return new JAXBElement<VermarktungGrundstueckWohnenKaufTyp.Kauf>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckWohnenKaufTyp.Kauf.class, VermarktungGrundstueckWohnenKaufTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckWohnenKaufTyp.Kauf.class, VermarktungGrundstueckWohnenKaufTyp.class, value);
     }
 
     /**
@@ -1585,7 +1742,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Erbpacht", scope = VermarktungGrundstueckWohnenKaufTyp.class)
     public JAXBElement<VermarktungGrundstueckWohnenKaufTyp.Erbpacht> createVermarktungGrundstueckWohnenKaufTypErbpacht(VermarktungGrundstueckWohnenKaufTyp.Erbpacht value) {
-        return new JAXBElement<VermarktungGrundstueckWohnenKaufTyp.Erbpacht>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckWohnenKaufTyp.Erbpacht.class, VermarktungGrundstueckWohnenKaufTyp.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckWohnenKaufTyp.Erbpacht.class, VermarktungGrundstueckWohnenKaufTyp.class, value);
     }
 
     /**
@@ -1598,7 +1755,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kauf", scope = VermarktungGrundstueckTypAlt.class)
     public JAXBElement<VermarktungGrundstueckTypAlt.Kauf> createVermarktungGrundstueckTypAltKauf(VermarktungGrundstueckTypAlt.Kauf value) {
-        return new JAXBElement<VermarktungGrundstueckTypAlt.Kauf>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckTypAlt.Kauf.class, VermarktungGrundstueckTypAlt.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckTypAlt.Kauf.class, VermarktungGrundstueckTypAlt.class, value);
     }
 
     /**
@@ -1611,7 +1768,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Pacht", scope = VermarktungGrundstueckTypAlt.class)
     public JAXBElement<VermarktungGrundstueckTypAlt.Pacht> createVermarktungGrundstueckTypAltPacht(VermarktungGrundstueckTypAlt.Pacht value) {
-        return new JAXBElement<VermarktungGrundstueckTypAlt.Pacht>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckTypAlt.Pacht.class, VermarktungGrundstueckTypAlt.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckTypAlt.Pacht.class, VermarktungGrundstueckTypAlt.class, value);
     }
 
     /**
@@ -1624,7 +1781,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Erbpacht", scope = VermarktungGrundstueckTypAlt.class)
     public JAXBElement<VermarktungGrundstueckTypAlt.Erbpacht> createVermarktungGrundstueckTypAltErbpacht(VermarktungGrundstueckTypAlt.Erbpacht value) {
-        return new JAXBElement<VermarktungGrundstueckTypAlt.Erbpacht>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckTypAlt.Erbpacht.class, VermarktungGrundstueckTypAlt.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckTypAlt.Erbpacht.class, VermarktungGrundstueckTypAlt.class, value);
     }
 
     /**
@@ -1637,7 +1794,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Kauf", scope = VermarktungGrundstueckGewerbeTyp.class)
     public JAXBElement<VermarktungGrundstueckGewerbeTyp.Kauf> createVermarktungGrundstueckGewerbeTypKauf(VermarktungGrundstueckGewerbeTyp.Kauf value) {
-        return new JAXBElement<VermarktungGrundstueckGewerbeTyp.Kauf>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckGewerbeTyp.Kauf.class, VermarktungGrundstueckGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTyp2Kauf_QNAME, VermarktungGrundstueckGewerbeTyp.Kauf.class, VermarktungGrundstueckGewerbeTyp.class, value);
     }
 
     /**
@@ -1650,7 +1807,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Pacht", scope = VermarktungGrundstueckGewerbeTyp.class)
     public JAXBElement<VermarktungGrundstueckGewerbeTyp.Pacht> createVermarktungGrundstueckGewerbeTypPacht(VermarktungGrundstueckGewerbeTyp.Pacht value) {
-        return new JAXBElement<VermarktungGrundstueckGewerbeTyp.Pacht>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckGewerbeTyp.Pacht.class, VermarktungGrundstueckGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenMieteTypPacht_QNAME, VermarktungGrundstueckGewerbeTyp.Pacht.class, VermarktungGrundstueckGewerbeTyp.class, value);
     }
 
     /**
@@ -1663,7 +1820,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Erbpacht", scope = VermarktungGrundstueckGewerbeTyp.class)
     public JAXBElement<VermarktungGrundstueckGewerbeTyp.Erbpacht> createVermarktungGrundstueckGewerbeTypErbpacht(VermarktungGrundstueckGewerbeTyp.Erbpacht value) {
-        return new JAXBElement<VermarktungGrundstueckGewerbeTyp.Erbpacht>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckGewerbeTyp.Erbpacht.class, VermarktungGrundstueckGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGrundstueckWohnenKaufTypErbpacht_QNAME, VermarktungGrundstueckGewerbeTyp.Erbpacht.class, VermarktungGrundstueckGewerbeTyp.class, value);
     }
 
     /**
@@ -1676,7 +1833,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "Miete", scope = VermarktungGrundstueckGewerbeTyp.class)
     public JAXBElement<VermarktungGrundstueckGewerbeTyp.Miete> createVermarktungGrundstueckGewerbeTypMiete(VermarktungGrundstueckGewerbeTyp.Miete value) {
-        return new JAXBElement<VermarktungGrundstueckGewerbeTyp.Miete>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGrundstueckGewerbeTyp.Miete.class, VermarktungGrundstueckGewerbeTyp.class, value);
+        return new JAXBElement<>(_VermarktungGewerbeTypMiete_QNAME, VermarktungGrundstueckGewerbeTyp.Miete.class, VermarktungGrundstueckGewerbeTyp.class, value);
     }
 
     /**
@@ -1689,7 +1846,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "ApiSuchfeld1", scope = ApiSuchfelderTyp.class)
     public JAXBElement<String> createApiSuchfelderTypApiSuchfeld1(String value) {
-        return new JAXBElement<String>(_ApiSuchfelderTypApiSuchfeld1_QNAME, String.class, ApiSuchfelderTyp.class, value);
+        return new JAXBElement<>(_ApiSuchfelderTypApiSuchfeld1_QNAME, String.class, ApiSuchfelderTyp.class, value);
     }
 
     /**
@@ -1702,7 +1859,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "ApiSuchfeld2", scope = ApiSuchfelderTyp.class)
     public JAXBElement<String> createApiSuchfelderTypApiSuchfeld2(String value) {
-        return new JAXBElement<String>(_ApiSuchfelderTypApiSuchfeld2_QNAME, String.class, ApiSuchfelderTyp.class, value);
+        return new JAXBElement<>(_ApiSuchfelderTypApiSuchfeld2_QNAME, String.class, ApiSuchfelderTyp.class, value);
     }
 
     /**
@@ -1715,7 +1872,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.immobilienscout24.de/immobilientransfer", name = "ApiSuchfeld3", scope = ApiSuchfelderTyp.class)
     public JAXBElement<String> createApiSuchfelderTypApiSuchfeld3(String value) {
-        return new JAXBElement<String>(_ApiSuchfelderTypApiSuchfeld3_QNAME, String.class, ApiSuchfelderTyp.class, value);
+        return new JAXBElement<>(_ApiSuchfelderTypApiSuchfeld3_QNAME, String.class, ApiSuchfelderTyp.class, value);
     }
 
 }

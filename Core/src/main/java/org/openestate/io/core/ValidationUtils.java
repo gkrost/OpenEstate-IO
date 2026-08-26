@@ -16,11 +16,11 @@
 package org.openestate.io.core;
 
 import java.util.Set;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.ValidationException;
-import javax.validation.ValidatorFactory;
-import javax.validation.groups.Default;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.ValidationException;
+import jakarta.validation.ValidatorFactory;
+import jakarta.validation.groups.Default;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

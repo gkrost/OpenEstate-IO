@@ -10,23 +10,23 @@
         <!-- parsers & writers for global simple types -->
 
         <jaxb:javaType xmlType="xsd:int" name="java.math.BigInteger"
-                       parseMethod="javax.xml.bind.DatatypeConverter.parseInteger"
-                       printMethod="javax.xml.bind.DatatypeConverter.printInteger"/>
+                       parseMethod="jakarta.xml.bind.DatatypeConverter.parseInteger"
+                       printMethod="jakarta.xml.bind.DatatypeConverter.printInteger"/>
         <jaxb:javaType xmlType="xsd:positiveInteger" name="java.math.BigInteger"
                        parseMethod="org.openestate.io.immobiliare_it.ImmobiliareItUtils.parsePositiveInteger"
                        printMethod="org.openestate.io.immobiliare_it.ImmobiliareItUtils.printPositiveInteger"/>
         <jaxb:javaType xmlType="xsd:long" name="java.math.BigInteger"
-                       parseMethod="javax.xml.bind.DatatypeConverter.parseInteger"
-                       printMethod="javax.xml.bind.DatatypeConverter.printInteger"/>
+                       parseMethod="jakarta.xml.bind.DatatypeConverter.parseInteger"
+                       printMethod="jakarta.xml.bind.DatatypeConverter.printInteger"/>
         <jaxb:javaType xmlType="xsd:float" name="java.math.BigDecimal"
-                       parseMethod="javax.xml.bind.DatatypeConverter.parseDecimal"
-                       printMethod="javax.xml.bind.DatatypeConverter.printDecimal"/>
+                       parseMethod="jakarta.xml.bind.DatatypeConverter.parseDecimal"
+                       printMethod="jakarta.xml.bind.DatatypeConverter.printDecimal"/>
         <jaxb:javaType xmlType="xsd:double" name="java.math.BigDecimal"
-                       parseMethod="javax.xml.bind.DatatypeConverter.parseDecimal"
-                       printMethod="javax.xml.bind.DatatypeConverter.printDecimal"/>
+                       parseMethod="jakarta.xml.bind.DatatypeConverter.parseDecimal"
+                       printMethod="jakarta.xml.bind.DatatypeConverter.printDecimal"/>
         <jaxb:javaType xmlType="xsd:dateTime" name="java.util.Calendar"
-                       parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
-                       printMethod="javax.xml.bind.DatatypeConverter.printDateTime"/>
+                       parseMethod="jakarta.xml.bind.DatatypeConverter.parseDateTime"
+                       printMethod="jakarta.xml.bind.DatatypeConverter.printDateTime"/>
 
         <jaxb:javaType xmlType="immobiliare:nullInteger" name="java.math.BigInteger"
                        parseMethod="org.openestate.io.immobiliare_it.ImmobiliareItUtils.parseNullInteger"

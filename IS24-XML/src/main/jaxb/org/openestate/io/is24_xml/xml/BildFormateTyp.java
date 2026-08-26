@@ -1,33 +1,33 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for BildFormateTyp.
+ * Akzeptierte Dateiformate von Bild-Attachments
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="BildFormateTyp"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="JPG"/&gt;
- *     &lt;enumeration value="GIF"/&gt;
- *     &lt;enumeration value="PNG"/&gt;
- *     &lt;enumeration value="BMP"/&gt;
- *     &lt;enumeration value="WBMP"/&gt;
- *     &lt;enumeration value="JPEG"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>Java class for BildFormateTyp</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="BildFormateTyp">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="JPG"/>
+ *     <enumeration value="GIF"/>
+ *     <enumeration value="PNG"/>
+ *     <enumeration value="BMP"/>
+ *     <enumeration value="WBMP"/>
+ *     <enumeration value="JPEG"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "BildFormateTyp")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public enum BildFormateTyp {
 
     JPG,

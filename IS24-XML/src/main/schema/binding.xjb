@@ -6,7 +6,7 @@
 
     <jaxb:globalBindings>
         <jaxb:serializable/>
-        <!--<jaxb:javaType name="java.util.Calendar" xmlType="xsd:date" parseMethod="javax.xml.bind.DatatypeConverter.parseDate" printMethod="javax.xml.bind.DatatypeConverter.printDate" />-->
+        <!--<jaxb:javaType name="java.util.Calendar" xmlType="xsd:date" parseMethod="jakarta.xml.bind.DatatypeConverter.parseDate" printMethod="jakarta.xml.bind.DatatypeConverter.printDate" />-->
         <jaxb:javaType name="java.util.Calendar" xmlType="xsd:date"
                        parseMethod="org.openestate.io.is24_xml.Is24XmlUtils.parseDate"
                        printMethod="org.openestate.io.is24_xml.Is24XmlUtils.printDate"/>

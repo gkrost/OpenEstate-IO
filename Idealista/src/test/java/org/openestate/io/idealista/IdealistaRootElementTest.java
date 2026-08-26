@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.util.Set;
-import javax.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolation;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
