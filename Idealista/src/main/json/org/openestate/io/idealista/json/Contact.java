@@ -2,16 +2,16 @@
 package org.openestate.io.idealista.json;
 
 import java.io.Serializable;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -51,8 +51,7 @@ public class Contact implements Serializable
     @Pattern(regexp = "^[0-9]{5,12}$")
     private String secondaryPhoneNumber;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 3433591450038418896L;
 
     @JsonProperty("contactName")

@@ -3,13 +3,9 @@ package org.openestate.io.idealista.json;
 
 import java.io.Serializable;
 import java.net.URI;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -18,6 +14,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 
 /**
@@ -76,19 +76,18 @@ public class Property implements Serializable
     /**
      * Property descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
     @JsonProperty("propertyDescriptions")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
     @Size(min = 1)
-    @Valid
-    private Set<Description> descriptions = null;
+    private Set<@Valid Description> descriptions;
     /**
      * Property type
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyFeatures" property.
      * 
      */
@@ -97,15 +96,14 @@ public class Property implements Serializable
     /**
      * Property images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */
     @JsonProperty("propertyImages")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
     @Size(min = 1)
-    @Valid
-    private Set<Image> images = null;
+    private Set<@Valid Image> images;
     /**
      * Operation Object
      * <p>
@@ -125,8 +123,7 @@ public class Property implements Serializable
     @JsonPropertyDescription("If the visibility is 'idealista', you can find the property using the idealista's search engine; 'microsite', the property is only published on the real estate agency microsite; 'private', the property is not published and only the customer can see it.")
     private PropertyVisibilityType visibility;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = -3965990345321591059L;
 
     /**
@@ -139,6 +136,7 @@ public class Property implements Serializable
     /**
      * 
      * @param code
+     *     Property identifier. It must be unique for each property and unchanging over time. This code will be the internal id to match it with our id. Its not the same that the propertyReference value. If the code changes, the property that was associated with this code will be unset on our systems.
      */
     public Property(String code) {
         super();
@@ -242,7 +240,7 @@ public class Property implements Serializable
     /**
      * Property descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
@@ -254,7 +252,7 @@ public class Property implements Serializable
     /**
      * Property descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
@@ -271,7 +269,7 @@ public class Property implements Serializable
     /**
      * Property type
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyFeatures" property.
      * 
      */
@@ -283,7 +281,7 @@ public class Property implements Serializable
     /**
      * Property type
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyFeatures" property.
      * 
      */
@@ -300,7 +298,7 @@ public class Property implements Serializable
     /**
      * Property images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */
@@ -312,7 +310,7 @@ public class Property implements Serializable
     /**
      * Property images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */

@@ -5,11 +5,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,6 +16,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
 
 
 /**
@@ -78,7 +79,7 @@ public class HomeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.Types availability varies between countries. Spain: rustic_rural, rustic_masia, rustic_cortijo, rustic_terrera, rustic_torre, rustic_caseron. Italy: house_villa, rustic_masseria, rustic_trullo, rustic_casalecascina, rustic_baita. Portugal: house_andar_moradia, rustic_quinta, rustic_moinho, rustic_montealentejano, rustic_solar. Spain and Portugal: rustic_palace.  The rest of the types is available in every country.
      * (Required)
      * 
@@ -398,8 +399,7 @@ public class HomeFeatures
     @JsonProperty("featuresHeatingType")
     private HeatingType heatingType;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 2164016004890903218L;
 
     /**
@@ -411,9 +411,8 @@ public class HomeFeatures
 
     /**
      * 
-     * @param bathroomNumber
      * @param type
-     * @param areaConstructed
+     *     property types. Types availability varies between countries. Spain: rustic_rural, rustic_masia, rustic_cortijo, rustic_terrera, rustic_torre, rustic_caseron. Italy: house_villa, rustic_masseria, rustic_trullo, rustic_casalecascina, rustic_baita. Portugal: house_andar_moradia, rustic_quinta, rustic_moinho, rustic_montealentejano, rustic_solar. Spain and Portugal: rustic_palace.  The rest of the types is available in every country.
      */
     public HomeFeatures(HomeFeatures.Type type, BigInteger areaConstructed, BigInteger bathroomNumber) {
         super();
@@ -425,7 +424,7 @@ public class HomeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.Types availability varies between countries. Spain: rustic_rural, rustic_masia, rustic_cortijo, rustic_terrera, rustic_torre, rustic_caseron. Italy: house_villa, rustic_masseria, rustic_trullo, rustic_casalecascina, rustic_baita. Portugal: house_andar_moradia, rustic_quinta, rustic_moinho, rustic_montealentejano, rustic_solar. Spain and Portugal: rustic_palace.  The rest of the types is available in every country.
      * (Required)
      * 
@@ -438,7 +437,7 @@ public class HomeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.Types availability varies between countries. Spain: rustic_rural, rustic_masia, rustic_cortijo, rustic_terrera, rustic_torre, rustic_caseron. Italy: house_villa, rustic_masseria, rustic_trullo, rustic_casalecascina, rustic_baita. Portugal: house_andar_moradia, rustic_quinta, rustic_moinho, rustic_montealentejano, rustic_solar. Spain and Portugal: rustic_palace.  The rest of the types is available in every country.
      * (Required)
      * 

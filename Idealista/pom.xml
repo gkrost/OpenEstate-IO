@@ -152,6 +152,7 @@
                     <initializeCollections>false</initializeCollections>
                     <includeHashcodeAndEquals>true</includeHashcodeAndEquals>
                     <includeJsr303Annotations>true</includeJsr303Annotations>
+                    <useJakartaValidation>true</useJakartaValidation>
                     <includeJsr305Annotations>false</includeJsr305Annotations>
                     <includeGeneratedAnnotation>false</includeGeneratedAnnotation>
                     <includeConstructors>true</includeConstructors>

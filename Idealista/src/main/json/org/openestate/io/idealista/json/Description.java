@@ -3,10 +3,8 @@ package org.openestate.io.idealista.json;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -15,6 +13,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -32,7 +33,7 @@ public class Description implements Serializable
 {
 
     /**
-     * 
+     * 
      * Corresponds to the "descriptionLanguage" property.
      * (Required)
      * 
@@ -44,8 +45,7 @@ public class Description implements Serializable
     @Pattern(regexp = "^.{0,4000}$")
     private String text;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = -7737248333909340855L;
 
     /**
@@ -55,17 +55,13 @@ public class Description implements Serializable
     public Description() {
     }
 
-    /**
-     * 
-     * @param language
-     */
     public Description(Description.Language language) {
         super();
         this.language = language;
     }
 
     /**
-     * 
+     * 
      * Corresponds to the "descriptionLanguage" property.
      * (Required)
      * 
@@ -76,7 +72,7 @@ public class Description implements Serializable
     }
 
     /**
-     * 
+     * 
      * Corresponds to the "descriptionLanguage" property.
      * (Required)
      * 

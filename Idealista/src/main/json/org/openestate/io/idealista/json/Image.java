@@ -5,11 +5,8 @@ import java.io.Serializable;
 import java.math.BigInteger;
 import java.net.URI;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -18,6 +15,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
 
 
 /**
@@ -38,7 +39,7 @@ public class Image implements Serializable
     /**
      * image label
      * <p>
-     * 
+     * 
      * Corresponds to the "imageLabel" property.
      * 
      */
@@ -47,7 +48,7 @@ public class Image implements Serializable
     /**
      * image order
      * <p>
-     * 
+     * 
      * Corresponds to the "imageOrder" property.
      * 
      */
@@ -64,8 +65,7 @@ public class Image implements Serializable
     @NotNull
     private URI url;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 7266463362292978492L;
 
     /**
@@ -78,6 +78,7 @@ public class Image implements Serializable
     /**
      * 
      * @param url
+     *     image url.
      */
     public Image(URI url) {
         super();
@@ -87,7 +88,7 @@ public class Image implements Serializable
     /**
      * image label
      * <p>
-     * 
+     * 
      * Corresponds to the "imageLabel" property.
      * 
      */
@@ -99,7 +100,7 @@ public class Image implements Serializable
     /**
      * image label
      * <p>
-     * 
+     * 
      * Corresponds to the "imageLabel" property.
      * 
      */
@@ -116,7 +117,7 @@ public class Image implements Serializable
     /**
      * image order
      * <p>
-     * 
+     * 
      * Corresponds to the "imageOrder" property.
      * 
      */
@@ -128,7 +129,7 @@ public class Image implements Serializable
     /**
      * image order
      * <p>
-     * 
+     * 
      * Corresponds to the "imageOrder" property.
      * 
      */

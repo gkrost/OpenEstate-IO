@@ -5,11 +5,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,6 +16,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
 
 
 /**
@@ -82,7 +83,7 @@ public class OfficeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 
@@ -426,8 +427,7 @@ public class OfficeFeatures
     @JsonPropertyDescription("internal / external flat based on windows view. Only available for Spain.")
     private WindowsLocationType windowsLocation;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 7360516029818834574L;
 
     /**
@@ -440,7 +440,7 @@ public class OfficeFeatures
     /**
      * 
      * @param type
-     * @param areaConstructed
+     *     property types.
      */
     public OfficeFeatures(OfficeFeatures.Type type, BigInteger areaConstructed) {
         super();
@@ -451,7 +451,7 @@ public class OfficeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 
@@ -464,7 +464,7 @@ public class OfficeFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 

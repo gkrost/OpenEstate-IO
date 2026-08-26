@@ -2,12 +2,9 @@
 package org.openestate.io.idealista.json;
 
 import java.io.Serializable;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -16,6 +13,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -89,39 +89,35 @@ public class NewDevelopment implements Serializable
     /**
      * New Development descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
     @JsonProperty("propertyDescriptions")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<Description> descriptions = null;
+    private Set<@Valid Description> descriptions;
     /**
      * New Development images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */
     @JsonProperty("propertyImages")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<Image> images = null;
+    private Set<@Valid Image> images;
     /**
      * New Development typologies
      * <p>
-     * 
+     * 
      * Corresponds to the "newDevelopmentTypologies" property.
      * 
      */
     @JsonProperty("newDevelopmentTypologies")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<Typology> typologies = null;
+    private Set<@Valid Typology> typologies;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = -4527364995153293283L;
 
     /**
@@ -134,6 +130,7 @@ public class NewDevelopment implements Serializable
     /**
      * 
      * @param code
+     *     New Development identifier. It must be unique for each property and unchanging over time.
      */
     public NewDevelopment(String code) {
         super();
@@ -287,7 +284,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
@@ -299,7 +296,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development descriptions
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyDescriptions" property.
      * 
      */
@@ -316,7 +313,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */
@@ -328,7 +325,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development images
      * <p>
-     * 
+     * 
      * Corresponds to the "propertyImages" property.
      * 
      */
@@ -345,7 +342,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development typologies
      * <p>
-     * 
+     * 
      * Corresponds to the "newDevelopmentTypologies" property.
      * 
      */
@@ -357,7 +354,7 @@ public class NewDevelopment implements Serializable
     /**
      * New Development typologies
      * <p>
-     * 
+     * 
      * Corresponds to the "newDevelopmentTypologies" property.
      * 
      */
