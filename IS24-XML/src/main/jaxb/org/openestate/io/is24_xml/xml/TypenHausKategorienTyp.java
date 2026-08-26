@@ -1,41 +1,41 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for TypenHausKategorienTyp.
+ * Objektkategorie 2 fuer Typenhaeuser
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="TypenHausKategorienTyp"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Blockhaus"/&gt;
- *     &lt;enumeration value="Bungalow"/&gt;
- *     &lt;enumeration value="Doppelhaus"/&gt;
- *     &lt;enumeration value="Einfamilienhaus"/&gt;
- *     &lt;enumeration value="Fachwerkhaus"/&gt;
- *     &lt;enumeration value="Holzhaus"/&gt;
- *     &lt;enumeration value="Landhaus"/&gt;
- *     &lt;enumeration value="Mehrfamilienhaus"/&gt;
- *     &lt;enumeration value="Villa"/&gt;
- *     &lt;enumeration value="Reihenhaus"/&gt;
- *     &lt;enumeration value="Zweifamilienhaus"/&gt;
- *     &lt;enumeration value="EinfamilienhausMitEinliegerwohnung"/&gt;
- *     &lt;enumeration value="keineAngabe"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>Java class for TypenHausKategorienTyp</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="TypenHausKategorienTyp">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Blockhaus"/>
+ *     <enumeration value="Bungalow"/>
+ *     <enumeration value="Doppelhaus"/>
+ *     <enumeration value="Einfamilienhaus"/>
+ *     <enumeration value="Fachwerkhaus"/>
+ *     <enumeration value="Holzhaus"/>
+ *     <enumeration value="Landhaus"/>
+ *     <enumeration value="Mehrfamilienhaus"/>
+ *     <enumeration value="Villa"/>
+ *     <enumeration value="Reihenhaus"/>
+ *     <enumeration value="Zweifamilienhaus"/>
+ *     <enumeration value="EinfamilienhausMitEinliegerwohnung"/>
+ *     <enumeration value="keineAngabe"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "TypenHausKategorienTyp")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public enum TypenHausKategorienTyp {
 
     @XmlEnumValue("Blockhaus")
@@ -70,10 +70,26 @@ public enum TypenHausKategorienTyp {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static TypenHausKategorienTyp fromValue(String v) {
         for (TypenHausKategorienTyp c: TypenHausKategorienTyp.values()) {
             if (c.value.equals(v)) {

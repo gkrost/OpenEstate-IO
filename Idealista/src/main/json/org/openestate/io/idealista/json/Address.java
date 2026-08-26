@@ -4,11 +4,8 @@ package org.openestate.io.idealista.json;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -18,6 +15,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -50,7 +51,7 @@ public class Address implements Serializable
     /**
      * address visibility
      * <p>
-     * 
+     * 
      * Corresponds to the "addressVisibility" property.full address, street name or zone will be shown publicly
      * 
      */
@@ -69,7 +70,7 @@ public class Address implements Serializable
     /**
      * address floor
      * <p>
-     * 
+     * 
      * Corresponds to the "addressFloor" property.
      * 
      */
@@ -88,7 +89,7 @@ public class Address implements Serializable
     /**
      * address postal code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressPostalCode" property.
      * 
      */
@@ -101,7 +102,7 @@ public class Address implements Serializable
     /**
      * address nsi code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressNsiCode" property.national institute of statistics town code
      * 
      */
@@ -112,7 +113,7 @@ public class Address implements Serializable
     /**
      * address country
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCountry" property.
      * 
      */
@@ -121,7 +122,7 @@ public class Address implements Serializable
     /**
      * address coordinates precision
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesPrecision" property.if moved, just the property zone will be shown publicly, but not its address
      * 
      */
@@ -131,7 +132,7 @@ public class Address implements Serializable
     /**
      * address coordinates latitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLatitude" property.to have a good accuracy, latitude need to have at least 4 decimals
      * 
      */
@@ -143,7 +144,7 @@ public class Address implements Serializable
     /**
      * address coordinates longitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLongitude" property.to have a good accuracy, longitude need to have at least 4 decimals
      * 
      */
@@ -153,14 +154,13 @@ public class Address implements Serializable
     @DecimalMax("180")
     private BigDecimal coordinatesLongitude;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 9024735423331326534L;
 
     /**
      * address visibility
      * <p>
-     * 
+     * 
      * Corresponds to the "addressVisibility" property.full address, street name or zone will be shown publicly
      * 
      */
@@ -172,7 +172,7 @@ public class Address implements Serializable
     /**
      * address visibility
      * <p>
-     * 
+     * 
      * Corresponds to the "addressVisibility" property.full address, street name or zone will be shown publicly
      * 
      */
@@ -234,7 +234,7 @@ public class Address implements Serializable
     /**
      * address floor
      * <p>
-     * 
+     * 
      * Corresponds to the "addressFloor" property.
      * 
      */
@@ -246,7 +246,7 @@ public class Address implements Serializable
     /**
      * address floor
      * <p>
-     * 
+     * 
      * Corresponds to the "addressFloor" property.
      * 
      */
@@ -308,7 +308,7 @@ public class Address implements Serializable
     /**
      * address postal code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressPostalCode" property.
      * 
      */
@@ -320,7 +320,7 @@ public class Address implements Serializable
     /**
      * address postal code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressPostalCode" property.
      * 
      */
@@ -352,7 +352,7 @@ public class Address implements Serializable
     /**
      * address nsi code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressNsiCode" property.national institute of statistics town code
      * 
      */
@@ -364,7 +364,7 @@ public class Address implements Serializable
     /**
      * address nsi code
      * <p>
-     * 
+     * 
      * Corresponds to the "addressNsiCode" property.national institute of statistics town code
      * 
      */
@@ -381,7 +381,7 @@ public class Address implements Serializable
     /**
      * address country
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCountry" property.
      * 
      */
@@ -393,7 +393,7 @@ public class Address implements Serializable
     /**
      * address country
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCountry" property.
      * 
      */
@@ -410,7 +410,7 @@ public class Address implements Serializable
     /**
      * address coordinates precision
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesPrecision" property.if moved, just the property zone will be shown publicly, but not its address
      * 
      */
@@ -422,7 +422,7 @@ public class Address implements Serializable
     /**
      * address coordinates precision
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesPrecision" property.if moved, just the property zone will be shown publicly, but not its address
      * 
      */
@@ -439,7 +439,7 @@ public class Address implements Serializable
     /**
      * address coordinates latitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLatitude" property.to have a good accuracy, latitude need to have at least 4 decimals
      * 
      */
@@ -451,7 +451,7 @@ public class Address implements Serializable
     /**
      * address coordinates latitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLatitude" property.to have a good accuracy, latitude need to have at least 4 decimals
      * 
      */
@@ -468,7 +468,7 @@ public class Address implements Serializable
     /**
      * address coordinates longitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLongitude" property.to have a good accuracy, longitude need to have at least 4 decimals
      * 
      */
@@ -480,7 +480,7 @@ public class Address implements Serializable
     /**
      * address coordinates longitude
      * <p>
-     * 
+     * 
      * Corresponds to the "addressCoordinatesLongitude" property.to have a good accuracy, longitude need to have at least 4 decimals
      * 
      */

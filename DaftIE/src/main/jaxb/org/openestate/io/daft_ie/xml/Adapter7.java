@@ -1,7 +1,6 @@
-
 package org.openestate.io.daft_ie.xml;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class Adapter7
     extends XmlAdapter<java.lang.String, String>

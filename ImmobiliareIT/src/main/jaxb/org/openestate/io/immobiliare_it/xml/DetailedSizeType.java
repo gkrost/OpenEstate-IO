@@ -1,68 +1,66 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for detailedSizeType.
+ * <p>Java class for detailedSizeType</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="detailedSizeType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Abitazione"/&gt;
- *     &lt;enumeration value="Ufficio"/&gt;
- *     &lt;enumeration value="Studio"/&gt;
- *     &lt;enumeration value="Negozio"/&gt;
- *     &lt;enumeration value="Magazzino"/&gt;
- *     &lt;enumeration value="Garage"/&gt;
- *     &lt;enumeration value="Cantina"/&gt;
- *     &lt;enumeration value="Soffitta"/&gt;
- *     &lt;enumeration value="Balcone"/&gt;
- *     &lt;enumeration value="Terrazzo"/&gt;
- *     &lt;enumeration value="Giardino"/&gt;
- *     &lt;enumeration value="Terreno"/&gt;
- *     &lt;enumeration value="Parti comuni"/&gt;
- *     &lt;enumeration value="Altro"/&gt;
- *     &lt;enumeration value="Mansarda"/&gt;
- *     &lt;enumeration value="Capannone"/&gt;
- *     &lt;enumeration value="Laboratorio"/&gt;
- *     &lt;enumeration value="Posti auto"/&gt;
- *     &lt;enumeration value="Soppalco"/&gt;
- *     &lt;enumeration value="Esterno"/&gt;
- *     &lt;enumeration value="Parcheggio"/&gt;
- *     &lt;enumeration value="Albergo/hotel"/&gt;
- *     &lt;enumeration value="Posto moto"/&gt;
- *     &lt;enumeration value="Posto barca"/&gt;
- *     &lt;enumeration value="Posto camper o roulotte"/&gt;
- *     &lt;enumeration value="Autorimessa"/&gt;
- *     &lt;enumeration value="Centralina"/&gt;
- *     &lt;enumeration value="Podere o tenuta"/&gt;
- *     &lt;enumeration value="Filiale bancaria"/&gt;
- *     &lt;enumeration value="Scuderia"/&gt;
- *     &lt;enumeration value="Casa di cura"/&gt;
- *     &lt;enumeration value="Stabilimento balneare"/&gt;
- *     &lt;enumeration value="Azienda agricola"/&gt;
- *     &lt;enumeration value="Impianti sportivi"/&gt;
- *     &lt;enumeration value="Stazione di servizio"/&gt;
- *     &lt;enumeration value="Autorimessa"/&gt;
- *     &lt;enumeration value="Autolavaggio"/&gt;
- *     &lt;enumeration value="Impianti sportivi"/&gt;
- *     &lt;enumeration value="Stabilimento balneare"/&gt;
- *     &lt;enumeration value="Campeggio"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="detailedSizeType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="Abitazione"/>
+ *     <enumeration value="Ufficio"/>
+ *     <enumeration value="Studio"/>
+ *     <enumeration value="Negozio"/>
+ *     <enumeration value="Magazzino"/>
+ *     <enumeration value="Garage"/>
+ *     <enumeration value="Cantina"/>
+ *     <enumeration value="Soffitta"/>
+ *     <enumeration value="Balcone"/>
+ *     <enumeration value="Terrazzo"/>
+ *     <enumeration value="Giardino"/>
+ *     <enumeration value="Terreno"/>
+ *     <enumeration value="Parti comuni"/>
+ *     <enumeration value="Altro"/>
+ *     <enumeration value="Mansarda"/>
+ *     <enumeration value="Capannone"/>
+ *     <enumeration value="Laboratorio"/>
+ *     <enumeration value="Posti auto"/>
+ *     <enumeration value="Soppalco"/>
+ *     <enumeration value="Esterno"/>
+ *     <enumeration value="Parcheggio"/>
+ *     <enumeration value="Albergo/hotel"/>
+ *     <enumeration value="Posto moto"/>
+ *     <enumeration value="Posto barca"/>
+ *     <enumeration value="Posto camper o roulotte"/>
+ *     <enumeration value="Autorimessa"/>
+ *     <enumeration value="Centralina"/>
+ *     <enumeration value="Podere o tenuta"/>
+ *     <enumeration value="Filiale bancaria"/>
+ *     <enumeration value="Scuderia"/>
+ *     <enumeration value="Casa di cura"/>
+ *     <enumeration value="Stabilimento balneare"/>
+ *     <enumeration value="Azienda agricola"/>
+ *     <enumeration value="Impianti sportivi"/>
+ *     <enumeration value="Stazione di servizio"/>
+ *     <enumeration value="Autorimessa"/>
+ *     <enumeration value="Autolavaggio"/>
+ *     <enumeration value="Impianti sportivi"/>
+ *     <enumeration value="Stabilimento balneare"/>
+ *     <enumeration value="Campeggio"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "detailedSizeType")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public enum DetailedSizeType {
 
     @XmlEnumValue("Abitazione")
@@ -145,10 +143,26 @@ public enum DetailedSizeType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static DetailedSizeType fromValue(String v) {
         for (DetailedSizeType c: DetailedSizeType.values()) {
             if (c.value.equals(v)) {

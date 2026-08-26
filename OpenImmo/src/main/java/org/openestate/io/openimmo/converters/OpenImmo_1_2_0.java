@@ -15,7 +15,7 @@
  */
 package org.openestate.io.openimmo.converters;
 
-import javax.xml.bind.DatatypeConverter;
+import jakarta.xml.bind.DatatypeConverter;
 import javax.xml.xpath.XPathExpressionException;
 import org.apache.commons.lang3.StringUtils;
 import org.openestate.io.core.XmlUtils;

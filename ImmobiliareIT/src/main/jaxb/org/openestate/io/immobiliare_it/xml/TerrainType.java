@@ -1,56 +1,54 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for terrainType.
+ * <p>Java class for terrainType</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="terrainType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="seminativo"/&gt;
- *     &lt;enumeration value="seminativo irriguo"/&gt;
- *     &lt;enumeration value="seminativo arborato"/&gt;
- *     &lt;enumeration value="seminativo arborato irriguo"/&gt;
- *     &lt;enumeration value="prato"/&gt;
- *     &lt;enumeration value="prato irriguo"/&gt;
- *     &lt;enumeration value="prato arborato"/&gt;
- *     &lt;enumeration value="prato a marcita"/&gt;
- *     &lt;enumeration value="risaia stabile"/&gt;
- *     &lt;enumeration value="pascolo"/&gt;
- *     &lt;enumeration value="pascolo arborato"/&gt;
- *     &lt;enumeration value="pascolo cespugliato"/&gt;
- *     &lt;enumeration value="giardino"/&gt;
- *     &lt;enumeration value="orto"/&gt;
- *     &lt;enumeration value="orto irriguo"/&gt;
- *     &lt;enumeration value="agrumeto"/&gt;
- *     &lt;enumeration value="vigneto"/&gt;
- *     &lt;enumeration value="uliveto"/&gt;
- *     &lt;enumeration value="frutteto"/&gt;
- *     &lt;enumeration value="gelseto"/&gt;
- *     &lt;enumeration value="colture speciali"/&gt;
- *     &lt;enumeration value="castagneto da frutto"/&gt;
- *     &lt;enumeration value="canneto"/&gt;
- *     &lt;enumeration value="bosco alto fusto"/&gt;
- *     &lt;enumeration value="bosco ceduo"/&gt;
- *     &lt;enumeration value="bosco misto"/&gt;
- *     &lt;enumeration value="incolto produttivo"/&gt;
- *     &lt;enumeration value="incolto sterile"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="terrainType">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="seminativo"/>
+ *     <enumeration value="seminativo irriguo"/>
+ *     <enumeration value="seminativo arborato"/>
+ *     <enumeration value="seminativo arborato irriguo"/>
+ *     <enumeration value="prato"/>
+ *     <enumeration value="prato irriguo"/>
+ *     <enumeration value="prato arborato"/>
+ *     <enumeration value="prato a marcita"/>
+ *     <enumeration value="risaia stabile"/>
+ *     <enumeration value="pascolo"/>
+ *     <enumeration value="pascolo arborato"/>
+ *     <enumeration value="pascolo cespugliato"/>
+ *     <enumeration value="giardino"/>
+ *     <enumeration value="orto"/>
+ *     <enumeration value="orto irriguo"/>
+ *     <enumeration value="agrumeto"/>
+ *     <enumeration value="vigneto"/>
+ *     <enumeration value="uliveto"/>
+ *     <enumeration value="frutteto"/>
+ *     <enumeration value="gelseto"/>
+ *     <enumeration value="colture speciali"/>
+ *     <enumeration value="castagneto da frutto"/>
+ *     <enumeration value="canneto"/>
+ *     <enumeration value="bosco alto fusto"/>
+ *     <enumeration value="bosco ceduo"/>
+ *     <enumeration value="bosco misto"/>
+ *     <enumeration value="incolto produttivo"/>
+ *     <enumeration value="incolto sterile"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "terrainType")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
 public enum TerrainType {
 
     @XmlEnumValue("seminativo")
@@ -115,10 +113,26 @@ public enum TerrainType {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static TerrainType fromValue(String v) {
         for (TerrainType c: TerrainType.values()) {
             if (c.value.equals(v)) {

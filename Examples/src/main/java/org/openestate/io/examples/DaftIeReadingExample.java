@@ -18,7 +18,7 @@ package org.openestate.io.examples;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.openestate.io.daft_ie.DaftIeDocument;
 import org.openestate.io.daft_ie.DaftIeUtils;

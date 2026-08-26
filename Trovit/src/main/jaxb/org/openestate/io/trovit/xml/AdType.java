@@ -1,4 +1,3 @@
-
 package org.openestate.io.trovit.xml;
 
 import java.io.Serializable;
@@ -8,100 +7,98 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 import org.openestate.io.trovit.xml.types.ForeclosureTypeValue;
 import org.openestate.io.trovit.xml.types.OrientationValue;
 import org.openestate.io.trovit.xml.types.TypeValue;
 
 
 /**
+ * Ein einzufügendes oder zu aktualisierendes Objekt.
  * 
- *                 Ein einzuf\u00fcgendes oder zu aktualisierendes Objekt.
- *             
+ * <p>Java class for AdType complex type</p>.
  * 
- * <p>Java class for AdType complex type.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="AdType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;all&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}anyURI"/&gt;
- *         &lt;element name="mobile_url" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
- *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="type" type="{}TypeValue"/&gt;
- *         &lt;element name="content" type="{}ContentValue"/&gt;
- *         &lt;element name="price" type="{}PriceType" minOccurs="0"/&gt;
- *         &lt;element name="property_type" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="foreclosure_type" type="{}ForeclosureTypeValue" minOccurs="0"/&gt;
- *         &lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="floor_number" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="neighborhood" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="city_area" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="region" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="country" type="{}CountryValue" minOccurs="0"/&gt;
- *         &lt;element name="postcode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="latitude" type="{}LatitudeValue" minOccurs="0"/&gt;
- *         &lt;element name="longitude" type="{}LongitudeValue" minOccurs="0"/&gt;
- *         &lt;element name="orientation" type="{}OrientationValue" minOccurs="0"/&gt;
- *         &lt;element name="agency" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="mls_database" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="floor_area" type="{}FloorAreaType" minOccurs="0"/&gt;
- *         &lt;element name="plot_area" type="{}PlotAreaType" minOccurs="0"/&gt;
- *         &lt;element name="rooms" type="{}RoomsValue" minOccurs="0"/&gt;
- *         &lt;element name="bathrooms" type="{}RoomsValue" minOccurs="0"/&gt;
- *         &lt;element name="condition" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="year" type="{}YearValue" minOccurs="0"/&gt;
- *         &lt;element name="virtual_tour" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
- *         &lt;element name="eco_score" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="pictures" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="picture" type="{}PictureType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="date" type="{}DateValue" minOccurs="0"/&gt;
- *         &lt;element name="expiration_date" type="{}DateValue" minOccurs="0"/&gt;
- *         &lt;element name="by_owner" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="is_rent_to_own" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="parking" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="foreclosure" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="is_furnished" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="is_new" type="{}BooleanValue" minOccurs="0"/&gt;
- *         &lt;element name="contact_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="contact_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="contact_telephone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *       &lt;/all&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="AdType">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *         <element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="url" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
+ *         <element name="mobile_url" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+ *         <element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="type" type="{}TypeValue"/>
+ *         <element name="content" type="{}ContentValue"/>
+ *         <element name="price" type="{}PriceType" minOccurs="0"/>
+ *         <element name="property_type" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="foreclosure_type" type="{}ForeclosureTypeValue" minOccurs="0"/>
+ *         <element name="address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="floor_number" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="neighborhood" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="city_area" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="region" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="country" type="{}CountryValue" minOccurs="0"/>
+ *         <element name="postcode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="latitude" type="{}LatitudeValue" minOccurs="0"/>
+ *         <element name="longitude" type="{}LongitudeValue" minOccurs="0"/>
+ *         <element name="orientation" type="{}OrientationValue" minOccurs="0"/>
+ *         <element name="agency" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="mls_database" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="floor_area" type="{}FloorAreaType" minOccurs="0"/>
+ *         <element name="plot_area" type="{}PlotAreaType" minOccurs="0"/>
+ *         <element name="rooms" type="{}RoomsValue" minOccurs="0"/>
+ *         <element name="bathrooms" type="{}RoomsValue" minOccurs="0"/>
+ *         <element name="condition" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="year" type="{}YearValue" minOccurs="0"/>
+ *         <element name="virtual_tour" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+ *         <element name="eco_score" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="pictures" minOccurs="0">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="picture" type="{}PictureType" maxOccurs="unbounded" minOccurs="0"/>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="date" type="{}DateValue" minOccurs="0"/>
+ *         <element name="expiration_date" type="{}DateValue" minOccurs="0"/>
+ *         <element name="by_owner" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="is_rent_to_own" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="parking" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="foreclosure" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="is_furnished" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="is_new" type="{}BooleanValue" minOccurs="0"/>
+ *         <element name="contact_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="contact_email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="contact_telephone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       </all>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -109,163 +106,334 @@ import org.openestate.io.trovit.xml.types.TypeValue;
 @XmlType(name = "AdType", propOrder = {
 
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+public class AdType implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
+    /**
+     * id der Anzeige (numerisch oder alphanumerisch, muss "einmalig" sein)
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String id;
+    /**
+     * URL der Anzeige
+     * 
+     */
     @XmlElement(required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "anyURI")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected URI url;
+    /**
+     * URL Ihrer Website für Handys (mobile version)
+     * 
+     */
     @XmlElement(name = "mobile_url", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "anyURI")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected URI mobileUrl;
+    /**
+     * Anzeigentitel (muss mit Anzeigeninhalt übereinstimmen; Name der
+     *                         Website oder URL darf nicht genannt werden)
+     * 
+     */
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String title;
+    /**
+     * Verkaufsart
+     * 
+     */
     @XmlElement(required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected TypeValue type;
+    /**
+     * Beschreibung der Immobilie (mind. 30 Zeichen)
+     * 
+     */
     @XmlElement(required = true)
     @XmlJavaTypeAdapter(Adapter3 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String content;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Preis der Immobilie.
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected PriceType price;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "property_type")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String propertyType;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "foreclosure_type", type = String.class)
     @XmlJavaTypeAdapter(Adapter7 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected ForeclosureTypeValue foreclosureType;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Adresse/Strasse
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String address;
+    /**
+     * Stockwerk
+     * 
+     */
     @XmlElement(name = "floor_number")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String floorNumber;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * ???
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String neighborhood;
+    /**
+     * Stadtviertel
+     * 
+     */
     @XmlElement(name = "city_area")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String cityArea;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Stadt
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String city;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Bundesland
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String region;
+    /**
+     * Land, in der sich Auslandsimmoblie befindet (nur für "Overseas"
+     *                         anwendbar; bitte ISO-Code angeben)
+     * 
+     */
     @XmlJavaTypeAdapter(Adapter17 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String country;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Postleitzahl
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String postcode;
+    /**
+     * Breitengrad
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter8 .class)
     @XmlSchemaType(name = "decimal")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected BigDecimal latitude;
+    /**
+     * Längengrad
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter9 .class)
     @XmlSchemaType(name = "decimal")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected BigDecimal longitude;
+    /**
+     * Ausrichtung
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter18 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected OrientationValue orientation;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Name der Immobilienagentur
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String agency;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "mls_database")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String mlsDatabase;
+    /**
+     * Wohnfläche
+     * 
+     */
     @XmlElement(name = "floor_area")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected FloorAreaType floorArea;
+    /**
+     * Grundstücksfläche
+     * 
+     */
     @XmlElement(name = "plot_area")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected PlotAreaType plotArea;
+    /**
+     * Anzahl Zimmer
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected BigDecimal rooms;
+    /**
+     * Anzahl Badezimmer
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter13 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected BigDecimal bathrooms;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Instandhaltung
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String condition;
+    /**
+     * Baujahr
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter14 .class)
     @XmlSchemaType(name = "integer")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected BigInteger year;
+    /**
+     * URL der Virtual Tour
+     * 
+     */
     @XmlElement(name = "virtual_tour", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "anyURI")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected URI virtualTour;
+    /**
+     * Energieeffizienzklasse (freier Text: A = sehr effiziente
+     *                         Energienutzung; I = wenig effizient)
+     * 
+     */
     @XmlElement(name = "eco_score")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String ecoScore;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    /**
+     * Bilder der Immobilie
+     * 
+     */
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected AdType.Pictures pictures;
+    /**
+     * Anzeigendatum
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Calendar date;
+    /**
+     * Ablaufsdatum der Anzeige
+     * 
+     */
     @XmlElement(name = "expiration_date", type = String.class)
     @XmlJavaTypeAdapter(Adapter15 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Calendar expirationDate;
+    /**
+     * Makler / Privatperson
+     * 
+     */
     @XmlElement(name = "by_owner", type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean byOwner;
+    /**
+     * Mietobjekt mit Kaufoption
+     * 
+     */
     @XmlElement(name = "is_rent_to_own", type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean isRentToOwn;
+    /**
+     * Stellplatz
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean parking;
+    /**
+     * Zwangsversteigerung
+     * 
+     */
     @XmlElement(type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean foreclosure;
+    /**
+     * Möblierung
+     * 
+     */
     @XmlElement(name = "is_furnished", type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean isFurnished;
+    /**
+     * Neubau/Altbau
+     * 
+     */
     @XmlElement(name = "is_new", type = String.class)
     @XmlJavaTypeAdapter(Adapter16 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected Boolean isNew;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "contact_name")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String contactName;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "contact_email")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String contactEmail;
+    /**
+     * ???
+     * 
+     */
     @XmlElement(name = "contact_telephone")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     protected String contactTelephone;
 
     /**
-     * Gets the value of the id property.
+     * id der Anzeige (numerisch oder alphanumerisch, muss "einmalig" sein)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getId() {
         return id;
     }
@@ -277,21 +445,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getId()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setId(String value) {
         this.id = value;
     }
 
     /**
-     * Gets the value of the url property.
+     * URL der Anzeige
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public URI getUrl() {
         return url;
     }
@@ -301,23 +470,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
+     * @see #getUrl()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setUrl(URI value) {
         this.url = value;
     }
 
     /**
-     * Gets the value of the mobileUrl property.
+     * URL Ihrer Website für Handys (mobile version)
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public URI getMobileUrl() {
         return mobileUrl;
     }
@@ -327,23 +497,25 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
+     * @see #getMobileUrl()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setMobileUrl(URI value) {
         this.mobileUrl = value;
     }
 
     /**
-     * Gets the value of the title property.
+     * Anzeigentitel (muss mit Anzeigeninhalt übereinstimmen; Name der
+     *                         Website oder URL darf nicht genannt werden)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getTitle() {
         return title;
     }
@@ -355,21 +527,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getTitle()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setTitle(String value) {
         this.title = value;
     }
 
     /**
-     * Gets the value of the type property.
+     * Verkaufsart
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TypeValue }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public TypeValue getType() {
         return type;
     }
@@ -379,23 +552,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TypeValue }
      *     
+     * @see #getType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setType(TypeValue value) {
         this.type = value;
     }
 
     /**
-     * Gets the value of the content property.
+     * Beschreibung der Immobilie (mind. 30 Zeichen)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getContent() {
         return content;
     }
@@ -407,21 +581,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContent()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setContent(String value) {
         this.content = value;
     }
 
     /**
-     * Gets the value of the price property.
+     * Preis der Immobilie.
      * 
      * @return
      *     possible object is
      *     {@link PriceType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public PriceType getPrice() {
         return price;
     }
@@ -433,21 +608,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link PriceType }
      *     
+     * @see #getPrice()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setPrice(PriceType value) {
         this.price = value;
     }
 
     /**
-     * Gets the value of the propertyType property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getPropertyType() {
         return propertyType;
     }
@@ -459,21 +635,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getPropertyType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setPropertyType(String value) {
         this.propertyType = value;
     }
 
     /**
-     * Gets the value of the foreclosureType property.
+     * ???
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ForeclosureTypeValue }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public ForeclosureTypeValue getForeclosureType() {
         return foreclosureType;
     }
@@ -483,23 +660,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ForeclosureTypeValue }
      *     
+     * @see #getForeclosureType()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setForeclosureType(ForeclosureTypeValue value) {
         this.foreclosureType = value;
     }
 
     /**
-     * Gets the value of the address property.
+     * Adresse/Strasse
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getAddress() {
         return address;
     }
@@ -511,21 +689,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getAddress()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setAddress(String value) {
         this.address = value;
     }
 
     /**
-     * Gets the value of the floorNumber property.
+     * Stockwerk
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getFloorNumber() {
         return floorNumber;
     }
@@ -537,21 +716,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getFloorNumber()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setFloorNumber(String value) {
         this.floorNumber = value;
     }
 
     /**
-     * Gets the value of the neighborhood property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getNeighborhood() {
         return neighborhood;
     }
@@ -563,21 +743,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getNeighborhood()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setNeighborhood(String value) {
         this.neighborhood = value;
     }
 
     /**
-     * Gets the value of the cityArea property.
+     * Stadtviertel
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getCityArea() {
         return cityArea;
     }
@@ -589,21 +770,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCityArea()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setCityArea(String value) {
         this.cityArea = value;
     }
 
     /**
-     * Gets the value of the city property.
+     * Stadt
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getCity() {
         return city;
     }
@@ -615,21 +797,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCity()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setCity(String value) {
         this.city = value;
     }
 
     /**
-     * Gets the value of the region property.
+     * Bundesland
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getRegion() {
         return region;
     }
@@ -641,21 +824,23 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getRegion()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setRegion(String value) {
         this.region = value;
     }
 
     /**
-     * Gets the value of the country property.
+     * Land, in der sich Auslandsimmoblie befindet (nur für "Overseas"
+     *                         anwendbar; bitte ISO-Code angeben)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getCountry() {
         return country;
     }
@@ -667,21 +852,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCountry()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setCountry(String value) {
         this.country = value;
     }
 
     /**
-     * Gets the value of the postcode property.
+     * Postleitzahl
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getPostcode() {
         return postcode;
     }
@@ -693,21 +879,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getPostcode()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setPostcode(String value) {
         this.postcode = value;
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Breitengrad
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public BigDecimal getLatitude() {
         return latitude;
     }
@@ -717,23 +904,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
+     * @see #getLatitude()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setLatitude(BigDecimal value) {
         this.latitude = value;
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Längengrad
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public BigDecimal getLongitude() {
         return longitude;
     }
@@ -743,23 +931,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
+     * @see #getLongitude()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setLongitude(BigDecimal value) {
         this.longitude = value;
     }
 
     /**
-     * Gets the value of the orientation property.
+     * Ausrichtung
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link OrientationValue }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public OrientationValue getOrientation() {
         return orientation;
     }
@@ -769,23 +958,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link OrientationValue }
      *     
+     * @see #getOrientation()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setOrientation(OrientationValue value) {
         this.orientation = value;
     }
 
     /**
-     * Gets the value of the agency property.
+     * Name der Immobilienagentur
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getAgency() {
         return agency;
     }
@@ -797,21 +987,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getAgency()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setAgency(String value) {
         this.agency = value;
     }
 
     /**
-     * Gets the value of the mlsDatabase property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getMlsDatabase() {
         return mlsDatabase;
     }
@@ -823,21 +1014,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getMlsDatabase()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setMlsDatabase(String value) {
         this.mlsDatabase = value;
     }
 
     /**
-     * Gets the value of the floorArea property.
+     * Wohnfläche
      * 
      * @return
      *     possible object is
      *     {@link FloorAreaType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public FloorAreaType getFloorArea() {
         return floorArea;
     }
@@ -849,21 +1041,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link FloorAreaType }
      *     
+     * @see #getFloorArea()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setFloorArea(FloorAreaType value) {
         this.floorArea = value;
     }
 
     /**
-     * Gets the value of the plotArea property.
+     * Grundstücksfläche
      * 
      * @return
      *     possible object is
      *     {@link PlotAreaType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public PlotAreaType getPlotArea() {
         return plotArea;
     }
@@ -875,21 +1068,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link PlotAreaType }
      *     
+     * @see #getPlotArea()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setPlotArea(PlotAreaType value) {
         this.plotArea = value;
     }
 
     /**
-     * Gets the value of the rooms property.
+     * Anzahl Zimmer
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public BigDecimal getRooms() {
         return rooms;
     }
@@ -899,23 +1093,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
+     * @see #getRooms()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setRooms(BigDecimal value) {
         this.rooms = value;
     }
 
     /**
-     * Gets the value of the bathrooms property.
+     * Anzahl Badezimmer
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public BigDecimal getBathrooms() {
         return bathrooms;
     }
@@ -925,23 +1120,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
+     * @see #getBathrooms()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setBathrooms(BigDecimal value) {
         this.bathrooms = value;
     }
 
     /**
-     * Gets the value of the condition property.
+     * Instandhaltung
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getCondition() {
         return condition;
     }
@@ -953,21 +1149,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getCondition()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setCondition(String value) {
         this.condition = value;
     }
 
     /**
-     * Gets the value of the year property.
+     * Baujahr
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public BigInteger getYear() {
         return year;
     }
@@ -977,23 +1174,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
+     * @see #getYear()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setYear(BigInteger value) {
         this.year = value;
     }
 
     /**
-     * Gets the value of the virtualTour property.
+     * URL der Virtual Tour
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link URI }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public URI getVirtualTour() {
         return virtualTour;
     }
@@ -1003,23 +1201,25 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link URI }
      *     
+     * @see #getVirtualTour()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setVirtualTour(URI value) {
         this.virtualTour = value;
     }
 
     /**
-     * Gets the value of the ecoScore property.
+     * Energieeffizienzklasse (freier Text: A = sehr effiziente
+     *                         Energienutzung; I = wenig effizient)
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getEcoScore() {
         return ecoScore;
     }
@@ -1031,21 +1231,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getEcoScore()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setEcoScore(String value) {
         this.ecoScore = value;
     }
 
     /**
-     * Gets the value of the pictures property.
+     * Bilder der Immobilie
      * 
      * @return
      *     possible object is
      *     {@link AdType.Pictures }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public AdType.Pictures getPictures() {
         return pictures;
     }
@@ -1057,21 +1258,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link AdType.Pictures }
      *     
+     * @see #getPictures()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setPictures(AdType.Pictures value) {
         this.pictures = value;
     }
 
     /**
-     * Gets the value of the date property.
+     * Anzeigendatum
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Calendar getDate() {
         return date;
     }
@@ -1081,23 +1283,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
+     * @see #getDate()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setDate(Calendar value) {
         this.date = value;
     }
 
     /**
-     * Gets the value of the expirationDate property.
+     * Ablaufsdatum der Anzeige
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Calendar getExpirationDate() {
         return expirationDate;
     }
@@ -1107,23 +1310,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Calendar }
      *     
+     * @see #getExpirationDate()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setExpirationDate(Calendar value) {
         this.expirationDate = value;
     }
 
     /**
-     * Gets the value of the byOwner property.
+     * Makler / Privatperson
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getByOwner() {
         return byOwner;
     }
@@ -1133,23 +1337,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getByOwner()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setByOwner(Boolean value) {
         this.byOwner = value;
     }
 
     /**
-     * Gets the value of the isRentToOwn property.
+     * Mietobjekt mit Kaufoption
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getIsRentToOwn() {
         return isRentToOwn;
     }
@@ -1159,23 +1364,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getIsRentToOwn()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setIsRentToOwn(Boolean value) {
         this.isRentToOwn = value;
     }
 
     /**
-     * Gets the value of the parking property.
+     * Stellplatz
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getParking() {
         return parking;
     }
@@ -1185,23 +1391,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getParking()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setParking(Boolean value) {
         this.parking = value;
     }
 
     /**
-     * Gets the value of the foreclosure property.
+     * Zwangsversteigerung
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getForeclosure() {
         return foreclosure;
     }
@@ -1211,23 +1418,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getForeclosure()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setForeclosure(Boolean value) {
         this.foreclosure = value;
     }
 
     /**
-     * Gets the value of the isFurnished property.
+     * Möblierung
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getIsFurnished() {
         return isFurnished;
     }
@@ -1237,23 +1445,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getIsFurnished()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setIsFurnished(Boolean value) {
         this.isFurnished = value;
     }
 
     /**
-     * Gets the value of the isNew property.
+     * Neubau/Altbau
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Boolean getIsNew() {
         return isNew;
     }
@@ -1263,23 +1472,24 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
+     * @see #getIsNew()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setIsNew(Boolean value) {
         this.isNew = value;
     }
 
     /**
-     * Gets the value of the contactName property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getContactName() {
         return contactName;
     }
@@ -1291,21 +1501,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContactName()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setContactName(String value) {
         this.contactName = value;
     }
 
     /**
-     * Gets the value of the contactEmail property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getContactEmail() {
         return contactEmail;
     }
@@ -1317,21 +1528,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContactEmail()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setContactEmail(String value) {
         this.contactEmail = value;
     }
 
     /**
-     * Gets the value of the contactTelephone property.
+     * ???
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String getContactTelephone() {
         return contactTelephone;
     }
@@ -1343,30 +1555,34 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
      *     allowed object is
      *     {@link String }
      *     
+     * @see #getContactTelephone()
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public void setContactTelephone(String value) {
         this.contactTelephone = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             String theId;
             theId = this.getId();
@@ -1580,19 +1796,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof AdType) {
             final AdType copy = ((AdType) draftCopy);
@@ -2146,13 +2365,15 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public Object createNewInstance() {
         return new AdType();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -2541,29 +2762,30 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="picture" type="{}PictureType" maxOccurs="unbounded" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <sequence>
+     *         <element name="picture" type="{}PictureType" maxOccurs="unbounded" minOccurs="0"/>
+     *       </sequence>
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
@@ -2571,61 +2793,73 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
     @XmlType(name = "", propOrder = {
         "picture"
     })
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-    public static class Pictures implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+    public static class Pictures implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        /**
+         * Url und Titel des Fotos (letzteres optional).
+         * 
+         */
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         protected List<PictureType> picture;
 
         /**
+         * Url und Titel des Fotos (letzteres optional).
+         * 
          * Gets the value of the picture property.
          * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the picture property.
+         * <p>This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore, any modification you make to the
+         * returned list will be present inside the Jakarta XML Binding object.
+         * This is why there is not a {@code set} method for the picture property.</p>
          * 
          * <p>
          * For example, to add a new item, do as follows:
+         * </p>
          * <pre>
-         *    getPicture().add(newItem);
+         * getPicture().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PictureType }
+         * </p>
          * 
          * 
+         * @return
+         *     The value of the picture property.
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public List<PictureType> getPicture() {
             if (picture == null) {
-                picture = new ArrayList<PictureType>();
+                picture = new ArrayList<>();
             }
             return this.picture;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 List<PictureType> thePicture;
                 thePicture = (((this.picture!= null)&&(!this.picture.isEmpty()))?this.getPicture():null);
@@ -2634,19 +2868,22 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof AdType.Pictures) {
                 final AdType.Pictures copy = ((AdType.Pictures) draftCopy);
@@ -2672,13 +2909,15 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public Object createNewInstance() {
             return new AdType.Pictures();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -2698,9 +2937,10 @@ public class AdType implements Serializable, Cloneable, CopyTo2, Equals2, ToStri
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:32:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:05:53+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 

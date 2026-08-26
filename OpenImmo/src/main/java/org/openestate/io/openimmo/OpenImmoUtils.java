@@ -28,11 +28,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-import javax.xml.bind.DatatypeConverter;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import jakarta.xml.bind.DatatypeConverter;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 import javax.xml.parsers.ParserConfigurationException;
 import org.apache.commons.lang3.StringUtils;
 import org.openestate.io.core.NumberUtils;
@@ -248,7 +248,7 @@ public class OpenImmoUtils {
         m.setProperty(Marshaller.JAXB_ENCODING, StringUtils.defaultIfBlank(encoding, Charset.defaultCharset().name()));
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, formatted);
         m.setEventHandler(new XmlValidationHandler());
-        //m.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
+        //m.setEventHandler(new jakarta.xml.bind.helpers.DefaultValidationEventHandler());
 
         return m;
     }

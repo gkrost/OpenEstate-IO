@@ -1,50 +1,49 @@
-
 package org.openestate.io.is24_xml.xml;
 
 import java.io.Serializable;
-import javax.annotation.Generated;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlType;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElementRef;
+import jakarta.xml.bind.annotation.XmlType;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for BefeuerungsArtTyp complex type.
+ * <p>Java class for BefeuerungsArtTyp complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="BefeuerungsArtTyp"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;all&gt;
- *         &lt;element name="KeineAngabe" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Erdwaerme" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Solarheizung" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Pelletheizung" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Gas" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Oel" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Fernwaerme" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Strom" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *         &lt;element name="Kohle" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/&gt;
- *       &lt;/all&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="BefeuerungsArtTyp">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *         <element name="KeineAngabe" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Erdwaerme" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Solarheizung" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Pelletheizung" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Gas" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Oel" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Fernwaerme" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Strom" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *         <element name="Kohle" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
+ *       </all>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -52,36 +51,36 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "BefeuerungsArtTyp", propOrder = {
 
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElementRef(name = "KeineAngabe", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> keineAngabe;
     @XmlElementRef(name = "Erdwaerme", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> erdwaerme;
     @XmlElementRef(name = "Solarheizung", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> solarheizung;
     @XmlElementRef(name = "Pelletheizung", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> pelletheizung;
     @XmlElementRef(name = "Gas", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> gas;
     @XmlElementRef(name = "Oel", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> oel;
     @XmlElementRef(name = "Fernwaerme", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> fernwaerme;
     @XmlElementRef(name = "Strom", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> strom;
     @XmlElementRef(name = "Kohle", namespace = "http://www.immobilienscout24.de/immobilientransfer", type = JAXBElement.class, required = false)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     protected JAXBElement<Object> kohle;
 
     /**
@@ -92,7 +91,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getKeineAngabe() {
         return keineAngabe;
     }
@@ -105,7 +104,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setKeineAngabe(JAXBElement<Object> value) {
         this.keineAngabe = value;
     }
@@ -118,7 +117,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getErdwaerme() {
         return erdwaerme;
     }
@@ -131,7 +130,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setErdwaerme(JAXBElement<Object> value) {
         this.erdwaerme = value;
     }
@@ -144,7 +143,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getSolarheizung() {
         return solarheizung;
     }
@@ -157,7 +156,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setSolarheizung(JAXBElement<Object> value) {
         this.solarheizung = value;
     }
@@ -170,7 +169,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getPelletheizung() {
         return pelletheizung;
     }
@@ -183,7 +182,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setPelletheizung(JAXBElement<Object> value) {
         this.pelletheizung = value;
     }
@@ -196,7 +195,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getGas() {
         return gas;
     }
@@ -209,7 +208,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setGas(JAXBElement<Object> value) {
         this.gas = value;
     }
@@ -222,7 +221,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getOel() {
         return oel;
     }
@@ -235,7 +234,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setOel(JAXBElement<Object> value) {
         this.oel = value;
     }
@@ -248,7 +247,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getFernwaerme() {
         return fernwaerme;
     }
@@ -261,7 +260,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setFernwaerme(JAXBElement<Object> value) {
         this.fernwaerme = value;
     }
@@ -274,7 +273,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getStrom() {
         return strom;
     }
@@ -287,7 +286,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setStrom(JAXBElement<Object> value) {
         this.strom = value;
     }
@@ -300,7 +299,7 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public JAXBElement<Object> getKohle() {
         return kohle;
     }
@@ -313,29 +312,32 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
      *     {@link JAXBElement }{@code <}{@link Object }{@code >}
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public void setKohle(JAXBElement<Object> value) {
         this.kohle = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             JAXBElement<Object> theKeineAngabe;
             theKeineAngabe = this.getKeineAngabe();
@@ -384,19 +386,22 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof BefeuerungsArtTyp) {
             final BefeuerungsArtTyp copy = ((BefeuerungsArtTyp) draftCopy);
@@ -530,13 +535,15 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public Object createNewInstance() {
         return new BefeuerungsArtTyp();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -628,9 +635,10 @@ public class BefeuerungsArtTyp implements Serializable, Cloneable, CopyTo2, Equa
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 

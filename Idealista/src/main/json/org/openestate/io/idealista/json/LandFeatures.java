@@ -5,11 +5,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,6 +16,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
 
 
 /**
@@ -60,7 +61,7 @@ public class LandFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 
@@ -230,8 +231,7 @@ public class LandFeatures
     @JsonProperty("featuresAccessType")
     private AccessType accessType;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 2214429406720917033L;
 
     /**
@@ -243,8 +243,8 @@ public class LandFeatures
 
     /**
      * 
-     * @param areaPlot
      * @param type
+     *     property types.
      */
     public LandFeatures(LandFeatures.Type type, BigInteger areaPlot) {
         super();
@@ -255,7 +255,7 @@ public class LandFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 
@@ -268,7 +268,7 @@ public class LandFeatures
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * (Required)
      * 

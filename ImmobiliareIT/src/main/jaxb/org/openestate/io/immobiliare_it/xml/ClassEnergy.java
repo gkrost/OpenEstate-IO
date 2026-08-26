@@ -1,128 +1,127 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 import org.openestate.io.immobiliare_it.xml.types.EnergyScaleType;
 
 
 /**
- * <p>Java class for classEnergy complex type.
+ * <p>Java class for classEnergy complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="classEnergy"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="energy-performance" maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;simpleContent&gt;
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
- *                 &lt;attribute name="unit" use="required"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="kWh/m2anno"/&gt;
- *                       &lt;enumeration value="kWh/m3anno"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="type" use="required"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="nren"/&gt;
- *                       &lt;enumeration value="ren"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/extension&gt;
- *             &lt;/simpleContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="energy-season" maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attribute name="season"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="summer"/&gt;
- *                       &lt;enumeration value="winter"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="level"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="low"/&gt;
- *                       &lt;enumeration value="normal"/&gt;
- *                       &lt;enumeration value="high"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="zero" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="scale"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int"&gt;
- *             &lt;pattern value="1|2"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="value"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *             &lt;enumeration value="A4"/&gt;
- *             &lt;enumeration value="A3"/&gt;
- *             &lt;enumeration value="A2"/&gt;
- *             &lt;enumeration value="A1"/&gt;
- *             &lt;enumeration value="A+"/&gt;
- *             &lt;enumeration value="A"/&gt;
- *             &lt;enumeration value="B"/&gt;
- *             &lt;enumeration value="C"/&gt;
- *             &lt;enumeration value="D"/&gt;
- *             &lt;enumeration value="E"/&gt;
- *             &lt;enumeration value="F"/&gt;
- *             &lt;enumeration value="G"/&gt;
- *             &lt;enumeration value="esente"/&gt;
- *             &lt;enumeration value="NC"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="certified" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="classEnergy">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="energy-performance" maxOccurs="unbounded" minOccurs="0">
+ *           <complexType>
+ *             <simpleContent>
+ *               <extension base="<http://www.w3.org/2001/XMLSchema>double">
+ *                 <attribute name="unit" use="required">
+ *                   <simpleType>
+ *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       <enumeration value="kWh/m2anno"/>
+ *                       <enumeration value="kWh/m3anno"/>
+ *                     </restriction>
+ *                   </simpleType>
+ *                 </attribute>
+ *                 <attribute name="type" use="required">
+ *                   <simpleType>
+ *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       <enumeration value="nren"/>
+ *                       <enumeration value="ren"/>
+ *                     </restriction>
+ *                   </simpleType>
+ *                 </attribute>
+ *               </extension>
+ *             </simpleContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="energy-season" maxOccurs="unbounded" minOccurs="0">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <attribute name="season">
+ *                   <simpleType>
+ *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       <enumeration value="summer"/>
+ *                       <enumeration value="winter"/>
+ *                     </restriction>
+ *                   </simpleType>
+ *                 </attribute>
+ *                 <attribute name="level">
+ *                   <simpleType>
+ *                     <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       <enumeration value="low"/>
+ *                       <enumeration value="normal"/>
+ *                       <enumeration value="high"/>
+ *                     </restriction>
+ *                   </simpleType>
+ *                 </attribute>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *       </sequence>
+ *       <attribute name="zero" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="scale">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}int">
+ *             <pattern value="1|2"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="value">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *             <enumeration value="A4"/>
+ *             <enumeration value="A3"/>
+ *             <enumeration value="A2"/>
+ *             <enumeration value="A1"/>
+ *             <enumeration value="A+"/>
+ *             <enumeration value="A"/>
+ *             <enumeration value="B"/>
+ *             <enumeration value="C"/>
+ *             <enumeration value="D"/>
+ *             <enumeration value="E"/>
+ *             <enumeration value="F"/>
+ *             <enumeration value="G"/>
+ *             <enumeration value="esente"/>
+ *             <enumeration value="NC"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <attribute name="certified" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -131,56 +130,59 @@ import org.openestate.io.immobiliare_it.xml.types.EnergyScaleType;
     "energyPerformance",
     "energySeason"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+public class ClassEnergy implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(name = "energy-performance")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected List<ClassEnergy.EnergyPerformance> energyPerformance;
     @XmlElement(name = "energy-season")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected List<ClassEnergy.EnergySeason> energySeason;
     @XmlAttribute(name = "zero")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Boolean zero;
     @XmlAttribute(name = "scale")
     @XmlJavaTypeAdapter(Adapter22 .class)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected EnergyScaleType scale;
     @XmlAttribute(name = "value")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected ClassEnergy.Type value;
     @XmlAttribute(name = "certified")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Boolean certified;
 
     /**
      * Gets the value of the energyPerformance property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the energyPerformance property.
+     * <p>This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore, any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the energyPerformance property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEnergyPerformance().add(newItem);
+     * getEnergyPerformance().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassEnergy.EnergyPerformance }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the energyPerformance property.
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public List<ClassEnergy.EnergyPerformance> getEnergyPerformance() {
         if (energyPerformance == null) {
-            energyPerformance = new ArrayList<ClassEnergy.EnergyPerformance>();
+            energyPerformance = new ArrayList<>();
         }
         return this.energyPerformance;
     }
@@ -188,29 +190,32 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
     /**
      * Gets the value of the energySeason property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the energySeason property.
+     * <p>This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore, any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the energySeason property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEnergySeason().add(newItem);
+     * getEnergySeason().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassEnergy.EnergySeason }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the energySeason property.
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public List<ClassEnergy.EnergySeason> getEnergySeason() {
         if (energySeason == null) {
-            energySeason = new ArrayList<ClassEnergy.EnergySeason>();
+            energySeason = new ArrayList<>();
         }
         return this.energySeason;
     }
@@ -223,7 +228,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Boolean getZero() {
         if (zero == null) {
             return false;
@@ -240,7 +245,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setZero(Boolean value) {
         this.zero = value;
     }
@@ -250,10 +255,10 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link EnergyScaleType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public EnergyScaleType getScale() {
         return scale;
     }
@@ -263,10 +268,10 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link EnergyScaleType }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setScale(EnergyScaleType value) {
         this.scale = value;
     }
@@ -279,7 +284,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link ClassEnergy.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public ClassEnergy.Type getValue() {
         return value;
     }
@@ -292,7 +297,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link ClassEnergy.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setValue(ClassEnergy.Type value) {
         this.value = value;
     }
@@ -305,7 +310,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Boolean getCertified() {
         if (certified == null) {
             return true;
@@ -322,29 +327,32 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
      *     {@link Boolean }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setCertified(Boolean value) {
         this.certified = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             List<ClassEnergy.EnergyPerformance> theEnergyPerformance;
             theEnergyPerformance = (((this.energyPerformance!= null)&&(!this.energyPerformance.isEmpty()))?this.getEnergyPerformance():null);
@@ -378,19 +386,22 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof ClassEnergy) {
             final ClassEnergy copy = ((ClassEnergy) draftCopy);
@@ -486,13 +497,15 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object createNewInstance() {
         return new ClassEnergy();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -557,42 +570,43 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;simpleContent&gt;
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
-     *       &lt;attribute name="unit" use="required"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="kWh/m2anno"/&gt;
-     *             &lt;enumeration value="kWh/m3anno"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="type" use="required"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="nren"/&gt;
-     *             &lt;enumeration value="ren"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/simpleContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <simpleContent>
+     *     <extension base="<http://www.w3.org/2001/XMLSchema>double">
+     *       <attribute name="unit" use="required">
+     *         <simpleType>
+     *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             <enumeration value="kWh/m2anno"/>
+     *             <enumeration value="kWh/m3anno"/>
+     *           </restriction>
+     *         </simpleType>
+     *       </attribute>
+     *       <attribute name="type" use="required">
+     *         <simpleType>
+     *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             <enumeration value="nren"/>
+     *             <enumeration value="ren"/>
+     *           </restriction>
+     *         </simpleType>
+     *       </attribute>
+     *     </extension>
+     *   </simpleContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
@@ -600,20 +614,20 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
     @XmlType(name = "", propOrder = {
         "value"
     })
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public static class EnergyPerformance implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public static class EnergyPerformance implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlValue
         @XmlJavaTypeAdapter(Adapter2 .class)
         @XmlSchemaType(name = "double")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BigDecimal value;
         @XmlAttribute(name = "unit", required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected ClassEnergy.EnergyPerformance.Unit unit;
         @XmlAttribute(name = "type", required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected ClassEnergy.EnergyPerformance.Type type;
 
         /**
@@ -621,10 +635,10 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BigDecimal getValue() {
             return value;
         }
@@ -634,10 +648,10 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setValue(BigDecimal value) {
             this.value = value;
         }
@@ -650,7 +664,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergyPerformance.Unit }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public ClassEnergy.EnergyPerformance.Unit getUnit() {
             return unit;
         }
@@ -663,7 +677,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergyPerformance.Unit }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setUnit(ClassEnergy.EnergyPerformance.Unit value) {
             this.unit = value;
         }
@@ -676,7 +690,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergyPerformance.Type }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public ClassEnergy.EnergyPerformance.Type getType() {
             return type;
         }
@@ -689,29 +703,32 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergyPerformance.Type }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setType(ClassEnergy.EnergyPerformance.Type value) {
             this.type = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 BigDecimal theValue;
                 theValue = this.getValue();
@@ -730,19 +747,22 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof ClassEnergy.EnergyPerformance) {
                 final ClassEnergy.EnergyPerformance copy = ((ClassEnergy.EnergyPerformance) draftCopy);
@@ -789,13 +809,15 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object createNewInstance() {
             return new ClassEnergy.EnergyPerformance();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -833,31 +855,31 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 
 
         /**
-         * <p>Java class for null.
+         * <p>Java class for null</p>.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType&gt;
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *     &lt;enumeration value="nren"/&gt;
-         *     &lt;enumeration value="ren"/&gt;
-         *   &lt;/restriction&gt;
-         * &lt;/simpleType&gt;
-         * </pre>
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * <pre>{@code
+         * <simpleType>
+         *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *     <enumeration value="nren"/>
+         *     <enumeration value="ren"/>
+         *   </restriction>
+         * </simpleType>
+         * }</pre>
          * 
          */
         @XmlType(name = "")
         @XmlEnum
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public enum Type {
 
             @XmlEnumValue("nren")
@@ -870,10 +892,26 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
                 value = v;
             }
 
+            /**
+             * Gets the value associated to the enum constant.
+             * 
+             * @return
+             *     The value linked to the enum.
+             */
             public String value() {
                 return value;
             }
 
+            /**
+             * Gets the enum associated to the value passed as parameter.
+             * 
+             * @param v
+             *     The value to get the enum from.
+             * @return
+             *     The enum which corresponds to the value, if it exists.
+             * @throws IllegalArgumentException
+             *     If no value matches in the enum declaration.
+             */
             public static ClassEnergy.EnergyPerformance.Type fromValue(String v) {
                 for (ClassEnergy.EnergyPerformance.Type c: ClassEnergy.EnergyPerformance.Type.values()) {
                     if (c.value.equals(v)) {
@@ -887,23 +925,22 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
 
 
         /**
-         * <p>Java class for null.
+         * <p>Java class for null</p>.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType&gt;
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *     &lt;enumeration value="kWh/m2anno"/&gt;
-         *     &lt;enumeration value="kWh/m3anno"/&gt;
-         *   &lt;/restriction&gt;
-         * &lt;/simpleType&gt;
-         * </pre>
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * <pre>{@code
+         * <simpleType>
+         *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *     <enumeration value="kWh/m2anno"/>
+         *     <enumeration value="kWh/m3anno"/>
+         *   </restriction>
+         * </simpleType>
+         * }</pre>
          * 
          */
         @XmlType(name = "")
         @XmlEnum
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public enum Unit {
 
             @XmlEnumValue("kWh/m2anno")
@@ -916,10 +953,26 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
                 value = v;
             }
 
+            /**
+             * Gets the value associated to the enum constant.
+             * 
+             * @return
+             *     The value linked to the enum.
+             */
             public String value() {
                 return value;
             }
 
+            /**
+             * Gets the enum associated to the value passed as parameter.
+             * 
+             * @param v
+             *     The value to get the enum from.
+             * @return
+             *     The enum which corresponds to the value, if it exists.
+             * @throws IllegalArgumentException
+             *     If no value matches in the enum declaration.
+             */
             public static ClassEnergy.EnergyPerformance.Unit fromValue(String v) {
                 for (ClassEnergy.EnergyPerformance.Unit c: ClassEnergy.EnergyPerformance.Unit.values()) {
                     if (c.value.equals(v)) {
@@ -935,49 +988,49 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="season"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="summer"/&gt;
-     *             &lt;enumeration value="winter"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="level"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="low"/&gt;
-     *             &lt;enumeration value="normal"/&gt;
-     *             &lt;enumeration value="high"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <attribute name="season">
+     *         <simpleType>
+     *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             <enumeration value="summer"/>
+     *             <enumeration value="winter"/>
+     *           </restriction>
+     *         </simpleType>
+     *       </attribute>
+     *       <attribute name="level">
+     *         <simpleType>
+     *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             <enumeration value="low"/>
+     *             <enumeration value="normal"/>
+     *             <enumeration value="high"/>
+     *           </restriction>
+     *         </simpleType>
+     *       </attribute>
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public static class EnergySeason implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public static class EnergySeason implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlAttribute(name = "season")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected ClassEnergy.EnergySeason.Type season;
         @XmlAttribute(name = "level")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected ClassEnergy.EnergySeason.Level level;
 
         /**
@@ -988,7 +1041,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergySeason.Type }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public ClassEnergy.EnergySeason.Type getSeason() {
             return season;
         }
@@ -1001,7 +1054,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergySeason.Type }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setSeason(ClassEnergy.EnergySeason.Type value) {
             this.season = value;
         }
@@ -1014,7 +1067,7 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergySeason.Level }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public ClassEnergy.EnergySeason.Level getLevel() {
             return level;
         }
@@ -1027,29 +1080,32 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
          *     {@link ClassEnergy.EnergySeason.Level }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setLevel(ClassEnergy.EnergySeason.Level value) {
             this.level = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 ClassEnergy.EnergySeason.Type theSeason;
                 theSeason = this.getSeason();
@@ -1063,19 +1119,22 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof ClassEnergy.EnergySeason) {
                 final ClassEnergy.EnergySeason copy = ((ClassEnergy.EnergySeason) draftCopy);
@@ -1109,13 +1168,15 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object createNewInstance() {
             return new ClassEnergy.EnergySeason();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -1144,32 +1205,32 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 
 
         /**
-         * <p>Java class for null.
+         * <p>Java class for null</p>.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType&gt;
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *     &lt;enumeration value="low"/&gt;
-         *     &lt;enumeration value="normal"/&gt;
-         *     &lt;enumeration value="high"/&gt;
-         *   &lt;/restriction&gt;
-         * &lt;/simpleType&gt;
-         * </pre>
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * <pre>{@code
+         * <simpleType>
+         *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *     <enumeration value="low"/>
+         *     <enumeration value="normal"/>
+         *     <enumeration value="high"/>
+         *   </restriction>
+         * </simpleType>
+         * }</pre>
          * 
          */
         @XmlType(name = "")
         @XmlEnum
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public enum Level {
 
             @XmlEnumValue("low")
@@ -1184,10 +1245,26 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
                 value = v;
             }
 
+            /**
+             * Gets the value associated to the enum constant.
+             * 
+             * @return
+             *     The value linked to the enum.
+             */
             public String value() {
                 return value;
             }
 
+            /**
+             * Gets the enum associated to the value passed as parameter.
+             * 
+             * @param v
+             *     The value to get the enum from.
+             * @return
+             *     The enum which corresponds to the value, if it exists.
+             * @throws IllegalArgumentException
+             *     If no value matches in the enum declaration.
+             */
             public static ClassEnergy.EnergySeason.Level fromValue(String v) {
                 for (ClassEnergy.EnergySeason.Level c: ClassEnergy.EnergySeason.Level.values()) {
                     if (c.value.equals(v)) {
@@ -1201,23 +1278,22 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
 
 
         /**
-         * <p>Java class for null.
+         * <p>Java class for null</p>.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType&gt;
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *     &lt;enumeration value="summer"/&gt;
-         *     &lt;enumeration value="winter"/&gt;
-         *   &lt;/restriction&gt;
-         * &lt;/simpleType&gt;
-         * </pre>
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * <pre>{@code
+         * <simpleType>
+         *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *     <enumeration value="summer"/>
+         *     <enumeration value="winter"/>
+         *   </restriction>
+         * </simpleType>
+         * }</pre>
          * 
          */
         @XmlType(name = "")
         @XmlEnum
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public enum Type {
 
             @XmlEnumValue("summer")
@@ -1230,10 +1306,26 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
                 value = v;
             }
 
+            /**
+             * Gets the value associated to the enum constant.
+             * 
+             * @return
+             *     The value linked to the enum.
+             */
             public String value() {
                 return value;
             }
 
+            /**
+             * Gets the enum associated to the value passed as parameter.
+             * 
+             * @param v
+             *     The value to get the enum from.
+             * @return
+             *     The enum which corresponds to the value, if it exists.
+             * @throws IllegalArgumentException
+             *     If no value matches in the enum declaration.
+             */
             public static ClassEnergy.EnergySeason.Type fromValue(String v) {
                 for (ClassEnergy.EnergySeason.Type c: ClassEnergy.EnergySeason.Type.values()) {
                     if (c.value.equals(v)) {
@@ -1249,35 +1341,34 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="A4"/&gt;
-     *     &lt;enumeration value="A3"/&gt;
-     *     &lt;enumeration value="A2"/&gt;
-     *     &lt;enumeration value="A1"/&gt;
-     *     &lt;enumeration value="A+"/&gt;
-     *     &lt;enumeration value="A"/&gt;
-     *     &lt;enumeration value="B"/&gt;
-     *     &lt;enumeration value="C"/&gt;
-     *     &lt;enumeration value="D"/&gt;
-     *     &lt;enumeration value="E"/&gt;
-     *     &lt;enumeration value="F"/&gt;
-     *     &lt;enumeration value="G"/&gt;
-     *     &lt;enumeration value="esente"/&gt;
-     *     &lt;enumeration value="NC"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="A4"/>
+     *     <enumeration value="A3"/>
+     *     <enumeration value="A2"/>
+     *     <enumeration value="A1"/>
+     *     <enumeration value="A+"/>
+     *     <enumeration value="A"/>
+     *     <enumeration value="B"/>
+     *     <enumeration value="C"/>
+     *     <enumeration value="D"/>
+     *     <enumeration value="E"/>
+     *     <enumeration value="F"/>
+     *     <enumeration value="G"/>
+     *     <enumeration value="esente"/>
+     *     <enumeration value="NC"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public enum Type {
 
         @XmlEnumValue("A4")
@@ -1306,10 +1397,26 @@ public class ClassEnergy implements Serializable, Cloneable, CopyTo2, Equals2, T
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static ClassEnergy.Type fromValue(String v) {
             for (ClassEnergy.Type c: ClassEnergy.Type.values()) {
                 if (c.value.equals(v)) {

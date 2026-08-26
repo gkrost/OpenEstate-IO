@@ -15,8 +15,8 @@
  */
 package org.openestate.io.filemaker;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.openestate.io.core.XmlUtils;
 import org.openestate.io.filemaker.xml.result.FMPXMLRESULT;

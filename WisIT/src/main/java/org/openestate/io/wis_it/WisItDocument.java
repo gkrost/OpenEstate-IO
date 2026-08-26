@@ -16,8 +16,8 @@
 package org.openestate.io.wis_it;
 
 import java.math.BigInteger;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.openestate.io.core.XmlDocument;
 import org.openestate.io.core.XmlUtils;

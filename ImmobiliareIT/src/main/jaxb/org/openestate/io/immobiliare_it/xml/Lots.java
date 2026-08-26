@@ -1,72 +1,71 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for lots complex type.
+ * <p>Java class for lots complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="lots"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="residential" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
- *         &lt;element name="commercial" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
- *         &lt;element name="lot" maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;all&gt;
- *                   &lt;element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *                   &lt;element name="property-type" type="{http://feed.immobiliare.it}propertyTypeProject"/&gt;
- *                   &lt;element name="price" type="{http://feed.immobiliare.it}priceType"/&gt;
- *                   &lt;element name="size" type="{http://feed.immobiliare.it}sizeType"/&gt;
- *                   &lt;element name="rooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/&gt;
- *                   &lt;element name="bathrooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/&gt;
- *                   &lt;element name="floor" type="{http://feed.immobiliare.it}floorProject" minOccurs="0"/&gt;
- *                   &lt;element name="garage" type="{http://feed.immobiliare.it}boxProject" minOccurs="0"/&gt;
- *                   &lt;element name="description" type="{http://feed.immobiliare.it}langtxt" minOccurs="0"/&gt;
- *                   &lt;element name="specification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *                   &lt;element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/&gt;
- *                 &lt;/all&gt;
- *                 &lt;attribute name="total" type="{http://feed.immobiliare.it}nullInteger" /&gt;
- *                 &lt;attribute name="forsale" type="{http://feed.immobiliare.it}nullInteger" /&gt;
- *                 &lt;attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="lots">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="residential" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         <element name="commercial" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         <element name="lot" maxOccurs="unbounded" minOccurs="0">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <all>
+ *                   <element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *                   <element name="property-type" type="{http://feed.immobiliare.it}propertyTypeProject"/>
+ *                   <element name="price" type="{http://feed.immobiliare.it}priceType"/>
+ *                   <element name="size" type="{http://feed.immobiliare.it}sizeType"/>
+ *                   <element name="rooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/>
+ *                   <element name="bathrooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/>
+ *                   <element name="floor" type="{http://feed.immobiliare.it}floorProject" minOccurs="0"/>
+ *                   <element name="garage" type="{http://feed.immobiliare.it}boxProject" minOccurs="0"/>
+ *                   <element name="description" type="{http://feed.immobiliare.it}langtxt" minOccurs="0"/>
+ *                   <element name="specification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *                   <element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/>
+ *                 </all>
+ *                 <attribute name="total" type="{http://feed.immobiliare.it}nullInteger" />
+ *                 <attribute name="forsale" type="{http://feed.immobiliare.it}nullInteger" />
+ *                 <attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" />
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *       </sequence>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -76,21 +75,21 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "commercial",
     "lot"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+public class Lots implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter4 .class)
     @XmlSchemaType(name = "long")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected BigInteger residential;
     @XmlElement(required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter4 .class)
     @XmlSchemaType(name = "long")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected BigInteger commercial;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected List<Lots.Lot> lot;
 
     /**
@@ -98,10 +97,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public BigInteger getResidential() {
         return residential;
     }
@@ -111,10 +110,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setResidential(BigInteger value) {
         this.residential = value;
     }
@@ -124,10 +123,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public BigInteger getCommercial() {
         return commercial;
     }
@@ -137,10 +136,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setCommercial(BigInteger value) {
         this.commercial = value;
     }
@@ -148,51 +147,57 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
     /**
      * Gets the value of the lot property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the lot property.
+     * <p>This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore, any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the lot property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getLot().add(newItem);
+     * getLot().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Lots.Lot }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the lot property.
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public List<Lots.Lot> getLot() {
         if (lot == null) {
-            lot = new ArrayList<Lots.Lot>();
+            lot = new ArrayList<>();
         }
         return this.lot;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             BigInteger theResidential;
             theResidential = this.getResidential();
@@ -211,19 +216,22 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof Lots) {
             final Lots copy = ((Lots) draftCopy);
@@ -275,13 +283,15 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object createNewInstance() {
         return new Lots();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -319,42 +329,43 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;all&gt;
-     *         &lt;element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
-     *         &lt;element name="property-type" type="{http://feed.immobiliare.it}propertyTypeProject"/&gt;
-     *         &lt;element name="price" type="{http://feed.immobiliare.it}priceType"/&gt;
-     *         &lt;element name="size" type="{http://feed.immobiliare.it}sizeType"/&gt;
-     *         &lt;element name="rooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/&gt;
-     *         &lt;element name="bathrooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/&gt;
-     *         &lt;element name="floor" type="{http://feed.immobiliare.it}floorProject" minOccurs="0"/&gt;
-     *         &lt;element name="garage" type="{http://feed.immobiliare.it}boxProject" minOccurs="0"/&gt;
-     *         &lt;element name="description" type="{http://feed.immobiliare.it}langtxt" minOccurs="0"/&gt;
-     *         &lt;element name="specification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
-     *         &lt;element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/&gt;
-     *       &lt;/all&gt;
-     *       &lt;attribute name="total" type="{http://feed.immobiliare.it}nullInteger" /&gt;
-     *       &lt;attribute name="forsale" type="{http://feed.immobiliare.it}nullInteger" /&gt;
-     *       &lt;attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <all>
+     *         <element name="unique-id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+     *         <element name="property-type" type="{http://feed.immobiliare.it}propertyTypeProject"/>
+     *         <element name="price" type="{http://feed.immobiliare.it}priceType"/>
+     *         <element name="size" type="{http://feed.immobiliare.it}sizeType"/>
+     *         <element name="rooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/>
+     *         <element name="bathrooms" type="{http://feed.immobiliare.it}roomsType" minOccurs="0"/>
+     *         <element name="floor" type="{http://feed.immobiliare.it}floorProject" minOccurs="0"/>
+     *         <element name="garage" type="{http://feed.immobiliare.it}boxProject" minOccurs="0"/>
+     *         <element name="description" type="{http://feed.immobiliare.it}langtxt" minOccurs="0"/>
+     *         <element name="specification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+     *         <element name="pictures" type="{http://feed.immobiliare.it}pictures" minOccurs="0"/>
+     *       </all>
+     *       <attribute name="total" type="{http://feed.immobiliare.it}nullInteger" />
+     *       <attribute name="forsale" type="{http://feed.immobiliare.it}nullInteger" />
+     *       <attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}long" />
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
@@ -362,49 +373,49 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
     @XmlType(name = "", propOrder = {
 
     })
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public static class Lot implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public static class Lot implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlElement(name = "unique-id")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected String uniqueId;
         @XmlElement(name = "property-type", required = true)
         @XmlSchemaType(name = "string")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected ProjectPropertyType propertyType;
         @XmlElement(required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected PriceType price;
         @XmlElement(required = true)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected SizeType size;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected RoomsType rooms;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected RoomsType bathrooms;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected FloorProject floor;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BoxProject garage;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected Langtxt description;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected String specification;
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected Pictures pictures;
         @XmlAttribute(name = "total")
         @XmlJavaTypeAdapter(Adapter9 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BigInteger total;
         @XmlAttribute(name = "forsale")
         @XmlJavaTypeAdapter(Adapter9 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BigInteger forsale;
         @XmlAttribute(name = "ID")
         @XmlJavaTypeAdapter(Adapter4 .class)
         @XmlSchemaType(name = "long")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BigInteger id;
 
         /**
@@ -415,7 +426,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String getUniqueId() {
             return uniqueId;
         }
@@ -428,7 +439,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setUniqueId(String value) {
             this.uniqueId = value;
         }
@@ -441,7 +452,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link ProjectPropertyType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public ProjectPropertyType getPropertyType() {
             return propertyType;
         }
@@ -454,7 +465,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link ProjectPropertyType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setPropertyType(ProjectPropertyType value) {
             this.propertyType = value;
         }
@@ -467,7 +478,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link PriceType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public PriceType getPrice() {
             return price;
         }
@@ -480,7 +491,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link PriceType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setPrice(PriceType value) {
             this.price = value;
         }
@@ -493,7 +504,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link SizeType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public SizeType getSize() {
             return size;
         }
@@ -506,7 +517,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link SizeType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setSize(SizeType value) {
             this.size = value;
         }
@@ -519,7 +530,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link RoomsType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public RoomsType getRooms() {
             return rooms;
         }
@@ -532,7 +543,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link RoomsType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setRooms(RoomsType value) {
             this.rooms = value;
         }
@@ -545,7 +556,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link RoomsType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public RoomsType getBathrooms() {
             return bathrooms;
         }
@@ -558,7 +569,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link RoomsType }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setBathrooms(RoomsType value) {
             this.bathrooms = value;
         }
@@ -571,7 +582,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link FloorProject }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public FloorProject getFloor() {
             return floor;
         }
@@ -584,7 +595,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link FloorProject }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setFloor(FloorProject value) {
             this.floor = value;
         }
@@ -597,7 +608,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link BoxProject }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BoxProject getGarage() {
             return garage;
         }
@@ -610,7 +621,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link BoxProject }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setGarage(BoxProject value) {
             this.garage = value;
         }
@@ -623,7 +634,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link Langtxt }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Langtxt getDescription() {
             return description;
         }
@@ -636,7 +647,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link Langtxt }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setDescription(Langtxt value) {
             this.description = value;
         }
@@ -649,7 +660,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String getSpecification() {
             return specification;
         }
@@ -662,7 +673,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link String }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setSpecification(String value) {
             this.specification = value;
         }
@@ -675,7 +686,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link Pictures }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Pictures getPictures() {
             return pictures;
         }
@@ -688,7 +699,7 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          *     {@link Pictures }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setPictures(Pictures value) {
             this.pictures = value;
         }
@@ -698,10 +709,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BigInteger getTotal() {
             return total;
         }
@@ -711,10 +722,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setTotal(BigInteger value) {
             this.total = value;
         }
@@ -724,10 +735,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BigInteger getForsale() {
             return forsale;
         }
@@ -737,10 +748,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setForsale(BigInteger value) {
             this.forsale = value;
         }
@@ -750,10 +761,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BigInteger getID() {
             return id;
         }
@@ -763,32 +774,35 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigInteger }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setID(BigInteger value) {
             this.id = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 String theUniqueId;
                 theUniqueId = this.getUniqueId();
@@ -862,19 +876,22 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof Lots.Lot) {
                 final Lots.Lot copy = ((Lots.Lot) draftCopy);
@@ -1064,13 +1081,15 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object createNewInstance() {
             return new Lots.Lot();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -1207,9 +1226,10 @@ public class Lots implements Serializable, Cloneable, CopyTo2, Equals2, ToString
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 

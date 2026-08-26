@@ -6,13 +6,9 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -24,6 +20,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -70,7 +71,7 @@ public class Promo implements Serializable
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * 
      */
@@ -166,7 +167,7 @@ public class Promo implements Serializable
     @JsonProperty("featuresSecurityAlarm")
     private Boolean securityAlarm;
     /**
-     * 
+     * 
      * Corresponds to the "featuresNewDevelopmentType" property.Typing for new developments
      * (Required)
      * 
@@ -220,14 +221,13 @@ public class Promo implements Serializable
     /**
      * Access comments
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresAccessComments" property.
      * 
      */
     @JsonProperty("featuresAccessComments")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<Description> accessComments = null;
+    private Set<@Valid Description> accessComments;
     /**
      * Booth sale on side
      * <p>
@@ -268,8 +268,7 @@ public class Promo implements Serializable
     @DecimalMax("9999")
     private BigDecimal mortgageYears;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = -4975280699303245838L;
 
     /**
@@ -282,7 +281,7 @@ public class Promo implements Serializable
     /**
      * 
      * @param newDevelopmentType
-     * @param newDevelopmentName
+     *     New Development type.
      */
     public Promo(Promo.NewDevelopmentType newDevelopmentType, String newDevelopmentName) {
         super();
@@ -293,7 +292,7 @@ public class Promo implements Serializable
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * 
      */
@@ -305,7 +304,7 @@ public class Promo implements Serializable
     /**
      * property types
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresType" property.
      * 
      */
@@ -605,7 +604,7 @@ public class Promo implements Serializable
     }
 
     /**
-     * 
+     * 
      * Corresponds to the "featuresNewDevelopmentType" property.Typing for new developments
      * (Required)
      * 
@@ -616,7 +615,7 @@ public class Promo implements Serializable
     }
 
     /**
-     * 
+     * 
      * Corresponds to the "featuresNewDevelopmentType" property.Typing for new developments
      * (Required)
      * 
@@ -777,7 +776,7 @@ public class Promo implements Serializable
     /**
      * Access comments
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresAccessComments" property.
      * 
      */
@@ -789,7 +788,7 @@ public class Promo implements Serializable
     /**
      * Access comments
      * <p>
-     * 
+     * 
      * Corresponds to the "featuresAccessComments" property.
      * 
      */

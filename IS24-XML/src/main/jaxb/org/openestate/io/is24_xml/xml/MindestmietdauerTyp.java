@@ -1,41 +1,39 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for MindestmietdauerTyp.
+ * <p>Java class for MindestmietdauerTyp</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="MindestmietdauerTyp"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="1"/&gt;
- *     &lt;enumeration value="2"/&gt;
- *     &lt;enumeration value="3"/&gt;
- *     &lt;enumeration value="4"/&gt;
- *     &lt;enumeration value="5"/&gt;
- *     &lt;enumeration value="6"/&gt;
- *     &lt;enumeration value="7"/&gt;
- *     &lt;enumeration value="8"/&gt;
- *     &lt;enumeration value="9"/&gt;
- *     &lt;enumeration value="10"/&gt;
- *     &lt;enumeration value="11"/&gt;
- *     &lt;enumeration value="12+"/&gt;
- *     &lt;enumeration value="Unbefristet"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="MindestmietdauerTyp">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="1"/>
+ *     <enumeration value="2"/>
+ *     <enumeration value="3"/>
+ *     <enumeration value="4"/>
+ *     <enumeration value="5"/>
+ *     <enumeration value="6"/>
+ *     <enumeration value="7"/>
+ *     <enumeration value="8"/>
+ *     <enumeration value="9"/>
+ *     <enumeration value="10"/>
+ *     <enumeration value="11"/>
+ *     <enumeration value="12+"/>
+ *     <enumeration value="Unbefristet"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "MindestmietdauerTyp")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public enum MindestmietdauerTyp {
 
     @XmlEnumValue("1")
@@ -70,10 +68,26 @@ public enum MindestmietdauerTyp {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static MindestmietdauerTyp fromValue(String v) {
         for (MindestmietdauerTyp c: MindestmietdauerTyp.values()) {
             if (c.value.equals(v)) {

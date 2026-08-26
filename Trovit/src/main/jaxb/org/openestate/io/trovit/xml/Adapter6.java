@@ -1,8 +1,7 @@
-
 package org.openestate.io.trovit.xml;
 
 import java.util.Currency;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class Adapter6
     extends XmlAdapter<String, Currency>

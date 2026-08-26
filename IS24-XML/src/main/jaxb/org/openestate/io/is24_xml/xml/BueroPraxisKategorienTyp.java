@@ -1,42 +1,42 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for BueroPraxisKategorienTyp.
+ * Objektkategorie 2 fuer Buero/Praxis
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="BueroPraxisKategorienTyp"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="keineAngabe"/&gt;
- *     &lt;enumeration value="Loft"/&gt;
- *     &lt;enumeration value="Atelier"/&gt;
- *     &lt;enumeration value="Buero"/&gt;
- *     &lt;enumeration value="BueroEtage"/&gt;
- *     &lt;enumeration value="Buerohaus"/&gt;
- *     &lt;enumeration value="Buerozentrum"/&gt;
- *     &lt;enumeration value="BueroUndLagerGebaeude"/&gt;
- *     &lt;enumeration value="Praxis"/&gt;
- *     &lt;enumeration value="PraxisEtage"/&gt;
- *     &lt;enumeration value="PraxisHaus"/&gt;
- *     &lt;enumeration value="GewerbeZentrum"/&gt;
- *     &lt;enumeration value="WohnUndGeschaeftsgebaeude"/&gt;
- *     &lt;enumeration value="BueroUndGeschaeftsgebaeude"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>Java class for BueroPraxisKategorienTyp</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="BueroPraxisKategorienTyp">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <enumeration value="keineAngabe"/>
+ *     <enumeration value="Loft"/>
+ *     <enumeration value="Atelier"/>
+ *     <enumeration value="Buero"/>
+ *     <enumeration value="BueroEtage"/>
+ *     <enumeration value="Buerohaus"/>
+ *     <enumeration value="Buerozentrum"/>
+ *     <enumeration value="BueroUndLagerGebaeude"/>
+ *     <enumeration value="Praxis"/>
+ *     <enumeration value="PraxisEtage"/>
+ *     <enumeration value="PraxisHaus"/>
+ *     <enumeration value="GewerbeZentrum"/>
+ *     <enumeration value="WohnUndGeschaeftsgebaeude"/>
+ *     <enumeration value="BueroUndGeschaeftsgebaeude"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "BueroPraxisKategorienTyp")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public enum BueroPraxisKategorienTyp {
 
     @XmlEnumValue("keineAngabe")
@@ -73,10 +73,26 @@ public enum BueroPraxisKategorienTyp {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static BueroPraxisKategorienTyp fromValue(String v) {
         for (BueroPraxisKategorienTyp c: BueroPraxisKategorienTyp.values()) {
             if (c.value.equals(v)) {

@@ -113,7 +113,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>8</release>
+                    <release>21</release>
                 </configuration>
             </plugin>
 
@@ -152,6 +152,7 @@
                     <initializeCollections>false</initializeCollections>
                     <includeHashcodeAndEquals>true</includeHashcodeAndEquals>
                     <includeJsr303Annotations>true</includeJsr303Annotations>
+                    <useJakartaValidation>true</useJakartaValidation>
                     <includeJsr305Annotations>false</includeJsr305Annotations>
                     <includeGeneratedAnnotation>false</includeGeneratedAnnotation>
                     <includeConstructors>true</includeConstructors>

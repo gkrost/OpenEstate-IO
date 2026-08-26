@@ -1,7 +1,6 @@
-
 package org.openestate.io.trovit.xml;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import org.openestate.io.trovit.xml.types.AreaUnitValue;
 
 public class Adapter12

@@ -1,110 +1,109 @@
-
 package org.openestate.io.immobiliare_it.xml;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Currency;
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.jvnet.jaxb2_commons.lang.CopyStrategy2;
-import org.jvnet.jaxb2_commons.lang.CopyTo2;
-import org.jvnet.jaxb2_commons.lang.Equals2;
-import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
-import org.jvnet.jaxb2_commons.lang.JAXBCopyStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
-import org.jvnet.jaxb2_commons.lang.JAXBToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.ToString2;
-import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.jvnet.jaxb.lang.CopyStrategy;
+import org.jvnet.jaxb.lang.CopyTo;
+import org.jvnet.jaxb.lang.Equals;
+import org.jvnet.jaxb.lang.EqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBCopyStrategy;
+import org.jvnet.jaxb.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb.lang.JAXBToStringStrategy;
+import org.jvnet.jaxb.lang.ToString;
+import org.jvnet.jaxb.lang.ToStringStrategy;
+import org.jvnet.jaxb.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for registry complex type.
+ * <p>Java class for registry complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
- * <pre>
- * &lt;complexType name="registry"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;all&gt;
- *         &lt;element name="income"&gt;
- *           &lt;complexType&gt;
- *             &lt;simpleContent&gt;
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
- *                 &lt;attribute name="currency" type="{http://feed.immobiliare.it}currency" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/simpleContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/all&gt;
- *       &lt;attribute name="class"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *             &lt;enumeration value="A/1"/&gt;
- *             &lt;enumeration value="A/2"/&gt;
- *             &lt;enumeration value="A/3"/&gt;
- *             &lt;enumeration value="A/4"/&gt;
- *             &lt;enumeration value="A/5"/&gt;
- *             &lt;enumeration value="A/6"/&gt;
- *             &lt;enumeration value="A/7"/&gt;
- *             &lt;enumeration value="A/8"/&gt;
- *             &lt;enumeration value="A/9"/&gt;
- *             &lt;enumeration value="A/10"/&gt;
- *             &lt;enumeration value="A/11"/&gt;
- *             &lt;enumeration value="B/1"/&gt;
- *             &lt;enumeration value="B/2"/&gt;
- *             &lt;enumeration value="B/3"/&gt;
- *             &lt;enumeration value="B/4"/&gt;
- *             &lt;enumeration value="B/5"/&gt;
- *             &lt;enumeration value="B/6"/&gt;
- *             &lt;enumeration value="B/7"/&gt;
- *             &lt;enumeration value="B/8"/&gt;
- *             &lt;enumeration value="C/1"/&gt;
- *             &lt;enumeration value="C/2"/&gt;
- *             &lt;enumeration value="C/3"/&gt;
- *             &lt;enumeration value="C/4"/&gt;
- *             &lt;enumeration value="C/5"/&gt;
- *             &lt;enumeration value="C/6"/&gt;
- *             &lt;enumeration value="C/7"/&gt;
- *             &lt;enumeration value="D/1"/&gt;
- *             &lt;enumeration value="D/2"/&gt;
- *             &lt;enumeration value="D/3"/&gt;
- *             &lt;enumeration value="D/4"/&gt;
- *             &lt;enumeration value="D/5"/&gt;
- *             &lt;enumeration value="D/6"/&gt;
- *             &lt;enumeration value="D/7"/&gt;
- *             &lt;enumeration value="D/8"/&gt;
- *             &lt;enumeration value="D/9"/&gt;
- *             &lt;enumeration value="D/10"/&gt;
- *             &lt;enumeration value="D/11"/&gt;
- *             &lt;enumeration value="D/12"/&gt;
- *             &lt;enumeration value="E/1"/&gt;
- *             &lt;enumeration value="E/2"/&gt;
- *             &lt;enumeration value="E/3"/&gt;
- *             &lt;enumeration value="E/4"/&gt;
- *             &lt;enumeration value="E/5"/&gt;
- *             &lt;enumeration value="E/6"/&gt;
- *             &lt;enumeration value="E/7"/&gt;
- *             &lt;enumeration value="E/8"/&gt;
- *             &lt;enumeration value="E/9"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="registry">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <all>
+ *         <element name="income">
+ *           <complexType>
+ *             <simpleContent>
+ *               <extension base="<http://www.w3.org/2001/XMLSchema>double">
+ *                 <attribute name="currency" type="{http://feed.immobiliare.it}currency" />
+ *               </extension>
+ *             </simpleContent>
+ *           </complexType>
+ *         </element>
+ *       </all>
+ *       <attribute name="class">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *             <enumeration value="A/1"/>
+ *             <enumeration value="A/2"/>
+ *             <enumeration value="A/3"/>
+ *             <enumeration value="A/4"/>
+ *             <enumeration value="A/5"/>
+ *             <enumeration value="A/6"/>
+ *             <enumeration value="A/7"/>
+ *             <enumeration value="A/8"/>
+ *             <enumeration value="A/9"/>
+ *             <enumeration value="A/10"/>
+ *             <enumeration value="A/11"/>
+ *             <enumeration value="B/1"/>
+ *             <enumeration value="B/2"/>
+ *             <enumeration value="B/3"/>
+ *             <enumeration value="B/4"/>
+ *             <enumeration value="B/5"/>
+ *             <enumeration value="B/6"/>
+ *             <enumeration value="B/7"/>
+ *             <enumeration value="B/8"/>
+ *             <enumeration value="C/1"/>
+ *             <enumeration value="C/2"/>
+ *             <enumeration value="C/3"/>
+ *             <enumeration value="C/4"/>
+ *             <enumeration value="C/5"/>
+ *             <enumeration value="C/6"/>
+ *             <enumeration value="C/7"/>
+ *             <enumeration value="D/1"/>
+ *             <enumeration value="D/2"/>
+ *             <enumeration value="D/3"/>
+ *             <enumeration value="D/4"/>
+ *             <enumeration value="D/5"/>
+ *             <enumeration value="D/6"/>
+ *             <enumeration value="D/7"/>
+ *             <enumeration value="D/8"/>
+ *             <enumeration value="D/9"/>
+ *             <enumeration value="D/10"/>
+ *             <enumeration value="D/11"/>
+ *             <enumeration value="D/12"/>
+ *             <enumeration value="E/1"/>
+ *             <enumeration value="E/2"/>
+ *             <enumeration value="E/3"/>
+ *             <enumeration value="E/4"/>
+ *             <enumeration value="E/5"/>
+ *             <enumeration value="E/6"/>
+ *             <enumeration value="E/7"/>
+ *             <enumeration value="E/8"/>
+ *             <enumeration value="E/9"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -112,15 +111,15 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "registry", propOrder = {
 
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+public class Registry implements Serializable, Cloneable, CopyTo, Equals, ToString
 {
 
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Registry.Income income;
     @XmlAttribute(name = "class")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     protected Registry.Type clazz;
 
     /**
@@ -131,7 +130,7 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
      *     {@link Registry.Income }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Registry.Income getIncome() {
         return income;
     }
@@ -144,7 +143,7 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
      *     {@link Registry.Income }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setIncome(Registry.Income value) {
         this.income = value;
     }
@@ -157,7 +156,7 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
      *     {@link Registry.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Registry.Type getClazz() {
         return clazz;
     }
@@ -170,29 +169,32 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
      *     {@link Registry.Type }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public void setClazz(Registry.Type value) {
         this.clazz = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public String toString() {
-        final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+        final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
         final StringBuilder buffer = new StringBuilder();
         append(null, buffer, strategy);
         return buffer.toString();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         strategy.appendStart(locator, this, buffer);
         appendFields(locator, buffer, strategy);
         strategy.appendEnd(locator, this, buffer);
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
         {
             Registry.Income theIncome;
             theIncome = this.getIncome();
@@ -206,19 +208,22 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
         return buffer;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object clone() {
         return copyTo(createNewInstance());
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object copyTo(Object target) {
-        final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+        final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
         return copyTo(null, target, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
         final Object draftCopy = ((target == null)?createNewInstance():target);
         if (draftCopy instanceof Registry) {
             final Registry copy = ((Registry) draftCopy);
@@ -252,13 +257,15 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
         return draftCopy;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public Object createNewInstance() {
         return new Registry();
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
@@ -287,27 +294,28 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Override
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public boolean equals(Object object) {
-        final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+        final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
         return equals(null, null, object, strategy);
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Java class for anonymous complex type</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
      * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;simpleContent&gt;
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;double"&gt;
-     *       &lt;attribute name="currency" type="{http://feed.immobiliare.it}currency" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/simpleContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
+     * <pre>{@code
+     * <complexType>
+     *   <simpleContent>
+     *     <extension base="<http://www.w3.org/2001/XMLSchema>double">
+     *       <attribute name="currency" type="{http://feed.immobiliare.it}currency" />
+     *     </extension>
+     *   </simpleContent>
+     * </complexType>
+     * }</pre>
      * 
      * 
      */
@@ -315,18 +323,18 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
     @XmlType(name = "", propOrder = {
         "value"
     })
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-    public static class Income implements Serializable, Cloneable, CopyTo2, Equals2, ToString2
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+    public static class Income implements Serializable, Cloneable, CopyTo, Equals, ToString
     {
 
         @XmlValue
         @XmlJavaTypeAdapter(Adapter2 .class)
         @XmlSchemaType(name = "double")
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected BigDecimal value;
         @XmlAttribute(name = "currency")
         @XmlJavaTypeAdapter(Adapter14 .class)
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         protected Currency currency;
 
         /**
@@ -334,10 +342,10 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public BigDecimal getValue() {
             return value;
         }
@@ -347,10 +355,10 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link BigDecimal }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setValue(BigDecimal value) {
             this.value = value;
         }
@@ -360,10 +368,10 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link Currency }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Currency getCurrency() {
             return currency;
         }
@@ -373,32 +381,35 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link Currency }
          *     
          */
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public void setCurrency(Currency value) {
             this.currency = value;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public String toString() {
-            final ToStringStrategy2 strategy = JAXBToStringStrategy.INSTANCE2;
+            final ToStringStrategy strategy = JAXBToStringStrategy.getInstance();
             final StringBuilder buffer = new StringBuilder();
             append(null, buffer, strategy);
             return buffer.toString();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder append(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             strategy.appendStart(locator, this, buffer);
             appendFields(locator, buffer, strategy);
             strategy.appendEnd(locator, this, buffer);
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public StringBuilder appendFields(ObjectLocator locator, StringBuilder buffer, ToStringStrategy strategy) {
             {
                 BigDecimal theValue;
                 theValue = this.getValue();
@@ -412,19 +423,22 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
             return buffer;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object clone() {
             return copyTo(createNewInstance());
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object copyTo(Object target) {
-            final CopyStrategy2 strategy = JAXBCopyStrategy.INSTANCE2;
+            final CopyStrategy strategy = JAXBCopyStrategy.getInstance();
             return copyTo(null, target, strategy);
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public Object copyTo(ObjectLocator locator, Object target, CopyStrategy strategy) {
             final Object draftCopy = ((target == null)?createNewInstance():target);
             if (draftCopy instanceof Registry.Income) {
                 final Registry.Income copy = ((Registry.Income) draftCopy);
@@ -458,13 +472,15 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
             return draftCopy;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public Object createNewInstance() {
             return new Registry.Income();
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
-        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
+        public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
             if ((object == null)||(this.getClass()!= object.getClass())) {
                 return false;
             }
@@ -493,9 +509,10 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
             return true;
         }
 
-        @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+        @Override
+        @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
         public boolean equals(Object object) {
-            final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE2;
+            final EqualsStrategy strategy = JAXBEqualsStrategy.getInstance();
             return equals(null, null, object, strategy);
         }
 
@@ -503,68 +520,67 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
 
 
     /**
-     * <p>Java class for null.
+     * <p>Java class for null</p>.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType&gt;
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *     &lt;enumeration value="A/1"/&gt;
-     *     &lt;enumeration value="A/2"/&gt;
-     *     &lt;enumeration value="A/3"/&gt;
-     *     &lt;enumeration value="A/4"/&gt;
-     *     &lt;enumeration value="A/5"/&gt;
-     *     &lt;enumeration value="A/6"/&gt;
-     *     &lt;enumeration value="A/7"/&gt;
-     *     &lt;enumeration value="A/8"/&gt;
-     *     &lt;enumeration value="A/9"/&gt;
-     *     &lt;enumeration value="A/10"/&gt;
-     *     &lt;enumeration value="A/11"/&gt;
-     *     &lt;enumeration value="B/1"/&gt;
-     *     &lt;enumeration value="B/2"/&gt;
-     *     &lt;enumeration value="B/3"/&gt;
-     *     &lt;enumeration value="B/4"/&gt;
-     *     &lt;enumeration value="B/5"/&gt;
-     *     &lt;enumeration value="B/6"/&gt;
-     *     &lt;enumeration value="B/7"/&gt;
-     *     &lt;enumeration value="B/8"/&gt;
-     *     &lt;enumeration value="C/1"/&gt;
-     *     &lt;enumeration value="C/2"/&gt;
-     *     &lt;enumeration value="C/3"/&gt;
-     *     &lt;enumeration value="C/4"/&gt;
-     *     &lt;enumeration value="C/5"/&gt;
-     *     &lt;enumeration value="C/6"/&gt;
-     *     &lt;enumeration value="C/7"/&gt;
-     *     &lt;enumeration value="D/1"/&gt;
-     *     &lt;enumeration value="D/2"/&gt;
-     *     &lt;enumeration value="D/3"/&gt;
-     *     &lt;enumeration value="D/4"/&gt;
-     *     &lt;enumeration value="D/5"/&gt;
-     *     &lt;enumeration value="D/6"/&gt;
-     *     &lt;enumeration value="D/7"/&gt;
-     *     &lt;enumeration value="D/8"/&gt;
-     *     &lt;enumeration value="D/9"/&gt;
-     *     &lt;enumeration value="D/10"/&gt;
-     *     &lt;enumeration value="D/11"/&gt;
-     *     &lt;enumeration value="D/12"/&gt;
-     *     &lt;enumeration value="E/1"/&gt;
-     *     &lt;enumeration value="E/2"/&gt;
-     *     &lt;enumeration value="E/3"/&gt;
-     *     &lt;enumeration value="E/4"/&gt;
-     *     &lt;enumeration value="E/5"/&gt;
-     *     &lt;enumeration value="E/6"/&gt;
-     *     &lt;enumeration value="E/7"/&gt;
-     *     &lt;enumeration value="E/8"/&gt;
-     *     &lt;enumeration value="E/9"/&gt;
-     *   &lt;/restriction&gt;
-     * &lt;/simpleType&gt;
-     * </pre>
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * <pre>{@code
+     * <simpleType>
+     *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *     <enumeration value="A/1"/>
+     *     <enumeration value="A/2"/>
+     *     <enumeration value="A/3"/>
+     *     <enumeration value="A/4"/>
+     *     <enumeration value="A/5"/>
+     *     <enumeration value="A/6"/>
+     *     <enumeration value="A/7"/>
+     *     <enumeration value="A/8"/>
+     *     <enumeration value="A/9"/>
+     *     <enumeration value="A/10"/>
+     *     <enumeration value="A/11"/>
+     *     <enumeration value="B/1"/>
+     *     <enumeration value="B/2"/>
+     *     <enumeration value="B/3"/>
+     *     <enumeration value="B/4"/>
+     *     <enumeration value="B/5"/>
+     *     <enumeration value="B/6"/>
+     *     <enumeration value="B/7"/>
+     *     <enumeration value="B/8"/>
+     *     <enumeration value="C/1"/>
+     *     <enumeration value="C/2"/>
+     *     <enumeration value="C/3"/>
+     *     <enumeration value="C/4"/>
+     *     <enumeration value="C/5"/>
+     *     <enumeration value="C/6"/>
+     *     <enumeration value="C/7"/>
+     *     <enumeration value="D/1"/>
+     *     <enumeration value="D/2"/>
+     *     <enumeration value="D/3"/>
+     *     <enumeration value="D/4"/>
+     *     <enumeration value="D/5"/>
+     *     <enumeration value="D/6"/>
+     *     <enumeration value="D/7"/>
+     *     <enumeration value="D/8"/>
+     *     <enumeration value="D/9"/>
+     *     <enumeration value="D/10"/>
+     *     <enumeration value="D/11"/>
+     *     <enumeration value="D/12"/>
+     *     <enumeration value="E/1"/>
+     *     <enumeration value="E/2"/>
+     *     <enumeration value="E/3"/>
+     *     <enumeration value="E/4"/>
+     *     <enumeration value="E/5"/>
+     *     <enumeration value="E/6"/>
+     *     <enumeration value="E/7"/>
+     *     <enumeration value="E/8"/>
+     *     <enumeration value="E/9"/>
+     *   </restriction>
+     * </simpleType>
+     * }</pre>
      * 
      */
     @XmlType(name = "")
     @XmlEnum
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-15T07:05:08+02:00", comments = "JAXB RI v2.3.0")
+    @Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:08+02:00")
     public enum Type {
 
         @XmlEnumValue("A/1")
@@ -667,10 +683,26 @@ public class Registry implements Serializable, Cloneable, CopyTo2, Equals2, ToSt
             value = v;
         }
 
+        /**
+         * Gets the value associated to the enum constant.
+         * 
+         * @return
+         *     The value linked to the enum.
+         */
         public String value() {
             return value;
         }
 
+        /**
+         * Gets the enum associated to the value passed as parameter.
+         * 
+         * @param v
+         *     The value to get the enum from.
+         * @return
+         *     The enum which corresponds to the value, if it exists.
+         * @throws IllegalArgumentException
+         *     If no value matches in the enum declaration.
+         */
         public static Registry.Type fromValue(String v) {
             for (Registry.Type c: Registry.Type.values()) {
                 if (c.value.equals(v)) {

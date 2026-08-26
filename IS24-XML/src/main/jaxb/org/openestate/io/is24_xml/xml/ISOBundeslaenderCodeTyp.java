@@ -1,46 +1,46 @@
-
 package org.openestate.io.is24_xml.xml;
 
-import javax.annotation.Generated;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.annotation.Generated;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ISOBundeslaenderCodeTyp.
+ * Die Liste der ISO 3166-2-Codes fuer Deutschland
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="ISOBundeslaenderCodeTyp"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;length value="5"/&gt;
- *     &lt;whiteSpace value="collapse"/&gt;
- *     &lt;enumeration value="DE-BW"/&gt;
- *     &lt;enumeration value="DE-BY"/&gt;
- *     &lt;enumeration value="DE-BE"/&gt;
- *     &lt;enumeration value="DE-BB"/&gt;
- *     &lt;enumeration value="DE-HB"/&gt;
- *     &lt;enumeration value="DE-HH"/&gt;
- *     &lt;enumeration value="DE-HE"/&gt;
- *     &lt;enumeration value="DE-MV"/&gt;
- *     &lt;enumeration value="DE-NI"/&gt;
- *     &lt;enumeration value="DE-NW"/&gt;
- *     &lt;enumeration value="DE-RP"/&gt;
- *     &lt;enumeration value="DE-SL"/&gt;
- *     &lt;enumeration value="DE-SN"/&gt;
- *     &lt;enumeration value="DE-ST"/&gt;
- *     &lt;enumeration value="DE-SH"/&gt;
- *     &lt;enumeration value="DE-TH"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <p>Java class for ISOBundeslaenderCodeTyp</p>.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
+ * <pre>{@code
+ * <simpleType name="ISOBundeslaenderCodeTyp">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     <length value="5"/>
+ *     <whiteSpace value="collapse"/>
+ *     <enumeration value="DE-BW"/>
+ *     <enumeration value="DE-BY"/>
+ *     <enumeration value="DE-BE"/>
+ *     <enumeration value="DE-BB"/>
+ *     <enumeration value="DE-HB"/>
+ *     <enumeration value="DE-HH"/>
+ *     <enumeration value="DE-HE"/>
+ *     <enumeration value="DE-MV"/>
+ *     <enumeration value="DE-NI"/>
+ *     <enumeration value="DE-NW"/>
+ *     <enumeration value="DE-RP"/>
+ *     <enumeration value="DE-SL"/>
+ *     <enumeration value="DE-SN"/>
+ *     <enumeration value="DE-ST"/>
+ *     <enumeration value="DE-SH"/>
+ *     <enumeration value="DE-TH"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "ISOBundeslaenderCodeTyp")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2021-08-07T06:30:26+02:00", comments = "JAXB RI v2.3.0")
+@Generated(value = "com.sun.tools.xjc.Driver", comments = "JAXB RI v4.0.9", date = "2026-08-26T20:17:23+02:00")
 public enum ISOBundeslaenderCodeTyp {
 
     @XmlEnumValue("DE-BW")
@@ -81,10 +81,26 @@ public enum ISOBundeslaenderCodeTyp {
         value = v;
     }
 
+    /**
+     * Gets the value associated to the enum constant.
+     * 
+     * @return
+     *     The value linked to the enum.
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Gets the enum associated to the value passed as parameter.
+     * 
+     * @param v
+     *     The value to get the enum from.
+     * @return
+     *     The enum which corresponds to the value, if it exists.
+     * @throws IllegalArgumentException
+     *     If no value matches in the enum declaration.
+     */
     public static ISOBundeslaenderCodeTyp fromValue(String v) {
         for (ISOBundeslaenderCodeTyp c: ISOBundeslaenderCodeTyp.values()) {
             if (c.value.equals(v)) {

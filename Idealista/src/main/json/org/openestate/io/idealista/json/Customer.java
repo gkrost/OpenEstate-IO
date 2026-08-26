@@ -4,10 +4,9 @@ package org.openestate.io.idealista.json;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -18,6 +17,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
 
 
 /**
@@ -46,7 +47,7 @@ public class Customer implements Serializable
     /**
      * Customer country
      * <p>
-     * 
+     * 
      * Corresponds to the "customerCountry" property.
      * 
      */
@@ -73,28 +74,25 @@ public class Customer implements Serializable
     /**
      * Customer Secondhand Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerProperties" property.
      * 
      */
     @JsonProperty("customerProperties")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<Property> properties = null;
+    private Set<@Valid Property> properties;
     /**
      * Customer NewDevelopment Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerNewDevelopments" property.
      * 
      */
     @JsonProperty("customerNewDevelopments")
     @JsonDeserialize(as = java.util.LinkedHashSet.class)
-    @Valid
-    private Set<NewDevelopment> newDevelopments = null;
+    private Set<@Valid NewDevelopment> newDevelopments;
     @JsonIgnore
-    @Valid
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, @Valid Object> additionalProperties = new LinkedHashMap<String, Object>();
     private final static long serialVersionUID = 8316910889507090679L;
 
     @JsonProperty("customerSendDate")
@@ -115,7 +113,7 @@ public class Customer implements Serializable
     /**
      * Customer country
      * <p>
-     * 
+     * 
      * Corresponds to the "customerCountry" property.
      * 
      */
@@ -127,7 +125,7 @@ public class Customer implements Serializable
     /**
      * Customer country
      * <p>
-     * 
+     * 
      * Corresponds to the "customerCountry" property.
      * 
      */
@@ -216,7 +214,7 @@ public class Customer implements Serializable
     /**
      * Customer Secondhand Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerProperties" property.
      * 
      */
@@ -228,7 +226,7 @@ public class Customer implements Serializable
     /**
      * Customer Secondhand Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerProperties" property.
      * 
      */
@@ -245,7 +243,7 @@ public class Customer implements Serializable
     /**
      * Customer NewDevelopment Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerNewDevelopments" property.
      * 
      */
@@ -257,7 +255,7 @@ public class Customer implements Serializable
     /**
      * Customer NewDevelopment Properties
      * <p>
-     * 
+     * 
      * Corresponds to the "customerNewDevelopments" property.
      * 
      */
